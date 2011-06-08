@@ -1,22 +1,27 @@
-# [Console-Pack!](repo)
-# A simple way to get the cool developer [console][cli] on your Mac**
+# [Console-Pack!](repo) a simple way to get a cool developer [console][cli] in your Mac
 
 ## Current feature list:
 
-- [Bash][bash] developer promt, listing colors, aliases. 
-- [Git][git] default configuration, alias & enabled autocompetition.
+- [Bash][bash] developer promt, listing colors, useful aliases. 
+- [Git][git] default configuration, git alias & autocomplete enabled.
 - [Sinatra][sinatra] alias.
-- [Ruby on Rails][rails] v2 and v3 smart alias
-- Default [rvm][rvm], [rubygems][gem] settings
+- [Ruby on Rails][rails] 2 and 3 smart alias.
+- Default [rvm][rvm], [rubygems][gem] settings.
+- Example configuration files. 
 
-![https://skitch.com/mariozaizar/fdap1/1-bash](/images/bash-1.png)
-![https://skitch.com/mariozaizar/fdat9/1-bash](/images/bash-2.png)
+![bash-1](/images/bash-1.jpg)
+<https://skitch.com/mariozaizar/fdat9/1-bash>
+
+![bash-2](/images/bash-2.jpg)
+<https://skitch.com/mariozaizar/fdap1/1-bash>
 
 ## Installation
-**Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`  
 
 ### Using Git
-_Recommended._
+
+_This is the recommended way._
+
+_**Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`._
 
 ```shell
     cd ~;
@@ -26,21 +31,19 @@ _Recommended._
 ```
 
 Restart your console, and that's it!. 
-_**Note:** You can delete the console-pack folder after that._
+
+_You can delete the console-pack folder after that._
 
 ## More info
 
-### Help
-[Here](https://github.com/mariozaizar/console-pack/issues?labels=Help).
-
-#### <https://github.com/mariozaizar/console-pack>
+### Project page: <https://github.com/mariozaizar/console-pack>, and [help](https://github.com/mariozaizar/console-pack/issues?labels=Help).
 [Follow me on Twitter!][twitter], [read me][crowdint] or [stalk me on Facebook!][facebook]
 
 ### Contribute
 
 * [Report bugs!](https://github.com/mariozaizar/console-pack/issues?labels=Bugs)
 * [Suggest new goodies!](https://github.com/mariozaizar/console-pack/issues?labels=Features)
-* _Buy me a beer (or something better)_
+* _Buy me a beer ([or something better][amazon])_
 
 ### Thanks to
 
@@ -60,15 +63,17 @@ Over the time I based my configurations on this awesome resources:
 * Logo and Page
 * Run [MarkEdit][markedit] from command line.
 * Other goodies.
-* Donations.
-* <strike><del>Met</del><strike> Marry Megan Fox.
+* Enable donations.
+* <del>Marry Megan Fox.</del>
 
 [twitter]: http://twitter.com/mariozaizar
 [facebook]: http://facebook.com/mariozaizar
 [crowdint]: http://blog.crowdint.com
+[amazon]: http://amzn.com/w/18ZQSVYATE5M1
 [repo]: https://github.com/mariozaizar/console-pack.git;
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
+[markedit]: http://keshiki.net/markdown-editor/
 
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
@@ -76,5 +81,3 @@ Over the time I based my configurations on this awesome resources:
 [rvm]: https://rvm.beginrescueend.com/
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
-
-[markedit]: http://keshiki.net/markdown-editor/
