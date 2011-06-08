@@ -1,16 +1,15 @@
-# [Console-Pack][repo], a simple way to get a cool developer [console][cli].
+# [Console-Pack][repo], a simple way to get a real developer [console][cli].
 
 ## Features:
 
 - [Bash][bash] developer promt, listing colors, useful aliases. 
+
+
 - [Git][git] default configuration, git alias & autocomplete enabled.
 - [Sinatra][sinatra] alias.
-- [Ruby on Rails][rails] 2 and 3 smart alias.
+- [Ruby on Rails][rails] 2 & 3 smart alias.
 - Default [rvm][rvm], [rubygems][gem] settings.
-- Example configuration files. 
-
-![bash-1](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg)
-Example [I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg), [II](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
+- Other example configuration files. 
 
 ## Installation
 
@@ -19,7 +18,7 @@ Example [I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.
 _This is the recommended way._
 **Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`.
 
-```shell
+```sh
     cd ~;
     git clone https://github.com/mariozaizar/console-pack.git;
     cd console-pack/;
@@ -29,10 +28,44 @@ _This is the recommended way._
 Restart your console, and that's it!.
 _You can delete the console-pack folder after that._
 
-## More info
+## Screenshoots
 
-### Project page: <https://github.com/mariozaizar/console-pack>, and [help](https://github.com/mariozaizar/console-pack/issues?labels=Help).
-Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Facebook!][facebook].
+![bash-1](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg)
+[Example I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg), [Example II](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
+
+## Full feature list
+
+1. `.bash_aliases`
+2. `.bash_profile`
+This is the **main** file, and enables the others submodules. For example:
+
+```sh
+    # Developer promt
+    if [ -f ~/.dev_promt.bash ]; then
+    	. ~/.dev_promt.bash
+    fi
+```
+
+3. `.dev_promt.bash`
+* Enables the developer bash promt and color listing. 
+
+4. `.gemrc`
+* Don't install `ri` and `rdoc` by default.
+* Add `rubygems`, `github`, `rubyforge`, and `gemcutter` as default gem sources.
+* Set other default as: `verybose: true` or `benchmark: false`.
+
+5. `.gitconfig`
+* Enable git aliases.
+
+2. `.rvmrc`
+* Enable `rvm_pretty_print_flag`.
+
+3. `~/.rvm.bash`
+* Enable rvm in Bash. ([rvm installation page][rvm])
+ 
+### Other tools
+* [][] powerup for mac vim.
+* [MarkEdit][markedit] a really nice Markdown editor.
 
 ## Contribute
 
@@ -40,15 +73,20 @@ Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Face
 * [Suggest new goodies!](https://github.com/mariozaizar/console-pack/issues?labels=Features)
 * _Buy me a beer ([or something better][amazon])_
 
+## About
+
+### Project page: <https://github.com/mariozaizar/console-pack>, and [help](https://github.com/mariozaizar/console-pack/issues?labels=Help).
+Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Facebook!][facebook].
+
 ### Thanks to
 
 This project started as me grabbing scripts, mods and hacks to enhance my developer experience and happiness.
 Over the time I based my configurations on this awesome resources: 
 
-- Git <http://library.edgecase.com/git_immersion/lab_11.html>
-- Sinatra <http://tinyurl.com/4j83zdv>
-- Rails 2 & 3 alias <http://tinyurl.com/2dq9pkv>,  snippets <http://snippets.rorbuilder.info/posts/show/272>
-- irb <http://iain.nl/2010/07/customizing-irb-2010-edition/>, <http://robots.thoughtbot.com/post/159806033/irb-script-console-tips>
+- [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html).
+- [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/) .
+- [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
+- [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
 
 ## TODO list
 
@@ -69,6 +107,7 @@ Over the time I based my configurations on this awesome resources:
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [markedit]: http://keshiki.net/markdown-editor/
+[janus]:
 
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
