@@ -9,11 +9,11 @@
 - Default [rvm][rvm], [rubygems][gem] settings.
 - Example configuration files. 
 
-![bash-1](/images/bash-1.jpg)
-<https://skitch.com/mariozaizar/fdat9/1-bash>
+![bash-1](images/bash-1.jpg)
+[1](https://skitch.com/mariozaizar/fdat9/1-bash)
 
-![bash-2](/images/bash-2.jpg)
-<https://skitch.com/mariozaizar/fdap1/1-bash>
+![bash-2](images/bash-2.jpg)
+[2](https://skitch.com/mariozaizar/fdap1/1-bash)
 
 ## Installation
 
