@@ -10,10 +10,7 @@
 - Example configuration files. 
 
 ![bash-1](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg)
-[Image 1](https://skitch.com/mariozaizar/fdat9/1-bash)
-
-![bash-2](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
-[Image 2](https://skitch.com/mariozaizar/fdap1/1-bash)
+Example [I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg), [II](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
 
 ## Installation
 
