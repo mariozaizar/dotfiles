@@ -1,40 +1,53 @@
 # Welcome to Console-Pack!
-_by [Mario Zaizar](twitter)_
-
-A simple way to get the cool dev tools and console mods in your [console](cli) (terminal, iTerm, bash...) 
+## A simple way to get the cool developer [console][cli]
+_by [Mario Zaizar][twitter]_
 
 **Current feature list:**
-- Developer [Bash](bash) promt, file listing colors. 
-- [Git](git) default configuration, alias & enabled autocompletition.
-- [Sinatra](sinatra) alias.
-- [Ruby on Rails](rails) v2 and v3 smart alias
-- Default [rvm](rvm), [rubygems](gem) settings
+
+- [Bash][bash] developer promt, listing colors, aliases. 
+- [Git][git] default configuration, alias & enabled autocompetition.
+- [Sinatra][sinatra] alias.
+- [Ruby on Rails][rails] v2 and v3 smart alias
+- Default [rvm][rvm], [rubygems][gem] settings
 
 ** Screenshoots: **
-![screenshoots/1.png]
-![screenshoots/2.png]
-![screenshoots/3.png]
+![Bash](https://skitch.com/mariozaizar/fdap1/1-bash)
+![Git](https://skitch.com/mariozaizar/fdat9/1-bash)
+
+---
 
 ## Installation
-Basically we add some files to your home folder, small ones will be replaced.
-**Don't worry, we make backups** for your original files, so `original.txt` will be `original.txt.old`  
+We add some files to your home, others will be replaced. **Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`  
 
 ### Using Git
-This is the recommended way.
+_This is the best way._
 
+```bash
     cd ~;
-    git clone [https://github.com/mariozaizar/console-pack.git][repo];
+    git clone https://github.com/mariozaizar/console-pack.git;
     cd console-pack/;
     ./install.sh;
+```
 
 Restart your console, and **that's it!**
 _**Note:** You can delete the console-pack folder after that._
-	
+
+---
+
 ## More info
-> [Follow me!](twitter) or [stalk me!](facebook)
-> Or even, [joing us!](crowdint)
+
+**Project page: <https://github.com/mariozaizar/console-pack>**
+
+[Follow me on Twitter!][twitter] or [stalk me on Facebook!][facebook]
+
+### Contribute
+
+* Report bugs!
+* Suggest new goodies!
+* _Buy me a beer (or something better)_
 
 ### Thanks to
+
 This project started as me grabbing scripts, mods and hacks to enhance my developer experience and happiness.
 Over the time I based my configurations on this awesome resources: 
 
@@ -43,12 +56,23 @@ Over the time I based my configurations on this awesome resources:
 - Rails 2 & 3 alias <http://tinyurl.com/2dq9pkv>,  snippets <http://snippets.rorbuilder.info/posts/show/272>
 - irb <http://iain.nl/2010/07/customizing-irb-2010-edition/>, <http://robots.thoughtbot.com/post/159806033/irb-script-console-tips>
 
-[repo]: https://github.com/mariozaizar/console-pack.git
+## `TODO` list
+
+* Manual installation.
+* Linux support.
+* Uninstaller support.
+* Logo and Page
+* Run [MarkEdit][markedit] from command line.
+* Other goodies.
+* Donations.
+* Met Marry Megan Fox.
+
 [twitter]: http://twitter.com/mariozaizar
 [facebook]: http://facebook.com/mariozaizar
 [crowdint]: http://crowdint.com
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
+
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
 [rails]: http://rubyonrails.org/
@@ -56,9 +80,4 @@ Over the time I based my configurations on this awesome resources:
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
 
-## TODO list.
-* Add a manual install instructions. Download and run perhaps?
-* Linux support.
-* Uninstaller support.
-* Logo and Page.
-* Other goodies.
+[markedit]: http://keshiki.net/markdown-editor/
