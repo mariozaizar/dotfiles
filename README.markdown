@@ -1,6 +1,6 @@
 # [Console-Pack](repo), a simple way to get a cool developer [console][cli].
 
-## Current feature list:
+## Features:
 
 - [Bash][bash] developer promt, listing colors, useful aliases. 
 - [Git][git] default configuration, git alias & autocomplete enabled.
@@ -9,12 +9,10 @@
 - Default [rvm][rvm], [rubygems][gem] settings.
 - Example configuration files. 
 
-![bash-1](/images/bash-1.jpg)
-
+![bash-1](images/bash-1.jpg)
 [Image 1](https://skitch.com/mariozaizar/fdat9/1-bash)
 
-![bash-2](/images/bash-2.jpg)
-
+![bash-2](images/bash-2.jpg)
 [Image 2](https://skitch.com/mariozaizar/fdap1/1-bash)
 
 ## Installation
@@ -37,9 +35,9 @@ _You can delete the console-pack folder after that._
 ## More info
 
 ### Project page: <https://github.com/mariozaizar/console-pack>, and [help](https://github.com/mariozaizar/console-pack/issues?labels=Help).
-[Follow me on Twitter!][twitter], [read me][crowdint] or [stalk me on Facebook!][facebook]
+Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Facebook!][facebook].
 
-### Contribute
+## Contribute
 
 * [Report bugs!](https://github.com/mariozaizar/console-pack/issues?labels=Bugs)
 * [Suggest new goodies!](https://github.com/mariozaizar/console-pack/issues?labels=Features)
