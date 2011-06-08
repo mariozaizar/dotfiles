@@ -1,4 +1,4 @@
-# [Console-Pack](repo), a simple way to get a cool developer [console][cli].
+# [Console-Pack][repo], a simple way to get a cool developer [console][cli].
 
 ## Features:
 
@@ -9,10 +9,10 @@
 - Default [rvm][rvm], [rubygems][gem] settings.
 - Example configuration files. 
 
-![bash-1](images/bash-1.jpg)
+![bash-1](./images/bash-1.jpg)
 [Image 1](https://skitch.com/mariozaizar/fdat9/1-bash)
 
-![bash-2](images/bash-2.jpg)
+![bash-2](./images/bash-2.jpg)
 [Image 2](https://skitch.com/mariozaizar/fdap1/1-bash)
 
 ## Installation
