@@ -1,4 +1,4 @@
-# [Console-Pack!](repo) a simple way to get a cool developer [console][cli] in your Mac
+# [Console-Pack](repo), a simple way to get a cool developer [console][cli].
 
 ## Current feature list:
 
@@ -9,19 +9,20 @@
 - Default [rvm][rvm], [rubygems][gem] settings.
 - Example configuration files. 
 
-![bash-1](images/bash-1.jpg)
-[1](https://skitch.com/mariozaizar/fdat9/1-bash)
+![bash-1](/images/bash-1.jpg)
 
-![bash-2](images/bash-2.jpg)
-[2](https://skitch.com/mariozaizar/fdap1/1-bash)
+[Image 1](https://skitch.com/mariozaizar/fdat9/1-bash)
+
+![bash-2](/images/bash-2.jpg)
+
+[Image 2](https://skitch.com/mariozaizar/fdap1/1-bash)
 
 ## Installation
 
 ### Using Git
 
 _This is the recommended way._
-
-_**Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`._
+**Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`.
 
 ```shell
     cd ~;
@@ -30,8 +31,7 @@ _**Don't worry, we make backups for your original files**, so `original.txt` wil
     ./install.sh;
 ```
 
-Restart your console, and that's it!. 
-
+Restart your console, and that's it!.
 _You can delete the console-pack folder after that._
 
 ## More info
@@ -55,7 +55,7 @@ Over the time I based my configurations on this awesome resources:
 - Rails 2 & 3 alias <http://tinyurl.com/2dq9pkv>,  snippets <http://snippets.rorbuilder.info/posts/show/272>
 - irb <http://iain.nl/2010/07/customizing-irb-2010-edition/>, <http://robots.thoughtbot.com/post/159806033/irb-script-console-tips>
 
-### TODO list
+## TODO list
 
 * Manual installation.
 * Linux support.
