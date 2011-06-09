@@ -1,0 +1,21 @@
+[user]
+	name = Your Name
+	email = your@email.com
+[autosetup]
+  rebase = true
+[branch]
+  autosetuprebase = remote
+[color]
+	interactive = auto
+	diff = auto
+	branch = auto
+	ui = true
+[alias]
+	slap = blame -w
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
