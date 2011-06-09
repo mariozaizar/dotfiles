@@ -3,8 +3,6 @@
 ## Features:
 
 - [Bash][bash] developer promt, listing colors, useful aliases. 
-
-
 - [Git][git] default configuration, git alias & autocomplete enabled.
 - [Sinatra][sinatra] alias.
 - [Ruby on Rails][rails] 2 & 3 smart alias.
@@ -16,16 +14,17 @@
 ### Using Git
 
 _This is the recommended way._
-**Don't worry, we make backups for your original files**, so `original.txt` will be `original.txt.old`.
+**We just provide example files**, in order to use them you should remove the "dot" from the name. so `dot.bash_profile` should be `.bash_profile`. _IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
 
 ```sh
     cd ~;
     git clone https://github.com/mariozaizar/console-pack.git;
-    cd console-pack/;
-    ./install.sh;
+    mv console-pack/files/* ~/;
+    mv .file1 .file1.old; 
+    mv dot.file1 .file1;
 ```
 
-Restart your console, and that's it!.
+Restart your console, and that's it!. If you want uninstall it, just restore the *.old files.
 _You can delete the console-pack folder after that._
 
 ## Screenshoots
@@ -38,33 +37,31 @@ _You can delete the console-pack folder after that._
 1. `.bash_aliases`
 2. `.bash_profile`
 This is the **main** file, and enables the others submodules. For example:
-
 ```sh
     # Developer promt
     if [ -f ~/.dev_promt.bash ]; then
     	. ~/.dev_promt.bash
     fi
 ```
-
 3. `.dev_promt.bash`
-* Enables the developer bash promt and color listing. 
+Enables the developer bash promt and color listing. 
 
 4. `.gemrc`
-* Don't install `ri` and `rdoc` by default.
-* Add `rubygems`, `github`, `rubyforge`, and `gemcutter` as default gem sources.
-* Set other default as: `verybose: true` or `benchmark: false`.
+Don't install `ri` and `rdoc` by default.
+Add `rubygems`, `github`, `rubyforge`, and `gemcutter` as default gem sources.
+Set other default as: `verybose: true` or `benchmark: false`.
 
 5. `.gitconfig`
-* Enable git aliases.
+Enable git aliases.
 
 2. `.rvmrc`
-* Enable `rvm_pretty_print_flag`.
+Enable `rvm_pretty_print_flag`.
 
 3. `~/.rvm.bash`
-* Enable rvm in Bash. ([rvm installation page][rvm])
+Enable rvm in Bash. ([rvm installation page][rvm])
  
 ### Other tools
-* [][] powerup for mac vim.
+
 * [MarkEdit][markedit] a really nice Markdown editor.
 
 ## Contribute
@@ -90,12 +87,12 @@ Over the time I based my configurations on this awesome resources:
 
 ## TODO list
 
-* Manual installation.
+* Installation/Uninstaller script.
 * Linux support.
-* Uninstaller support.
 * Logo and Page
 * Run [MarkEdit][markedit] from command line.
 * Other goodies.
+* Add other tools, like the vim powerpack.
 * Enable donations.
 * <del>Marry Megan Fox.</del>
 
@@ -107,7 +104,6 @@ Over the time I based my configurations on this awesome resources:
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [markedit]: http://keshiki.net/markdown-editor/
-[janus]:
 
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
