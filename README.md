@@ -87,7 +87,7 @@ Over the time I based my configurations on this awesome resources:
 
 ## TODO list
 
-* Installation/Uninstaller script.
+* Installation/Uninstaller script. Something like Homebrew does, `/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"`
 * Linux support.
 * Logo and Page
 * Run [MarkEdit][markedit] from command line.
