@@ -1,6 +1,12 @@
 [user]
 	name = Your Name
 	email = your@email.com
+[github]
+  user = youruser
+  token = yourtoken123456789012345678901234567890
+[github]
+  user = yourgithubuser
+  token = 0123456789001234567890
 [autosetup]
   rebase = true
 [branch]
@@ -16,6 +22,7 @@
 	ci = commit
 	st = status
 	br = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	today = log --pretty=format:\"* %s%d [%h]\" --no-merges --date=short --author=mariozaizar --since=\"$DATE 00:00:00\" --until=\"$DATE 24:00:00\"
+	mine = log --pretty=format:\"%ad - %s%d [%h]\" --no-merges --date=short --author=mariozaizar
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
 	type = cat-file -t
-	dump = cat-file -p
