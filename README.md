@@ -17,19 +17,19 @@ _This is the recommended way._
 **We just provide example files**, in order to use them you should remove the "dot" from the name. so `dot.bash_profile` should be `.bash_profile`. _IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
 
 ```sh
-		# Download the files in your home
+    # Download the files in your home
     cd ~;
     git clone https://github.com/mariozaizar/console-pack.git;
 
-		# Hide the source files
+    # Hide the source files
     mv console-pack .console-pack;
     
-		# Make a backup from your original files
-		mv ~/.gitconfig ~/.gitconfig.old;
+    # Make a backup from your original files
+    mv ~/.gitconfig ~/.gitconfig.old;
 		
-		# Start using it!
-		ln -s ~/.console-pack/dot.gitconfig ~/.gitconfig;
-		ll .gitconfig
+    # Start using it!
+    ln -s ~/.console-pack/dot.gitconfig ~/.gitconfig;
+    ll .gitconfig
 ```
 
 Restart your console, and that's it!. If you want uninstall it, just restore the *.old files.
