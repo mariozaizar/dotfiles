@@ -50,7 +50,7 @@ function rvm_version {
   local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
   [ "$version" != "" ] && version="$version"
   local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full "
+  [ "$full" != "" ] && echo "$full"
 }
 
 # Devpromt - http://tinyurl.com/4kzgb7k
@@ -64,11 +64,25 @@ if [ "$color_prompt" = yes ]; then
   #  Café        0;33     Amarillo      1;33
   #  Gris Claro  0;37     Blanco        1;37
 
-  # \u@\h mario@mario-laptop
-  PS1='\[\e[1;34m\]\T \[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s) ")\[\e[1;33m\]\w \[\e[1;37m\]\$ '
+  # Simple: 
+  # PS1="\u@\h mario@mario-laptop"
+  
+  # Two lines:
+  line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
+  line2='\[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s)")\[\e[1;33m\]\$ \[\e[1;37m\]'
+  PS1="$line1$line2"
+
+  # One line:
+  # PS1='\[\e[1;34m\]\T \[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s) ")\[\e[1;33m\]\w \[\e[1;37m\]\$ '
 else
-  PS1='\T $(rvm_version)$(__git_ps1 "(%s) ")\w \$ '
+  PS1="\T $(rvm_version)$(__git_ps1 '(%s) ')\w \$ "
 fi
 unset color_prompt force_color_prompt
+
+#####
+
+# MacPorts Installer addition on 2011-06-16_at_22:14:47: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
 
 test -r /sw/bin/init.sh && . /sw/bin/init.sh

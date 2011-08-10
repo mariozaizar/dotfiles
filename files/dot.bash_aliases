@@ -5,8 +5,11 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias claer='clear;' # Nada puede malir sal
+alias work='clear; cd ~/Documents/;'
+
 alias find_text='grep -Rin'
 alias find_usages='grep -ien'
+alias create='touch'
 
 #####
 # Git http://library.edgecase.com/git_immersion/lab_11.html
