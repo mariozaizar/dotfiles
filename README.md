@@ -40,37 +40,17 @@ _Note: ln -s will create a symbolic link between console-pack files, so please d
 ![bash-1](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg)
 [Example I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg), [Example II](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
 
-## Full feature list
+## Current files
 
-1. `.bash_aliases`
-2. `.bash_profile`
-This is the **main** file, and enables the others submodules. For example:
-```sh
-    # Developer promt
-    if [ -f ~/.dev_promt.bash ]; then
-    	. ~/.dev_promt.bash
-    fi
-```
-3. `.dev_promt.bash`
-Enables the developer bash promt and color listing. 
-
-4. `.gemrc`
-Don't install `ri` and `rdoc` by default.
-Add `rubygems`, `github`, `rubyforge`, and `gemcutter` as default gem sources.
-Set other default as: `verybose: true` or `benchmark: false`.
-
-5. `.gitconfig`
-Enable git aliases.
-
-2. `.rvmrc`
-Enable `rvm_pretty_print_flag`.
-
-3. `~/.rvm.bash`
-Enable rvm in Bash. ([rvm installation page][rvm])
- 
-### Other tools
-
-* [MarkEdit][markedit] a really nice Markdown editor.
+- .bash_aliases
+- .bash_profile
+- .diffmerge.sh
+- .gemrc
+- .git-completion.bash
+- .gitconfig
+- .irbrc
+- .rvmrc
+- .ssh/config
 
 ## Contribute
 
@@ -96,8 +76,8 @@ Over the time I based my configurations on this awesome resources:
 ## TODO list
 
 * Linux support.
-* Other goodies.
-* Add other tools, like the vim powerpack.
+* Add more goodies, rock like a pro.
+* See this related project, maybe we could use/merge/decline: https://github.com/ryanb/dotfiles
 * Enable donations.
 * <del>Marry Megan Fox.</del>
 
