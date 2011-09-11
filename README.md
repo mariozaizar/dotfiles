@@ -1,4 +1,4 @@
-# [Console-Pack][repo], a simple way to get a real developer [console][cli].
+# [dotfiles][repo], a simple way to get a real developer [console][cli].
 
 ## Features:
 
@@ -19,26 +19,28 @@ _This is the recommended way._
 ```sh
     # Download the files in your home
     cd ~;
-    git clone https://github.com/mariozaizar/console-pack.git;
+    git clone https://github.com/mariozaizar/dotfiles.git;
 
     # Hide the source files
-    mv console-pack .console-pack;
-    
-    # Make a backup from your original files
+    mv dotfiles .dotfiles;
+
+    # Start looking what is different. For example:
+    diff -U-1  ~/.gitconfig ~/.dotfiles/dot.gitconfig
+
+    # Make a backup from your original files. For example:
     mv ~/.gitconfig ~/.gitconfig.old;
-		
-    # Start using it!
-    ln -s ~/.console-pack/dot.gitconfig ~/.gitconfig;
-    ll .gitconfig
+
+    # Create a symbolic link between the new file pointing to yours.
+    ln -s ~/.dotfiles/dot.gitconfig ~/.gitconfig;
 ```
 
-Restart your console, and that's it!. If you want uninstall it, just restore the *.old files.
-_Note: ln -s will create a symbolic link between console-pack files, so please do not remove the console-pack folder._
+Restart your proyect, and that's it!. If you want uninstall it, just restore the *.old files.
+_Note: ln -s will create a symbolic link between dotfiles files, so please do not remove the dotfiles folder._
 
 ## Screenshoots
 
-![bash-1](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg)
-[Example I](http://github.com/mariozaizar/console-pack/raw/master/images/bash-1.jpg), [Example II](http://github.com/mariozaizar/console-pack/raw/master/images/bash-2.jpg)
+![bash-1](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-1.jpg)
+[Example I](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-1.jpg), [Example II](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-2.jpg)
 
 ## Current files
 
@@ -54,13 +56,13 @@ _Note: ln -s will create a symbolic link between console-pack files, so please d
 
 ## Contribute
 
-* [Report bugs!](https://github.com/mariozaizar/console-pack/issues?labels=Bugs)
-* [Suggest new goodies!](https://github.com/mariozaizar/console-pack/issues?labels=Features)
+* [Report bugs!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs)
+* [Suggest new goodies!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
 * _Buy me a beer ([or something better][amazon])_
 
 ## About
 
-### Project page: <https://github.com/mariozaizar/console-pack>, and [help](https://github.com/mariozaizar/console-pack/issues?labels=Help).
+### Project page: <https://github.com/mariozaizar/dotfiles>, and [help](https://github.com/mariozaizar/dotfiles/issues?labels=Help).
 Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Facebook!][facebook].
 
 ### Thanks to
@@ -85,7 +87,7 @@ Over the time I based my configurations on this awesome resources:
 [facebook]: http://facebook.com/mariozaizar
 [crowdint]: http://blog.crowdint.com
 [amazon]: http://amzn.com/w/18ZQSVYATE5M1
-[repo]: https://github.com/mariozaizar/console-pack.git;
+[repo]: https://github.com/mariozaizar/dotfiles.git;
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [markedit]: http://keshiki.net/markdown-editor/
