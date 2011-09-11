@@ -18,25 +18,27 @@ _This is the recommended way._
 **We just provide example files**, in order to use them you should remove the "dot" from the name. so `dot.bash_profile` should be `.bash_profile`. _IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
 
 ```sh
-    # Download the files in your home
-    cd ~;
-    git clone https://github.com/mariozaizar/dotfiles.git;
+    git clone https://github.com/mariozaizar/dotfiles.git ~/.dotfiles;
+    open ~/.dotfiles;
 
-    # Hide the source files
-    mv dotfiles .dotfiles;
+    # Compare the two files (ours, and yours). 
+    opendiff ~/.dotfiles/dot.gitconfig ~/.gitconfig
 
-    # Start looking what is different. For example:
-    diff -U-1  ~/.gitconfig ~/.dotfiles/dot.gitconfig
+    # Merge our changes to your file. (only if you're a pro). If not:
 
-    # Make a backup from your original files. For example:
+    # 1) Make a backup from your original file. For example:
     mv ~/.gitconfig ~/.gitconfig.old;
 
-    # Create a symbolic link between the new file pointing to yours.
-    ln -s ~/.dotfiles/dot.gitconfig ~/.gitconfig;
+    # 2) Create a symbolic link between our file pointing to yours.
+    ln -s ~/.dotfiles/dot.gitconfig ~/.gitconfig;  
 ```
 
 Restart your proyect, and that's it!. If you want uninstall it, just restore the *.old files.
 _Note: ln -s will create a symbolic link between dotfiles files, so please do not remove the dotfiles folder._
+
+### Environment
+
+I am running on Mac OS X, but it will likely work on Linux as well with minor fiddling. 
 
 ## Screenshoots
 
