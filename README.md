@@ -41,11 +41,6 @@ _Note: ln -s will create a symbolic link between dotfiles files, so please do no
 
 I am running on Mac OS X, but it will likely work on Linux as well with minor fiddling. 
 
-## Screenshoots
-
-![bash-1](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-1.jpg)
-[Example I](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-1.jpg), [Example II](http://github.com/mariozaizar/dotfiles/raw/master/images/bash-2.jpg)
-
 ## Current files
 
 - .bash_aliases
