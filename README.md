@@ -7,7 +7,7 @@
 - [Sinatra][sinatra] smart alias.
 - [Ruby on Rails][rails] 2 & 3 smart alias.
 - Default [rvm][rvm], [rubygems][gem] settings.
-- Vagrant status in promt!
+- [Vagrant][vagrant] status directly in the promt!
 - Other example configuration files. 
 
 ## Installation
@@ -15,7 +15,8 @@
 ### Using Git
 
 _This is the recommended way._
-**We just provide example files**, in order to use them you should remove the "dot" from the name. so `dot.bash_profile` should be `.bash_profile`. _IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
+**We just provide example files**, in order to use them you should add/remove features from our file to yours.
+_IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
 
 ```sh
     git clone https://github.com/mariozaizar/dotfiles.git ~/.dotfiles;
@@ -101,3 +102,4 @@ Over the time I based my configurations on this awesome resources:
 [rvm]: https://rvm.beginrescueend.com/
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
+[vagrant]: http://vagrantup.com
