@@ -7,6 +7,7 @@
 - [Sinatra][sinatra] smart alias.
 - [Ruby on Rails][rails] 2 & 3 smart alias.
 - Default [rvm][rvm], [rubygems][gem] settings.
+- Vagrant status in promt!
 - Other example configuration files. 
 
 ## Installation
@@ -87,7 +88,7 @@ Over the time I based my configurations on this awesome resources:
 [facebook]: http://facebook.com/mariozaizar
 [crowdint]: http://blog.crowdint.com
 [amazon]: http://amzn.com/w/18ZQSVYATE5M1
-[repo]: https://github.com/mariozaizar/dotfiles.git;
+[repo]: https://github.com/mariozaizar/dotfiles
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [markedit]: http://keshiki.net/markdown-editor/
