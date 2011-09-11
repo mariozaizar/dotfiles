@@ -5,7 +5,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias claer='clear;' # Nada puede malir sal
-alias work='clear; cd ~/Documents/;'
+alias work='clear; cd ~/Documents/Repositorios/;'
 
 alias find_text='grep -Rin'
 alias find_usages='grep -ien'

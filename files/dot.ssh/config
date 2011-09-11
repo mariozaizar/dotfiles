@@ -7,6 +7,7 @@ Host heroku.com
 	Hostname heroku.com
 	IdentityFile ~/.ssh/your_rsa.priv
 
+# Set the default Key for Github
 Host *github.com
  	Hostname github.com
  	User git

@@ -53,6 +53,18 @@ function rvm_version {
   [ "$full" != "" ] && echo "$full"
 }
 
+function vagrant_status {
+  local status=""
+  if [ -f 'Vagrantfile' ]; then
+    status="$(vagrant status | sed -n 3p)"
+    status="$(echo $status)"
+  fi
+  [ "$status" != "" ] && echo "($status)"
+
+  # Example:
+  # PS1="\u@\h$(vagrant_status)"
+}
+
 # Devpromt - http://tinyurl.com/4kzgb7k
 if [ "$color_prompt" = yes ]; then
   #  Negro       0;30     Gris Obscuro  1;30
@@ -65,11 +77,11 @@ if [ "$color_prompt" = yes ]; then
   #  Gris Claro  0;37     Blanco        1;37
 
   # Simple: 
-  # PS1="\u@\h mario@mario-laptop"
+  # PS1="\u@\h" # => mario@mario-laptop
   
   # Two lines:
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
-  line2='\[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s)")\[\e[1;33m\]\$ \[\e[1;37m\]'
+  line2='\[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s)")$(vagrant_status)\[\e[1;33m\]\$ \[\e[1;37m\]'
   PS1="$line1$line2"
 
   # One line:
@@ -80,6 +92,9 @@ fi
 unset color_prompt force_color_prompt
 
 #####
+
+# Improved grep
+export GREP_OPTIONS='-i'
 
 # MacPorts Installer addition on 2011-06-16_at_22:14:47: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
