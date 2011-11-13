@@ -3,9 +3,4 @@
 # http://robots.thoughtbot.com/post/159806033/irb-script-console-tips
 
 require 'rubygems'
-require 'wirble'
 require 'ap'
-
-# irb with color
-Wirble.init
-Wirble.colorize

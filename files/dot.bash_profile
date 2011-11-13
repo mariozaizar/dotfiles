@@ -56,13 +56,37 @@ function rvm_version {
 function vagrant_status {
   local status=""
   if [ -f 'Vagrantfile' ]; then
-    status="$(vagrant status | sed -n 3p)"
-    status="$(echo $status)"
+		if which vagrant > /dev/null;	 then
+			status="vagrant"
+		  # status="$(vagrant status | sed -n 3p)"
+		  # status="$(echo $status)"
+		else
+			status="install vagrant gem"
+		fi
   fi
-  [ "$status" != "" ] && echo "($status)"
+  [ "$status" != "" ] && echo " ($status)"
 
   # Example:
   # PS1="\u@\h$(vagrant_status)"
+}
+
+# https://gist.github.com/778558
+function minutes_since_last_commit {
+    # now=`date +%s`
+    #     last_commit=`git log --pretty=format:'%at' -1`
+    #     seconds_since_last_commit=$((now-last_commit))
+    #     minutes_since_last_commit=$((seconds_since_last_commit/60))
+    #     echo $minutes_since_last_commit
+    # 		[ "$minutes_since_last_commit" != "" ] && echo "(${$minutes_since_last_commit}m ago)"
+		echo ""
+}
+
+git_status() {
+	git_dir="$(__gitdir)"
+	if [ -n "$git_dir" ]; then
+    status=`__git_ps1 "%s"`      
+	fi
+	[ "$status" != "" ] && echo "${status}${minutes_since_last_commit}"
 }
 
 # Devpromt - http://tinyurl.com/4kzgb7k
@@ -81,20 +105,25 @@ if [ "$color_prompt" = yes ]; then
   
   # Two lines:
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
-  line2='\[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s)")$(vagrant_status)\[\e[1;33m\]\$ \[\e[1;37m\]'
+  line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\]\$ \[\e[1;37m\]'
   PS1="$line1$line2"
-
-  # One line:
-  # PS1='\[\e[1;34m\]\T \[\e[1;36m\]$(rvm_version)$(__git_ps1 "(%s) ")\[\e[1;33m\]\w \[\e[1;37m\]\$ '
 else
-  PS1="\T $(rvm_version)$(__git_ps1 '(%s) ')\w \$ "
+  PS1="\T $(rvm_version)$(git_status)$(vagrant_status)\w \$ "
 fi
 unset color_prompt force_color_prompt
 
 #####
 
-# Improved grep
-export GREP_OPTIONS='-i'
+# grep 2.5.1
+export GREP_OPTIONS="-i --exclude=\*.git\* --exclude=\*log\* --exclude=\*tmp\*"
+# grep 2.5.3
+#export GREP_OPTIONS="-i --exclude-dir=.git --exclude-dir=log --exclude-dir=tmp"
+
+# GiveHub
+export MONGOHQ_HOST='33.33.33.10'
+
+# MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
+export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 # MacPorts Installer addition on 2011-06-16_at_22:14:47: adding an appropriate PATH variable for use with MacPorts.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH

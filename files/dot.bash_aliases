@@ -4,12 +4,20 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# https://gist.github.com/1270654
+alias rmfr='rm -fr';
+alias exot='exit';
 alias claer='clear;' # Nada puede malir sal
 alias work='clear; cd ~/Documents/Repositorios/;'
-
 alias find_text='grep -Rin'
 alias find_usages='grep -ien'
 alias create='touch'
+alias be='bundle exec'
+alias ber="bundle exec rake"
+alias cuke="be cucumber -rfeatures -fprogress"
+alias cake="rake"
+alias tag="ctags -R app lib"
+alias sublime="subl" # sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 #####
 # Git http://library.edgecase.com/git_immersion/lab_11.html
