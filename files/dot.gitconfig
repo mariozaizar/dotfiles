@@ -19,8 +19,10 @@
 	ci = commit
 	st = status
 	br = branch
-	today = log --pretty=format:\"* %s%d [%h]\" --no-merges --date=short --author=mariozaizar --since=\"$DATE 00:00:00\" --until=\"$DATE 24:00:00\"
-	mine = log --pretty=format:\"%ad - %s%d [%h]\" --no-merges --date=short --author=mariozaizar
+	top = shortlog -s -n
+	files = show --pretty=\"format:\" --name-only
+	today = log --pretty=format:\"* %s%d [%h]\" --no-merges --date=short --author=youruser --since=\"$DATE 00:00:00\" --until=\"$DATE 24:00:00\"
+	mine = log --pretty=format:\"%ad - %s%d [%h]\" --no-merges --date=short --author=youruser
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
 	type = cat-file -t
 [core]
