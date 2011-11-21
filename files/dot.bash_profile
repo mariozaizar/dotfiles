@@ -12,12 +12,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
@@ -26,12 +26,12 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 
 # Alias definitions.
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 # Git autocomplete
 if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
+  . ~/.git-completion.bash
 fi
 
 #####
@@ -55,14 +55,15 @@ function rvm_version {
 
 function vagrant_status {
   local status=""
+
   if [ -f 'Vagrantfile' ]; then
-		if which vagrant > /dev/null;	 then
-			status="vagrant"
-		  # status="$(vagrant status | sed -n 3p)"
-		  # status="$(echo $status)"
-		else
-			status="install vagrant gem"
-		fi
+    if which vagrant > /dev/null;  then
+      status="vagrant!"
+      # status="$(vagrant status | sed -n 3p)"
+      # status="$(echo $status)"
+    else
+      status="Vagrantfile!"
+    fi
   fi
   [ "$status" != "" ] && echo " ($status)"
 
@@ -71,22 +72,20 @@ function vagrant_status {
 }
 
 # https://gist.github.com/778558
-function minutes_since_last_commit {
-    # now=`date +%s`
-    #     last_commit=`git log --pretty=format:'%at' -1`
-    #     seconds_since_last_commit=$((now-last_commit))
-    #     minutes_since_last_commit=$((seconds_since_last_commit/60))
-    #     echo $minutes_since_last_commit
-    # 		[ "$minutes_since_last_commit" != "" ] && echo "(${$minutes_since_last_commit}m ago)"
-		echo ""
-}
-
-git_status() {
-	git_dir="$(__gitdir)"
-	if [ -n "$git_dir" ]; then
-    status=`__git_ps1 "%s"`      
-	fi
-	[ "$status" != "" ] && echo "${status}${minutes_since_last_commit}"
+function git_status {
+  local git_dir="$(__gitdir)"
+  local git_branch=""
+  
+  if [ -n "$git_dir" ]; then
+    git_branch=`__git_ps1 "%s"`      
+    
+    local now=`date +%s`
+    local last_commit=`git log --pretty=format:'%at' -1`
+    local sec_ago=$((now - last_commit))
+    local min_ago=$((sec_ago/60))
+  fi
+    
+  [ "$git_branch" != "" ] && echo "${git_branch} ${min_ago}m"
 }
 
 # Devpromt - http://tinyurl.com/4kzgb7k
@@ -105,7 +104,7 @@ if [ "$color_prompt" = yes ]; then
   
   # Two lines:
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
-  line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\]\$ \[\e[1;37m\]'
+  line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\] \$ \[\e[1;37m\]'
   PS1="$line1$line2"
 else
   PS1="\T $(rvm_version)$(git_status)$(vagrant_status)\w \$ "
