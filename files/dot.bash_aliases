@@ -5,6 +5,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # https://gist.github.com/1270654
+alias pow_restart='ll ~/.pow/tmp/restart.txt; touch ~/.pow/tmp/restart.txt; ll ~/.pow/tmp/restart.txt;'
 alias rmfr='rm -fr';
 alias exot='exit';
 alias claer='clear;' # Nada puede malir sal
@@ -18,6 +19,7 @@ alias cuke="be cucumber -rfeatures -fprogress"
 alias cake="rake"
 alias tag="ctags -R app lib"
 alias sublime="subl" # sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+alias reload_bash='source ~/.bash_profile'
 
 #####
 # Git http://library.edgecase.com/git_immersion/lab_11.html
@@ -94,7 +96,9 @@ alias rdbm='rake db:migrate'
 alias rspec='rake spec'
 
 # rails logs, tailing and cleaning
-alias tdl='tail -f ./log/development.log'
-alias ttl='tail -f ./log/test.log'
+alias rails_log='tail -f ./log/development.log'
+alias rails_test_log='tail -f ./log/test.log'
+alias pow_log='tail -f ~/Library/Logs/Pow/access.log'
+
 alias ctl='> ./log/test.log'
 alias cdl='> ./log/development.log'
