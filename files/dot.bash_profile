@@ -65,8 +65,8 @@ function vagrant_status {
 }
 
 # Promt with git & rvm - http://tinyurl.com/4q6zehb
-__git_ps1 () 
-{ 
+__git_ps1 ()
+{
     local b="$(git symbolic-ref HEAD 2>/dev/null)";
     if [ -n "$b" ]; then
         printf " (%s)" "${b##refs/heads/}";
@@ -77,16 +77,16 @@ __git_ps1 ()
 function git_status {
 	local git_dir="$(__gitdir)"
   local git_branch=""
-	
+
   if [ -n "$git_dir" ]; then
-    git_branch=`__git_ps1 "%s"`      
-    
+    git_branch=`__git_ps1 "%s"`
+
     local now=`date +%s`
     local last_commit=`git log --pretty=format:'%at' -1`
     local sec_ago=$((now - last_commit))
     local min_ago=$((sec_ago/60))
 	fi
-  	
+
   [ "$git_branch" != "" ] && echo "${git_branch} ${min_ago}m"
 }
 
@@ -101,9 +101,9 @@ if [ "$color_prompt" = yes ]; then
   #  Café        0;33     Amarillo      1;33
   #  Gris Claro  0;37     Blanco        1;37
 
-  # Simple: 
+  # Simple:
   # PS1="\u@\h" # => mario@mario-laptop
-  
+
   # Two lines:
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
   line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\] \$ \[\e[0;37m\]'
