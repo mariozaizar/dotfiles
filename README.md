@@ -1,96 +1,102 @@
-# [dotfiles][repo], a simple way to get a real developer [console][cli].
+# dotFiles
 
-## Features:
+A simple way to configure your bash [terminal][cli] as a real developer console.
 
-- [Bash][bash] developer promt, identify files by color, useful aliases. 
-- [Git][git] default configuration, useful git alias & autocomplete enabled by default.
-- [Sinatra][sinatra] smart alias.
-- [Ruby on Rails][rails] 2 & 3 smart alias.
-- Default [rvm][rvm], [rubygems][gem] settings.
-- [Vagrant][vagrant] status directly in the promt!
-- Other example configuration files. 
+*by [Mario Zaizar](about)*
+
+## Features
+
+- [Bash][bash] developer promt, colors, aliases…
+- [Git][git] default configuration, alias, autocomplete, commit timer, promt…
+- [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias.
+- Default [rvm][rvm], [rubygems][gem] settings, rvm gemset and ruby promt.
+- [Vagrant][vagrant] promt!
+- Many others...
+
+### Themes
+
+There is also a `themes` folder with some color skins for the most common apps,
+like iTerm, Terminal.app, Textmate, Sublime and Ruby Mine.
+
+## Requirements
+
+- Mac OSX (tested in Lion)
+- Git (git-scm.com)
+- Ruby (ruby-lang.org)
+- Bash (never tested with zsh)
+- GitHub account (github.com)
 
 ## Installation
 
-### Using Git
+1) Get it!
 
-_This is the recommended way._
-**We just provide example files**, in order to use them you should add/remove features from our file to yours.
-_IMPORTANT: Please backup your original files before this, we don't want drama. For example `mv .bashprofile .bashprodile.old`_
+	git clone https://github.com/mariozaizar/dotfiles.git;
+    cd dotfiles;
 
-```sh
-    git clone https://github.com/mariozaizar/dotfiles.git ~/.dotfiles;
-    open ~/.dotfiles;
+2) Edit the `Rakefile`, and fill this variables with your own information.  
+For example: 
 
-    # Compare the two files (ours, and yours). 
-    opendiff ~/.dotfiles/dot.gitconfig ~/.gitconfig
+	USER_NAME     = 'Your Name' 
+	USER_EMAIL    = 'you@email.com'
+	GITHUB_USER   = 'githubuser'
+	GITHUB_TOKEN  = 'yourtoken123456789012345678901234567890' # keep this secret!
+	PROJECTS_DIR  = '~/Documents/Projects/'
 
-    # Merge our changes to your file. (only if you're a pro). If not:
+3) Test it!  
+Look around, feel comfortable with it.
 
-    # 1) Make a backup from your original file. For example:
-    mv ~/.gitconfig ~/.gitconfig.old;
+    $ rake test
 
-    # 2) Create a symbolic link between our file pointing to yours.
-    ln -s ~/.dotfiles/dot.gitconfig ~/.gitconfig;  
-```
+4) Install it!  
 
-Restart your proyect, and that's it!. If you want uninstall it, just restore the *.old files.
-_Note: ln -s will create a symbolic link between dotfiles files, so please do not remove the dotfiles folder._
+*Note:* this will take your info and generate the new files like 
+`~/.bash_profile`, then it will copy this files inside your home directory 
+(making backups if neccesary)
 
-### Environment
+    $ rake install
+    $ source ~/.bash_profile
 
-I am running on Mac OS X, but it will likely work on Linux as well with minor fiddling. 
+### Uninstall
 
-## Current files
-
-- .bash_aliases
-- .bash_profile
-- .diffmerge.sh
-- .gemrc
-- .git-completion.bash
-- .gitconfig
-- .irbrc
-- .rvmrc
-- .ssh/config
+	$ rake uninstall
+	$ source ~/.bash_profile
 
 ## Contribute
 
-* [Report bugs!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs)
-* [Suggest new goodies!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
-* _Buy me a beer ([or something better][amazon])_
+[Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
+[suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
 
 ## About
 
-### Project page: <https://github.com/mariozaizar/dotfiles>, and [help](https://github.com/mariozaizar/dotfiles/issues?labels=Help).
-Follow me on [Twitter!][twitter], read [our blog][crowdint] or stalk me on [Facebook!][facebook].
+My name is [Mario Zaizar][about].  
+This is my [twitter](twitter) (en español).  
+Right now I'm working for [Crowd Interactive](crowd).
 
-### Thanks to
+### Thanks
 
-This project started as me grabbing scripts, mods and hacks to enhance my developer experience and happiness.
+This project started as me grabbing scripts, mods and hacks to use better tools.
 Over the time I based my configurations on this awesome resources: 
 
 - [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html).
-- [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/) .
+- Git promt: 
+[link1](http://tinyurl.com/4q6zehb)
+[link2](https://gist.github.com/778558)
+[link3](http://tinyurl.com/4kzgb7k)
+- [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/). http://tinyurl.com/4j83zdv, http://tinyurl.com/2dq9pkv
 - [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
 - [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
+- [Misc](https://gist.github.com/1270654)
+- irb 
+[link1](http://iain.nl/2010/07/customizing-irb-2010-edition/)
+[link2](http://snippets.rorbuilder.info/posts/show/272)
+[link3](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips)
 
-## TODO list
+---
 
-* Linux support.
-* Add more goodies, rock like a pro.
-* See this related project, maybe we could use/merge/decline: https://github.com/ryanb/dotfiles
-* Enable donations.
-* <del>Marry Megan Fox.</del>
-
+[about]: http://about.me/mariozaizar
 [twitter]: http://twitter.com/mariozaizar
-[facebook]: http://facebook.com/mariozaizar
 [crowdint]: http://blog.crowdint.com
-[amazon]: http://amzn.com/w/18ZQSVYATE5M1
-[repo]: https://github.com/mariozaizar/dotfiles
-
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
-[markedit]: http://keshiki.net/markdown-editor/
-
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
 [rails]: http://rubyonrails.org/
