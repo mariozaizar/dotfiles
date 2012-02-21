@@ -1,8 +1,6 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+  xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -12,30 +10,18 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+  # We have color support; assume it's compliant with Ecma-48
+  # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+  # a case would tend to support setf rather than setaf.)
+  color_prompt=yes
     else
-	color_prompt=
+  color_prompt=
     fi
 fi
 
 # Colorize the Terminal
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
-
-# Alias definitions.
-if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
-fi
-
-# Git autocomplete
-if [ -f ~/.git-completion.bash ]; then
-	. ~/.git-completion.bash
-fi
-
-#####
 
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
@@ -50,32 +36,48 @@ function vagrant_status {
   local status=""
 
   if [ -f 'Vagrantfile' ]; then
-		if which vagrant > /dev/null;	 then
-			#status="vagrant!"
-		  status="$(vagrant status | sed -n 3p)"
-		  status="$(echo $status)"
-		else
-			status="Vagrantfile!"
-		fi
+    if which vagrant > /dev/null;  then
+      status="$(bundle exec vagrant status | sed -n 3p)"
+      status="$(echo $status)"
+    else
+      status="Vagrantfile!"
+    fi
   fi
   [ "$status" != "" ] && echo " ($status)"
-
-  # Example:
-  # PS1="\u@\h$(vagrant_status)"
 }
 
-# Promt with git & rvm - http://tinyurl.com/4q6zehb
+# https://gist.github.com/778558
 __git_ps1 ()
 {
     local b="$(git symbolic-ref HEAD 2>/dev/null)";
     if [ -n "$b" ]; then
-        printf " (%s)" "${b##refs/heads/}";
+        printf "%s" "${b##refs/heads/}";
     fi
+}
+
+function time_ago {
+  local now=`date +%s`;
+  local sec=$((now - $1));
+  local min=$((sec / 60));
+  local hrs=$((sec / 3600));
+  local day=$((sec / 86400));
+
+  local real_hrs=$((hrs % 24));
+  local real_min=$((min % 60));
+
+  if [ "$hrs" -gt 24 ]; then
+    time_ago="${day}d"
+  elif [ "$min" -gt 60 ]; then
+    time_ago="${hrs}:${real_min}h"
+  else
+    time_ago="${min}m"
+  fi
+  [ "$time_ago" != "" ] && echo "${time_ago}"
 }
 
 # https://gist.github.com/778558
 function git_status {
-	local git_dir="$(__gitdir)"
+  local git_dir="$(__gitdir)"
   local git_branch=""
 
   if [ -n "$git_dir" ]; then
@@ -85,9 +87,22 @@ function git_status {
     local last_commit=`git log --pretty=format:'%at' -1`
     local sec_ago=$((now - last_commit))
     local min_ago=$((sec_ago/60))
-	fi
+    # local commiter=`git config user.email`
+    # local last_commiter=`git log --pretty=format:'by %cN' -1`
+  fi
 
-  [ "$git_branch" != "" ] && echo "${git_branch} ${min_ago}m"
+  [ "$git_branch" != "" ] && echo " (${git_branch} ${min_ago}m)"
+}
+
+# BETA 2 http://tinyurl.com/4q6zehb
+function git_info {
+  if [ -n "$(__gitdir)" ]; then
+    git_branch=`__git_ps1 "%s"`
+
+    local last_commit=$(time_ago `git log --pretty=format:'%at' -1`);
+    local last_mine=$(time_ago `git mine --pretty=format:'%at' -1`);
+    echo "${git_branch}${last_commit}/${last_mine}";
+  fi
 }
 
 # Devpromt - http://tinyurl.com/4kzgb7k
@@ -101,37 +116,24 @@ if [ "$color_prompt" = yes ]; then
   #  Café        0;33     Amarillo      1;33
   #  Gris Claro  0;37     Blanco        1;37
 
-  # Simple:
-  # PS1="\u@\h" # => mario@mario-laptop
-
-  # Two lines:
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
   line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\] \$ \[\e[0;37m\]'
-  #line1="\[\e[1;37m\]\T \w\n"
-  #line2='$(rvm_version)$(git_status)$(vagrant_status) \$ \[\e[0;37m\]'
   PS1="$line1$line2"
+
+  # BETA 2
+  # line1="\n\[\e[1;34m\]\@ \[\e[1;33m\]\w"
+  # line2="\[\e[1;36m\]$(rvm_version) $(vagrant_status)"
+  # line3="\[\e[1;36m\]$(git_info)"
+  # PS1="$line1\n$line2\n$line3 \[\e[1;33m\]\$ \[\e[0;37m\]"
 else
   line1="\T \w\n"
   line2='$(rvm_version)$(git_status)$(vagrant_status) \$ '
   PS1="$line1$line2"
+
+  # BETA 2
+  # line1="\n\@ \w"
+  # line2="$(rvm_version) $(vagrant_status)"
+  # line3="$(git_info)"
+  # PS1="$line1\n$line2\n$line3 \$ "
 fi
 unset color_prompt force_color_prompt
-
-#####
-
-# grep 2.5.1
-export GREP_OPTIONS="-i --exclude=\*.git\* --exclude=\*log\* --exclude=\*tmp\*"
-# grep 2.5.3
-#export GREP_OPTIONS="-i --exclude-dir=.git --exclude-dir=log --exclude-dir=tmp"
-
-# Applying patch 'tcmalloc' error with RVM and ree
-export CC=/usr/bin/gcc-4.2
-
-# MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
-export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
-# MacPorts Installer addition on 2011-06-16_at_22:14:47: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
-
-test -r /sw/bin/init.sh && . /sw/bin/init.sh
