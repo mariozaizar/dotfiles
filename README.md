@@ -59,12 +59,12 @@ When you get ready with this information, run a simple test by:
 
 ### Uninstall
 
-*Important!* This is not fully implemented. But at least you will see how to restore the original files by removing the `*.old` extension.
-You can try to see which are the files by: `find ~ -name "*.old"`
+*Important!* This is not fully implemented. But at least you will see how to
+restore the original files by removing the `*.old` extension.
 
     $ rake uninstall
 
-This is the current list:
+This is the current list of files:
 
     ~/.bash_aliases
     ~/.bash_completion
