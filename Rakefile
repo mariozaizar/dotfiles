@@ -76,7 +76,12 @@ def create_files testing=true
     if File.exist?(to)
       puts "   Warning: #{to} exists!"
       puts "   Info: backup created at: #{to}.old"
-      system %Q{cp "#{to}" "#{to}.old"} unless testing
+
+      unless File.exist?("#{to}.old")
+        system %Q{cp "#{to}" "#{to}.old"} unless testing
+      else
+        puts "   Abort: backup already exists!"
+      end
     end
 
     content = ERB.new(File.read(from)).result(binding)
