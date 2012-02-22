@@ -1,8 +1,9 @@
 # dotFiles
-A simple way to configure your bash as a real developer [terminal][cli].  
+A simple way to configure your bash shell as developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
 ![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
+
 ## Features
 
 - [Bash][bash] custom developer promt, nice colors, useful aliases…
@@ -16,6 +17,7 @@ There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 ![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
+
 This is the current list of files:
 
     ~/.bash_aliases
@@ -86,9 +88,7 @@ restore the original files by removing the `*.old` extension.
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
 [suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
 
-### Support
-
-**[Click here if you like it!](http://goo.gl/QF88m)**
+### [Support! click here if you like it!](http://goo.gl/QF88m)
 
 ## About
 
