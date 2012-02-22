@@ -62,26 +62,26 @@ When you get ready with this information, run a simple test by:
 *Important!* This is not fully implemented. But at least you will see how to restore the original files by removing the `*.old` extension.
 You can try to see which are the files by: `find ~ -name "*.old"`
 
-	$ rake uninstall
+    $ rake uninstall
 
 This is the current list:
 
-  ~/.bash_aliases
-  ~/.bash_completion
-  ~/.bash_promt
-  ~/.bash_tweeks
-  ~/.bash_profile
-  ~/.bashrc
-  ~/.diffmerge.sh
-  ~/.gemrc
-  ~/.gitconfig
-  ~/.gitignore
-  ~/.hgignore_global
-  ~/.irbrc
-  ~/.rvmrc
-  ~/.smb/smb.conf
-  ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
-  ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+    ~/.bash_aliases
+    ~/.bash_completion
+    ~/.bash_promt
+    ~/.bash_tweeks
+    ~/.bash_profile
+    ~/.bashrc
+    ~/.diffmerge.sh
+    ~/.gemrc
+    ~/.gitconfig
+    ~/.gitignore
+    ~/.hgignore_global
+    ~/.irbrc
+    ~/.rvmrc
+    ~/.smb/smb.conf
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
 
 ## Contribute
 
