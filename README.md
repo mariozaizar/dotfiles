@@ -1,30 +1,26 @@
 # dotFiles
-
-A simple way to configure your bash [terminal][cli] as a real developer console.
-
+A simple way to configure your bash as a real developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
 ## Features
 
-- [Bash][bash] developer promt, colors, aliases…
-- [Git][git] default configuration, alias, autocomplete, commit timer, promt…
-- [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias.
-- Default [rvm][rvm], [rubygems][gem] settings, rvm gemset and ruby promt.
-- [Vagrant][vagrant] promt!
-- Many others...
+- [Bash][bash] custom developer promt, nice colors, useful aliases…
+- [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, promt…
+- [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias (use the same for both).
+- Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in promt.
+- [Vagrant][vagrant] getting box state directly in promt!
 
-### Themes
-
-There is also a `themes` folder with some color skins for the most common apps,
-like iTerm, Terminal.app, Textmate, Sublime and Ruby Mine.
+- **Editor and Terminal themes.**  
+There is also a themes folder with some color skins for the most common apps,
+like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 ## Requirements
 
-- Mac OSX (tested in Lion)
-- Git (git-scm.com)
-- Ruby (ruby-lang.org)
-- Bash (never tested with zsh)
-- GitHub account (github.com)
+- Mac OSX (Lion tested)
+- Git ([git-scm.com](http://git-scm.com))
+- Ruby ([ruby-lang.org](http://ruby-lang.org))
+- GitHub account ([github.com](http://github.com))
+- Bash shell
 
 ## Installation
 
@@ -33,33 +29,38 @@ like iTerm, Terminal.app, Textmate, Sublime and Ruby Mine.
 	git clone https://github.com/mariozaizar/dotfiles.git;
     cd dotfiles;
 
-2) Edit the `Rakefile`, and fill this variables with your own information.  
-For example: 
+2) Test it!
 
-	USER_NAME     = 'Your Name' 
-	USER_EMAIL    = 'you@email.com'
-	GITHUB_USER   = 'githubuser'
-	GITHUB_TOKEN  = 'yourtoken123456789012345678901234567890' # keep this secret!
-	PROJECTS_DIR  = '~/Documents/Projects/'
+*Important:* in order to generate some files, you'll be asked to fill some
+information like this:
 
-3) Test it!  
-Look around, feel comfortable with it.
+- Full name, *Mario Zaizar*
+- GitHub email, *mariozaizar@gmail.com*
+- GitHub username, *mariozaizar*
+- GitHub api token, *123456789012345678901234567890*
+- Git projects directory, *~/Documents/Repositorios*
+
+When you get ready with this information, run a simple test by:
 
     $ rake test
 
-4) Install it!  
+3) Install it!
 
-*Note:* this will take your info and generate the new files like 
-`~/.bash_profile`, then it will copy this files inside your home directory 
-(making backups if neccesary)
+*Note:* this will take your info to generate the new files like
+`~/.gitconfig` and so, then it will copy this files inside your home directory
+(and making backups if necessary).
 
     $ rake install
     $ source ~/.bash_profile
 
 ### Uninstall
 
+*Important!* This is not ready yet. But at least you can restore the original files by removing the `*.old` extension.
+
+<strike>
 	$ rake uninstall
 	$ source ~/.bash_profile
+</strike>
 
 ## Contribute
 
@@ -75,10 +76,10 @@ Right now I'm working for [Crowd Interactive](crowd).
 ### Thanks
 
 This project started as me grabbing scripts, mods and hacks to use better tools.
-Over the time I based my configurations on this awesome resources: 
+Over the time I based my configurations on this awesome resources:
 
 - [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html).
-- Git promt: 
+- Git promt:
 [link1](http://tinyurl.com/4q6zehb)
 [link2](https://gist.github.com/778558)
 [link3](http://tinyurl.com/4kzgb7k)
@@ -86,7 +87,7 @@ Over the time I based my configurations on this awesome resources:
 - [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
 - [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
 - [Misc](https://gist.github.com/1270654)
-- irb 
+- irb
 [link1](http://iain.nl/2010/07/customizing-irb-2010-edition/)
 [link2](http://snippets.rorbuilder.info/posts/show/272)
 [link3](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips)

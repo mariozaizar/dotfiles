@@ -1,15 +1,6 @@
 require 'rake'
 require 'erb'
 
-################################################################################
-# CHANGE THIS!
-USER_NAME     = 'Mario Zaizar' 
-USER_EMAIL    = 'mariozaizar@gmail.com'
-GITHUB_USER   = 'mariozaizar'
-GITHUB_TOKEN  = 'yourtoken123456789012345678901234567890'
-PROJECTS_DIR  = '~/Documents/Repositorios/'
-
-################################################################################
 HOME_DIR = File.expand_path('~')
 
 FILES = {
@@ -32,20 +23,24 @@ LINKS = {
   "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl"
 }
 
-################################################################################
-desc "Just test and print the results, Don't do anything yet."
-task :test do
-  create_links
-  create_files
+def get_user_information
+  puts "\nPlease write your information:"
+
+  @full_name    = ask(" - Your full name: ")
+  @github_email = ask(" - GitHub email: ")
+  @github_user  = ask(" - GitHub username: ")
+  @github_token = ask(" - GitHub api token: ")
+  @projects_dir = ask(" - Projects directory: ")
+
+  puts "Welcome #{@full_name}!"
+  exit if ask("Continue? Y/n: ")!='Y'
 end
 
-desc "Install the dot files into user's home directory and create symbolic links."
-task :install do
-  create_links
-  create_files
+def ask message="Press any key to continue."
+  print message
+  STDIN.gets.chomp
 end
 
-################################################################################
 def create_links testing=true
   puts "\nCreate #{LINKS.count} symbolic links:"
 
@@ -55,8 +50,8 @@ def create_links testing=true
     if File.exist?(from) && !File.exist?(to)
       system %Q{ln -s "#{from}" "#{to}"} unless testing
     else
-      puts "   Warning: destination already exists!" if File.exist?(to)
-      puts "   Warning: origin file doesn't exist!" unless File.exist?(from)
+      puts "   Abort: destination already exists!" if File.exist?(to)
+      puts "   Abort: origin file doesn't exist!" unless File.exist?(from)
     end
   end
 end
@@ -69,7 +64,7 @@ def create_files testing=true
     to.gsub!('~', HOME_DIR)
     
     if File.exist?(to)
-      puts "   Warning: #{to} exists!"
+      puts "   Warning: #{to} exists! Create a backup file."
       # system %Q{cp "#{to}" "#{to}.old"} unless testing
     end
 
@@ -79,8 +74,26 @@ def create_files testing=true
     puts "#{content}"
     puts "---------------------------------------------------------------------"
     
-    # File.open(to, 'w') do |new_file|  
-    #   new_file.write content
-    # end unless testing
+    File.open("#{to}.new", 'w') do |new_file|  
+      new_file.write content
+    end unless testing
   end
+end
+
+################################################################################
+desc "Just test and print the results, Don't do anything yet."
+################################################################################
+task :test do
+  get_user_information
+  create_files
+  # create_links
+end
+
+################################################################################
+desc "Install the dot files into user's home directory and create symbolic links."
+################################################################################
+task :install do
+  get_user_information
+  create_files
+  # create_links
 end

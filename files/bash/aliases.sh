@@ -1,8 +1,3 @@
-################################################################################
-# Personal
-alias work='clear; cd <% PROJECTS_DIR %>;'
-################################################################################
-
 # Utils
 alias ll='ls -alF'
 alias la='ls -A'
@@ -13,6 +8,7 @@ alias create='touch'
 alias find_text='grep -Rin --color'
 alias find_usages='grep -ien --color'
 alias reload='source ~/.bash_profile'
+alias work='clear; cd <% @projects_dir %>;'
 
 # Ruby
 alias be='bundle exec'
