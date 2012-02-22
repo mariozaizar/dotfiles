@@ -80,6 +80,7 @@ Right now I'm working for [Crowd Interactive](crowd).
 This project started as me grabbing scripts, mods and hacks to use better tools.
 Over the time I based my configurations on this awesome resources:
 
+- [Ryan Bates dotFiles](https://github.com/ryanb/dotfiles)
 - [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html).
 - Git promt:
 [link1](http://tinyurl.com/4q6zehb)
