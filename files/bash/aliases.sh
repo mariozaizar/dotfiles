@@ -6,12 +6,13 @@ alias work='clear; cd <%= @projects_dir %>;'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias exot='exit';
-alias claer='clear;'
+alias exot='exit'
+alias claer='clear;' # Nada puede malir sal
 alias create='touch'
 alias find_text='grep -Rin --color'
 alias find_usages='grep -ien --color'
 alias reload='source ~/.bash_profile'
+alias create='touch'
 
 # Ruby
 alias be='bundle exec'
@@ -32,6 +33,8 @@ alias rails_log='tail -f ./log/development.log'
 alias rails_test_log='tail -f ./log/test.log'
 
 # Rails 2 & 3 functions
+# http://tinyurl.com/4j83zdv
+# http://tinyurl.com/2dq9pkv
 function sc {
   if [ -x script/console ]; then
     script/console

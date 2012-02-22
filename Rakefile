@@ -13,6 +13,7 @@ FILES = {
   "files/gemrc.yml"               => "~/.gemrc",
   "files/gitconfig.ini"           => "~/.gitconfig",
   "files/gitignore"               => "~/.gitignore",
+  "files/hgignore_global"         => "~/.hgignore_global",
   "files/irbrc.rb"                => "~/.irbrc",
   "files/rvmrc.sh"                => "~/.rvmrc",
   "files/smb.conf.ini"            => "~/.smb/smb.conf",
@@ -20,7 +21,8 @@ FILES = {
 }
 
 LINKS = {
-  "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl"
+  "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
+  "~/.diffmerge.sh" => "/usr/bin/diffmerge"
 }
 
 def get_user_information
@@ -52,7 +54,8 @@ def create_links testing=true
   puts "\nCreate #{LINKS.count} symbolic links:"
 
   LINKS.each do |from, to|
-    puts " - Linking #{from} to #{to}"
+    puts "\n - Linking #{from} to #{to}"
+    to.gsub!('~', HOME_DIR)
 
     if File.exist?(from) && !File.exist?(to)
       system %Q{ln -s "#{from}" "#{to}"} unless testing
@@ -67,11 +70,12 @@ def create_files testing=true
   puts "\nReplace #{FILES.count} files:"
 
   FILES.each do |from, to|
-    puts " - Moving #{from} to #{to}"
+    puts "\n - Moving #{from} to #{to}"
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(to)
-      puts "   Warning: #{to} exists! Create a backup!"
+      puts "   Warning: #{to} exists!"
+      puts "   Info: backup created at: #{to}.old"
       system %Q{cp "#{to}" "#{to}.old"} unless testing
     end
 

@@ -2,13 +2,11 @@
 ## A little script to make it easier to launch DiffMerge from the command line.
 ## Install this script into a folder in your path, such as /usr/bin or /usr/local/bin.
 ##
-## Version 3.3.0.1001
-## Copyright (C) 2003-2009 SourceGear LLC. All Rights Reserved.
+## Version 3.3.2.1139
+## Copyright (C) 2003-2011 SourceGear LLC. All Rights Reserved.
 ##############################################################################
 
 ## Change DIFFMERGE_PATH to point to where you installed DiffMerge
-
-## INSTALL: sudo ln -s ~/.diffmerge.sh /usr/bin/diffmerge
 
 DIFFMERGE_PATH=/Applications/DiffMerge.app
 
