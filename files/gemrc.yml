@@ -1,7 +1,7 @@
 ---
 gem: --no-ri --no-rdoc
 :update_sources: true
-:sources: 
+:sources:
 - http://rubygems.org/
 - http://gems.github.com
 - http://gems.rubyforge.org

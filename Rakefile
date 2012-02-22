@@ -30,15 +30,22 @@ def get_user_information
   @github_email = ask(" - GitHub email: ")
   @github_user  = ask(" - GitHub username: ")
   @github_token = ask(" - GitHub api token: ")
-  @projects_dir = ask(" - Projects directory: ")
+  @projects_dir = ask(" - Projects directory. Like `~/Projects`: ")
 
-  puts "Welcome #{@full_name}!"
-  exit if ask("Continue? Y/n: ")!='Y'
+  puts "\nHello! #{@full_name}"
+  exit if ask("Continue? y/n: ", false)!='y'
 end
 
-def ask message="Press any key to continue."
+def ask message="", required=true
   print message
-  STDIN.gets.chomp
+  data = STDIN.gets.chomp
+
+  if data=="" && required
+    puts "Aborted. This field can't be blank."
+    exit
+  end
+
+  data
 end
 
 def create_links testing=true
@@ -60,17 +67,23 @@ def create_files testing=true
   puts "\nReplace #{FILES.count} files:"
 
   FILES.each do |from, to|
-    puts " - #{from} to #{to}"
+    puts " - Moving #{from} to #{to}"
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(to)
-      puts "   Warning: #{to} exists! Create a backup file."
+      puts "   Warning: #{to} exists! Create a backup!"
       system %Q{cp "#{to}" "#{to}.old"} unless testing
     end
 
     content = ERB.new(File.read(from)).result(binding)
-    puts "   Content:\n" if testing
-    puts "#{content}\n" if testing
+    if testing
+      puts "   File content:"
+      puts "\n"
+      puts "-------------------------------------------------------------------"
+      puts "#{content}"
+      puts "-------------------------------------------------------------------"
+      puts "\n"
+    end
 
     File.open("#{to}.new", 'w') do |new_file|
       new_file.write content
@@ -84,7 +97,7 @@ desc "Just test and print the results, Don't do anything yet."
 task :test do
   get_user_information
   create_files
-  # create_links
+  reate_links
 end
 
 ################################################################################
@@ -92,6 +105,7 @@ desc "Install the dot files into user's home directory and create symbolic links
 ################################################################################
 task :install do
   get_user_information
-  create_files
-  # create_links
+  create_files false
+  create_links
+  system %Q{source ~/.bash_profile}
 end

@@ -21,6 +21,3 @@ DIFFMERGE_EXE=${DIFFMERGE_PATH}/Contents/MacOS/DiffMerge
 ## shell script.
 
 exec ${DIFFMERGE_EXE} --nosplash "$@"
-
-
-
