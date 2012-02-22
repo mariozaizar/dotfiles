@@ -112,11 +112,7 @@ Over the time I based my configurations on this awesome resources:
 - [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), http://tinyurl.com/2dq9pkv
 - [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
 - [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
-- [Misc](https://gist.github.com/1270654)
-- irb
-[link1](http://iain.nl/2010/07/customizing-irb-2010-edition/)
-[link2](http://snippets.rorbuilder.info/posts/show/272)
-[link3](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips)
+- [Alias from @dabit](https://gist.github.com/1270654)
 
 [about]: http://about.me/mariozaizar
 [twitter]: http://twitter.com/mariozaizar
