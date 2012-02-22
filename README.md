@@ -60,6 +60,7 @@ When you get ready with this information, run a simple test by:
 ### Uninstall
 
 *Important!* This is not ready yet. But at least you can restore the original files by removing the `*.old` extension.
+You can try to see which are the files by: `find ~ -name "*.old"`
 
 <strike>
 	$ rake uninstall
