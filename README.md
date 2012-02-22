@@ -14,8 +14,8 @@ A simple way to configure your bash as a real developer [terminal][cli].
 There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
-![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.jpg)
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.jpg)
+![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
 
 ## Requirements
 
