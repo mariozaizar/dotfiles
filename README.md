@@ -87,7 +87,7 @@ restore the original files by removing the `*.old` extension.
 
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
 [suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
-### [Click here to support!](http://goo.gl/QF88m)
+### [Click here to SUPPORT!](http://goo.gl/QF88m)
 
 ## About
 
@@ -110,7 +110,7 @@ Over the time I based my configurations on this awesome resources:
 
 [about]: http://about.me/mariozaizar
 [twitter]: http://twitter.com/mariozaizar
-[crowdint]: http://blog.crowdint.com
+[crowd]: http://blog.crowdint.com
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
