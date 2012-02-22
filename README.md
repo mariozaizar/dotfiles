@@ -64,6 +64,25 @@ You can try to see which are the files by: `find ~ -name "*.old"`
 
 	$ rake uninstall
 
+This is the current list:
+
+  ~/.bash_aliases
+  ~/.bash_completion
+  ~/.bash_promt
+  ~/.bash_tweeks
+  ~/.bash_profile
+  ~/.bashrc
+  ~/.diffmerge.sh
+  ~/.gemrc
+  ~/.gitconfig
+  ~/.gitignore
+  ~/.hgignore_global
+  ~/.irbrc
+  ~/.rvmrc
+  ~/.smb/smb.conf
+  ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
+  ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+
 ## Contribute
 
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
