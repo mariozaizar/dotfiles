@@ -88,11 +88,15 @@ This is the current list:
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
 [suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
 
+### Support
+
+**[Click here if you like it!](http://goo.gl/QF88m)**
+
 ## About
 
 My name is [Mario Zaizar][about].  
 This is my [twitter](twitter) (en español).  
-Right now I'm working for [Crowd Interactive](crowd).
+I work for [Crowd Interactive](crowd).
 
 ### Thanks
 

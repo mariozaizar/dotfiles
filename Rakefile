@@ -119,6 +119,9 @@ task :install do
   create_files false
   create_links
   system %Q{source ~/.bash_profile}
+
+  puts "\nIf you like it, click here: http://goo.gl/QF88m"
+  puts "-Mario"
 end
 
 ################################################################################
