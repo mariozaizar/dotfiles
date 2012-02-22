@@ -6,10 +6,10 @@ HOME_DIR = File.expand_path('~')
 FILES = {
   "files/bash/aliases.sh"         => "~/.bash_aliases",
   "files/bash/completion.sh"      => "~/.bash_completion",
-  "files/bash/promt.sh"           => "~/.bash_promt", 
+  "files/bash/promt.sh"           => "~/.bash_promt",
   "files/bash_profile.sh"         => "~/.bash_profile",
-  "files/bashrc.sh"               => "~/.bashrc", 
-  "files/diffmerge.sh"            => "~/.diffmerge.sh", 
+  "files/bashrc.sh"               => "~/.bashrc",
+  "files/diffmerge.sh"            => "~/.diffmerge.sh",
   "files/gemrc.yml"               => "~/.gemrc",
   "files/gitconfig.ini"           => "~/.gitconfig",
   "files/gitignore"               => "~/.gitignore",
@@ -62,19 +62,17 @@ def create_files testing=true
   FILES.each do |from, to|
     puts " - #{from} to #{to}"
     to.gsub!('~', HOME_DIR)
-    
+
     if File.exist?(to)
       puts "   Warning: #{to} exists! Create a backup file."
-      # system %Q{cp "#{to}" "#{to}.old"} unless testing
+      system %Q{cp "#{to}" "#{to}.old"} unless testing
     end
 
     content = ERB.new(File.read(from)).result(binding)
-    puts "   Content:"
-    puts "---------------------------------------------------------------------"
-    puts "#{content}"
-    puts "---------------------------------------------------------------------"
-    
-    File.open("#{to}.new", 'w') do |new_file|  
+    puts "   Content:\n" if testing
+    puts "#{content}\n" if testing
+
+    File.open("#{to}.new", 'w') do |new_file|
       new_file.write content
     end unless testing
   end
