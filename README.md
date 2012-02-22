@@ -2,7 +2,7 @@
 A simple way to configure your bash as a real developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
+![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
 
 ## Features
 
@@ -16,7 +16,26 @@ A simple way to configure your bash as a real developer [terminal][cli].
 There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
-![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
+
+This is the current list of files:
+
+    ~/.bash_aliases
+    ~/.bash_completion
+    ~/.bash_promt
+    ~/.bash_tweeks
+    ~/.bash_profile
+    ~/.bashrc
+    ~/.diffmerge.sh
+    ~/.gemrc
+    ~/.gitconfig
+    ~/.gitignore
+    ~/.hgignore_global
+    ~/.irbrc
+    ~/.rvmrc
+    ~/.smb/smb.conf
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
 
 ## Requirements
 
@@ -28,7 +47,7 @@ like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 1) Get it!
 
-	git clone https://github.com/mariozaizar/dotfiles.git;
+    git clone https://github.com/mariozaizar/dotfiles.git;
     cd dotfiles;
 
 2) Test it!
@@ -36,11 +55,11 @@ like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 *Important:* in order to generate some files, you'll be asked to fill some
 information like this:
 
-- Full name, *Mario Zaizar*
-- GitHub email, *mariozaizar@gmail.com*
-- GitHub username, *mariozaizar*
-- GitHub api token, *123456789012345678901234567890*
-- Git projects directory, *~/Documents/Repositorios*
+    - Full name, *Mario Zaizar*
+    - GitHub email, *mariozaizar@gmail.com*
+    - GitHub username, *mariozaizar*
+    - GitHub api token, *123456789012345678901234567890*
+    - Git projects directory, *~/Documents/Repositorios*
 
 When you get ready with this information, run a simple test by:
 
@@ -63,25 +82,6 @@ When you get ready with this information, run a simple test by:
 restore the original files by removing the `*.old` extension.
 
     $ rake uninstall
-
-This is the current list of files:
-
-    ~/.bash_aliases
-    ~/.bash_completion
-    ~/.bash_promt
-    ~/.bash_tweeks
-    ~/.bash_profile
-    ~/.bashrc
-    ~/.diffmerge.sh
-    ~/.gemrc
-    ~/.gitconfig
-    ~/.gitignore
-    ~/.hgignore_global
-    ~/.irbrc
-    ~/.rvmrc
-    ~/.smb/smb.conf
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
 
 ## Contribute
 
