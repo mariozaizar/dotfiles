@@ -95,7 +95,7 @@ def create_files testing=true
       puts "\n"
     end
 
-    File.open("#{to}.new", 'w') do |new_file|
+    File.open(to, 'w') do |new_file|
       new_file.write content
     end unless testing
   end
@@ -107,7 +107,7 @@ desc "Just test and print the results, Don't do anything yet."
 task :test do
   get_user_information
   create_files
-  reate_links
+  create_links
 end
 
 ################################################################################
