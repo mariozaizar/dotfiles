@@ -2,6 +2,8 @@
 A simple way to configure your bash as a real developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
+
 ## Features
 
 - [Bash][bash] custom developer promt, nice colors, useful aliases…
@@ -15,7 +17,6 @@ There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 ![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
 
 ## Requirements
 
@@ -44,6 +45,8 @@ information like this:
 When you get ready with this information, run a simple test by:
 
     $ rake test
+
+![test screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/test.png)
 
 3) Install it!
 
