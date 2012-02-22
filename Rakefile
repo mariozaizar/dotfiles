@@ -7,6 +7,7 @@ FILES = {
   "files/bash/aliases.sh"         => "~/.bash_aliases",
   "files/bash/completion.sh"      => "~/.bash_completion",
   "files/bash/promt.sh"           => "~/.bash_promt",
+  "files/bash/tweeks.sh"          => "~/.bash_tweeks",
   "files/bash_profile.sh"         => "~/.bash_profile",
   "files/bashrc.sh"               => "~/.bashrc",
   "files/diffmerge.sh"            => "~/.diffmerge.sh",
