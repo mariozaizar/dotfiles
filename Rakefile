@@ -120,3 +120,16 @@ task :install do
   create_links
   system %Q{source ~/.bash_profile}
 end
+
+################################################################################
+desc "Uninstall this! move back the .old files as normal!"
+################################################################################
+task :uninstall do
+  puts "SORRY FOR ANY TROUBLE. But don't worry, your original files are safe."
+  puts "Just remove the '.old' extension from all of this files:\n\n"
+
+  system %Q{find ~ -name "*.old"}
+
+  puts "\nAnd then restart your terminal."
+  puts "-Mario"
+end
