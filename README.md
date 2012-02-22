@@ -67,11 +67,13 @@ When you get ready with this information, run a simple test by:
 
 ![test screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/test.png)
 
+This will show a list with all the files and full paths. But also including a
+preview of the file content.
+
 ### 3) Install it!
 
-*Note:* this will take your info to generate the new files like
-`~/.gitconfig` and so, then it will copy this files inside your home directory
-(and making backups if necessary).
+*Note:* this will generate the files (for example `~/.gitconfig`) and then it
+will copy this files inside your home directory (making backups if necessary).
 
     $ rake install
     $ source ~/.bash_profile
