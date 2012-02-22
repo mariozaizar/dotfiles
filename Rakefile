@@ -17,6 +17,7 @@ FILES = {
   "files/irbrc.rb"                => "~/.irbrc",
   "files/rvmrc.sh"                => "~/.rvmrc",
   "files/smb.conf.ini"            => "~/.smb/smb.conf",
+  "files/sublime-keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
   "files/sublime-settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
 }
 
