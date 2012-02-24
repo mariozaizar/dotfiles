@@ -9,6 +9,8 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - [Bash][bash] custom developer promt, nice colors, useful aliases…
 - [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, promt…
 - [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias (use the same for both).
+- [Ruby][ruby], [irb][irb] and [rubygems][gem] default settings.
+- Ruby versions like [rvm][rvm], [rbenv][rbenv] inside your promt.
 - Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in promt.
 - [Vagrant][vagrant] getting box state directly in promt!
 
@@ -22,8 +24,8 @@ This is the current list of files:
 
     ~/.bash_aliases
     ~/.bash_completion
+    ~/.bash_config
     ~/.bash_promt
-    ~/.bash_tweeks
     ~/.bash_profile
     ~/.bashrc
     ~/.diffmerge.sh
@@ -36,6 +38,8 @@ This is the current list of files:
     ~/.smb/smb.conf
     ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
     ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+
+![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/rbenv.png)
 
 ## Requirements
 
@@ -109,6 +113,7 @@ Over the time I based my configurations on this awesome resources:
 - [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
 - [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
 - [Alias from @dabit](https://gist.github.com/1270654)
+- My [CrowdInt][crowd] friends
 
 [about]: http://about.me/mariozaizar
 [twitter]: http://twitter.com/mariozaizar
