@@ -8,6 +8,11 @@ else
   export GREP_OPTIONS="-i --exclude-dir=.git --exclude-dir=log --exclude-dir=tmp --exclude-dir=.tmp"
 fi
 
+################################################################################
+# RVM (warning rbenv/rvm are incompatibles)
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=$PATH:$HOME/.rvm/bin;
+
 # RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
 # export CC=/usr/bin/gcc-4.2
 
@@ -15,6 +20,12 @@ fi
 # But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
+################################################################################
+# rbenv (warning rbenv/rvm are incompatibles)
+export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
+eval "$(rbenv init -)"
+
+################################################################################
 # Homebrew should be before system-provided path
 export PATH=/usr/local/bin:$PATH
 
