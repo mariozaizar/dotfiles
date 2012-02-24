@@ -23,6 +23,29 @@ fi
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
+################################################################################
+function ruby_version {
+  local version='';
+  if which rbenv > /dev/null; then
+    # rbenv installed
+    version="rbenv $(rbenv_version)";
+  elif which rbenv > /dev/null; then
+    # rvm installed
+    version=echo "rvm $(rvm_version)";
+  elif [ -f '.rbenv_version' ]; then
+    # rbenv_version detected
+    version=".rbenv_version!";
+  elif [ -f '.rvmrc' ]; then
+    # rvmrc detected
+    version=".rvmrc!";
+  fi
+  [ "$version=" != '' ] && echo "($version)"
+}
+
+function rbenv_version {
+  echo "$(rbenv version | awk '{print $1}')"
+}
+
 function rvm_version {
   local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
   [ "$gemset" != "" ] && gemset="@$gemset"
@@ -34,7 +57,6 @@ function rvm_version {
 
 function vagrant_status {
   local status=""
-
   if [ -f 'Vagrantfile' ]; then
     if which vagrant > /dev/null;  then
       status="$(bundle exec vagrant status | sed -n 3p)"
@@ -117,22 +139,22 @@ if [ "$color_prompt" = yes ]; then
   #  Gris Claro  0;37     Blanco        1;37
 
   line1="\[\e[1;34m\]\T \[\e[1;33m\]\w\n"
-  line2='\[\e[1;36m\]$(rvm_version)$(git_status)$(vagrant_status)\[\e[1;33m\] \$ \[\e[0;37m\]'
+  line2='\[\e[1;36m\]$(ruby_version)$(git_status)$(vagrant_status)\[\e[1;33m\] \$ \[\e[0;37m\]'
   PS1="$line1$line2"
 
   # BETA 2
   # line1="\n\[\e[1;34m\]\@ \[\e[1;33m\]\w"
-  # line2="\[\e[1;36m\]$(rvm_version) $(vagrant_status)"
+  # line2="\[\e[1;36m\]$(ruby_version) $(vagrant_status)"
   # line3="\[\e[1;36m\]$(git_info)"
   # PS1="$line1\n$line2\n$line3 \[\e[1;33m\]\$ \[\e[0;37m\]"
 else
   line1="\T \w\n"
-  line2='$(rvm_version)$(git_status)$(vagrant_status) \$ '
+  line2='$(ruby_version)$(git_status)$(vagrant_status) \$ '
   PS1="$line1$line2"
 
   # BETA 2
   # line1="\n\@ \w"
-  # line2="$(rvm_version) $(vagrant_status)"
+  # line2="$(ruby_version) $(vagrant_status)"
   # line3="$(git_info)"
   # PS1="$line1\n$line2\n$line3 \$ "
 fi
