@@ -38,16 +38,17 @@
     ".bundle",
     "tmp"
   ],
-  "font_face": "Menlo",
+  "font_face": "Monaco",
   "font_options":
   [
-    ""
+    "bold"
   ],
-  "font_size": 13.0,
+  "font_size": 12.0,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "hot_exit": false,
   "indent_subsequent_lines": true,
+  "indent_to_bracket": false,
   "line_numbers": true,
   "move_to_limit_on_up_down": true,
   "open_files_in_new_window": false,
@@ -60,7 +61,9 @@
   "save_on_focus_lost": true,
   "scroll_past_end": true,
   "shift_tab_unindent": true,
+  "smart_indent": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
+  "use_tab_stops": true,
   "word_wrap": false
 }
