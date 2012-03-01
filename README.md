@@ -121,8 +121,10 @@ Over the time I based my configurations on this awesome resources:
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
+[ruby]: http://ruby-lang.org/
 [rails]: http://rubyonrails.org/
 [rvm]: https://rvm.beginrescueend.com/
+[rbenv]: https://github.com/sstephenson/rbenv
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
 [vagrant]: http://vagrantup.com
