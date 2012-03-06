@@ -71,6 +71,11 @@ __git_ps1 ()
 }
 
 function time_ago {
+  if [ -x $1 ]; then
+    echo "?"
+    exit;
+  fi
+
   local now=`date +%s`;
   local sec=$((now - $1));
   local min=$((sec / 60));
@@ -95,8 +100,8 @@ function git_info {
   if [ -n "$(__gitdir)" ]; then
     git_branch=`__git_ps1 "%s"`
 
-    local last_commit=$(time_ago `git log --pretty=format:'%at' -1`);
-    local last_mine=$(time_ago `git mine --pretty=format:'%at' -1`);
+    local last_commit=$(time_ago `git log --pretty=format:'%at' -1 2>/dev/null;`);
+    local last_mine=$(time_ago `git mine --pretty=format:'%at' -1 2>/dev/null;`);
     echo "${git_branch}: ${last_commit}/${last_mine}  ";
   fi
 }
