@@ -33,8 +33,8 @@ def get_user_information
   puts "\nPlease write your information:"
 
   @full_name        = ask(" - Your full name: ")
-  @github_email     = ask(" - GitHub email: ")
   @github_user      = ask(" - GitHub username: ")
+  @github_email     = ask(" - GitHub email: ")
   @github_password  = ask(" - GitHub password: ")
   @github_token     = ask(" - GitHub api token: ")
   @projects_dir     = ask(" - Projects directory. Like `~/Projects`: ")
@@ -120,7 +120,7 @@ desc "Install the dot files into user's home directory and create symbolic links
 task :install do
   get_user_information
   create_files false
-  create_links
+  create_links false
   system %Q{source ~/.bash_profile}
 
   puts "\nIf you like it, click here: http://goo.gl/QF88m"
