@@ -1,0 +1,13 @@
+{
+  //############################################################################
+  // Your username on GitHub
+  "username": "<%= @github_user %>",
+
+  // Your password on GitHub
+  "password": "<%= @github_password %>",
+  //############################################################################
+
+  // Proxy server
+  // Format: "http://user:pass@proxy:port"
+  "https_proxy": ""
+}
