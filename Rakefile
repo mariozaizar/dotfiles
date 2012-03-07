@@ -18,8 +18,10 @@ FILES = {
   "files/irbrc.rb"                => "~/.irbrc",
   "files/rvmrc.sh"                => "~/.rvmrc",
   "files/smb.conf.ini"            => "~/.smb/smb.conf",
-  "files/sublime-keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-  "files/sublime-settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+  "files/sublime/keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+  "files/sublime/settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
+  "files/sublime/gist.json"       => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+  "files/sublime/packages.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings"
 }
 
 LINKS = {
@@ -30,11 +32,12 @@ LINKS = {
 def get_user_information
   puts "\nPlease write your information:"
 
-  @full_name    = ask(" - Your full name: ")
-  @github_email = ask(" - GitHub email: ")
-  @github_user  = ask(" - GitHub username: ")
-  @github_token = ask(" - GitHub api token: ")
-  @projects_dir = ask(" - Projects directory. Like `~/Projects`: ")
+  @full_name        = ask(" - Your full name: ")
+  @github_email     = ask(" - GitHub email: ")
+  @github_user      = ask(" - GitHub username: ")
+  @github_password  = ask(" - GitHub password: ")
+  @github_token     = ask(" - GitHub api token: ")
+  @projects_dir     = ask(" - Projects directory. Like `~/Projects`: ")
 
   puts "\nHello! #{@full_name}"
   exit if ask("Continue? y/n: ", false)!='y'
