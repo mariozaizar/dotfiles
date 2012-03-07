@@ -50,13 +50,13 @@ function rvm_version {
 function vagrant_status {
   local status=""
   if [ -f 'Vagrantfile' ]; then
-    # TODO FIXME - This is not working with rbenv
-    # if which vagrant > /dev/null;  then
-      status="$(bundle exec vagrant status | sed -n 3p)"
+    # This will work only for Vagrant +1.0
+    if which vagrant > /dev/null;  then
+      status="$(vagrant status | sed -n 3p)"
       status="$(echo $status)"
-    # else
-      # status="(vagrant)"
-    # fi
+    else
+      status="(vagrant)"
+    fi
   fi
   [ "$status" != "" ] && echo "vagrant: $status "
 }
