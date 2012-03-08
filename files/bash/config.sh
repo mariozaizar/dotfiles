@@ -27,7 +27,7 @@ eval "$(rbenv init -)"
 
 ################################################################################
 # Homebrew should be before system-provided path
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Personal
 export DEV_ENV="vagrant";
