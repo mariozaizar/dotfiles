@@ -37,7 +37,9 @@ This is the current list of files:
     ~/.rvmrc
     ~/.smb/smb.conf
     ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings"
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings
+    ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-setting
 
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/rbenv.png)
 

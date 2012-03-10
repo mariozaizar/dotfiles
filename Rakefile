@@ -131,7 +131,7 @@ end
 desc "Uninstall this! move back the .old files as normal!"
 ################################################################################
 task :uninstall do
-  puts "SORRY FOR ANY TROUBLE. But don't worry, your original files are safe."
+  puts "SORRY FOR ANY TROUBLE. But don't worry, your original files are safe as (.old backups)."
   puts "Just remove the '.old' extension from all of this files:\n\n"
 
   system %Q{find ~ -name "*.old"}

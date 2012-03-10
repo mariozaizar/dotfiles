@@ -16,7 +16,7 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 
 elif which rvm > /dev/null; then
-  # RVM
+  # RVM installed
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
   export PATH=$PATH:$HOME/.rvm/bin;
 
