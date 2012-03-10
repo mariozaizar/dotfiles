@@ -21,7 +21,7 @@ function ruby_version {
   if which rbenv > /dev/null; then
     # rbenv installed
     version="rbenv: $(rbenv_version)";
-  elif which rbenv > /dev/null; then
+  elif which rvm > /dev/null; then
     # rvm installed
     version=echo "rvm: $(rvm_version)";
   elif [ -f '.rbenv_version' ]; then
@@ -108,6 +108,16 @@ function git_info {
 
 ################################################################################
 # Devpromt - http://tinyurl.com/4kzgb7k (colors from 0;30 to 0;37)
+
+#  Negro       0;30     Gris Obscuro  1;30
+#  Azul        0;34     Azul Claro    1;34
+#  Verde       0;32     Verde Claro   1;32
+#  Cyan        0;36     Cyan Claro    1;36
+#  Rojo        0;31     Rojo Claro    1;31
+#  Purpura     0;35     Fiuscha       1;35
+#  Café        0;33     Amarillo      1;33
+#  Gris Claro  0;37     Blanco        1;37
+
 if [ "$color_prompt" = yes ]; then
   line1='\n\[\e[1;34m\]\@ \[\e[1;33m\]\w\n'
   line2='\[\e[1;36m\]$(ruby_version)$(git_info)$(vagrant_status)\n'

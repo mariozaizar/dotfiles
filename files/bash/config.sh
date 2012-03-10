@@ -9,26 +9,29 @@ else
 fi
 
 ################################################################################
-# RVM (warning rbenv/rvm are incompatibles)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-export PATH=$PATH:$HOME/.rvm/bin;
+# Ruby and friends (warning rbenv/rvm are incompatibles)
+if which rbenv > /dev/null; then
+  # rbenv installed
+  export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
+  eval "$(rbenv init -)"
 
-# RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
-# export CC=/usr/bin/gcc-4.2
+elif which rvm > /dev/null; then
+  # RVM
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+  export PATH=$PATH:$HOME/.rvm/bin;
 
-# This fix MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
-# But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
-# export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
-################################################################################
-# rbenv (warning rbenv/rvm are incompatibles)
-export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
-eval "$(rbenv init -)"
+  # RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
+  # export CC=/usr/bin/gcc-4.2
+fi
 
 ################################################################################
 # Homebrew should be before system-provided path
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# This fix MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
+# But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
+# export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+
 # Personal
 export DEV_ENV="vagrant";
-export EDITOR="subl"
+# export EDITOR="subl"
