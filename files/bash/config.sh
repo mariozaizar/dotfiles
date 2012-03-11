@@ -10,12 +10,12 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
-if which rbenv > /dev/null; then
+if [ -e "$HOME/.rbenv/bin/rbenv" ]; then
   # rbenv installed
   export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
   eval "$(rbenv init -)"
 
-elif which rvm > /dev/null; then
+elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
   # RVM installed
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
   export PATH=$PATH:$HOME/.rvm/bin;
