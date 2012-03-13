@@ -34,4 +34,4 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Personal
 export DEV_ENV="vagrant";
-# export EDITOR="subl"
+export EDITOR="subl -w"
