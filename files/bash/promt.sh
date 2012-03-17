@@ -118,18 +118,19 @@ function git_info {
 #  Café        0;33     Amarillo      1;33
 #  Gris Claro  0;37     Blanco        1;37
 
+# Note: don't mess with other's promts. Don't use export PS1
 if [ "$color_prompt" = yes ]; then
   line1='\n\[\e[1;34m\]\@ \[\e[1;33m\]\w\n'
   line2='\[\e[1;36m\]$(ruby_version)$(git_info)$(vagrant_status)\n'
   line3='\[\e[1;34m\]\W \[\e[1;33m\]\$ \[\e[0;37m\]'
 
-  export PS1="${line1}${line2}${line3}"
+  PS1="${line1}${line2}${line3}"
 else
   line1='\n\@ \w\n'
   line2='$(ruby_version)$(git_info)$(vagrant_status)\n'
   line3='\W \$ '
 
-  export PS1="${line1}${line2}${line3}"
+  PS1="${line1}${line2}${line3}"
 fi
 
 unset color_prompt
