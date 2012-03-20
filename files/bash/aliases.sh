@@ -12,7 +12,6 @@ alias create='touch'
 alias find_text='grep -Rin --color'
 alias find_usages='grep -ien --color'
 alias reload='source ~/.bash_profile'
-alias create='touch'
 
 # Ruby
 alias be='bundle exec'
