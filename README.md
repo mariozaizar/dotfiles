@@ -18,7 +18,8 @@ A simple way to configure your bash shell as developer [terminal][cli].
 There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/editor.png)
+> This is a developer promt.
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_complete.png)
 
 This is the current list of files:
 
@@ -41,7 +42,8 @@ This is the current list of files:
     ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-setting
 
-![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/rbenv.png)
+> The default promt is pretty simple:
+![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_simple.png)
 
 ## Requirements
 
@@ -55,6 +57,9 @@ This is the current list of files:
 
     git clone https://github.com/mariozaizar/dotfiles.git;
     cd dotfiles;
+
+> Type rake -T to see the available commands:
+![rake](http://github.com/mariozaizar/dotfiles/raw/master/images/rake.png)
 
 ### 2) Test it!
 
@@ -90,6 +95,9 @@ will copy this files inside your home directory (making backups if necessary).
 restore the original files by removing the `*.old` extension.
 
     $ rake uninstall
+
+> Uninstall example
+![uninstall](http://github.com/mariozaizar/dotfiles/raw/master/images/uninstall.png)
 
 ## Contribute
 
@@ -131,3 +139,4 @@ Over the time I based my configurations on this awesome resources:
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
 [vagrant]: http://vagrantup.com
+[irb]: http://en.wikipedia.org/wiki/Interactive_Ruby_Shell
