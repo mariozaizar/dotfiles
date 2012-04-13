@@ -112,15 +112,15 @@ I work for [Crowd Interactive][crowd].
 This project started as me grabbing scripts, mods and hacks to use better tools.
 Over the time I based my configurations on this awesome resources:
 
-- [Ryan Bates dotFiles](https://github.com/ryanb/dotfiles)
-- [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html).
-- Git promt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k)
-- [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), http://tinyurl.com/2dq9pkv
-- [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
-- [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
-- [Alias from @dabit](https://gist.github.com/1270654)
-- [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
-- My [CrowdInt][crowd] friends
+[Ryan Bates dotFiles](https://github.com/ryanb/dotfiles), 
+[Git aliases](http://library.edgecase.com/git_immersion/lab_11.html), 
+Git promt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k), 
+[Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), <http://tinyurl.com/2dq9pkv>, 
+[Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272), 
+[Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips), 
+[Alias from @dabit](https://gist.github.com/1270654), 
+[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles), 
+My [CrowdInt][crowd] friends
 
 [about]: http://about.me/mariozaizar
 [twitter]: http://twitter.com/mariozaizar
