@@ -2,7 +2,7 @@
 A simple way to configure your bash shell as developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
-![bash screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/bash.png)
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_complete.png)
 
 ## Features
 
@@ -17,9 +17,6 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - **Editor and Terminal themes.**  
 There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
-
-> This is a developer promt.
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_complete.png)
 
 This is the current list of files:
 
@@ -42,8 +39,8 @@ This is the current list of files:
     ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-setting
 
-> The default promt is pretty simple:
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_simple.png)
+> The default promt is pretty simple:
 
 ## Requirements
 
@@ -58,8 +55,8 @@ This is the current list of files:
     git clone https://github.com/mariozaizar/dotfiles.git;
     cd dotfiles;
 
-> Type rake -T to see the available commands:
 ![rake](http://github.com/mariozaizar/dotfiles/raw/master/images/rake.png)
+> Type rake -T to see the available commands:
 
 ### 2) Test it!
 
@@ -96,14 +93,13 @@ restore the original files by removing the `*.old` extension.
 
     $ rake uninstall
 
-> Uninstall example
 ![uninstall](http://github.com/mariozaizar/dotfiles/raw/master/images/uninstall.png)
+> Uninstall example
 
 ## Contribute
 
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
 [suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
-### [Click here to SUPPORT!](http://goo.gl/QF88m)
 
 ## About
 
