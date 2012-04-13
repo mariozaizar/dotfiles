@@ -115,6 +115,7 @@ Over the time I based my configurations on this awesome resources:
 - [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272).
 - [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips).
 - [Alias from @dabit](https://gist.github.com/1270654)
+- [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles)
 - My [CrowdInt][crowd] friends
 
 [about]: http://about.me/mariozaizar
