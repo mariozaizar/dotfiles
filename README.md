@@ -120,6 +120,7 @@ Git promt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/
 [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips), 
 [Alias from @dabit](https://gist.github.com/1270654), 
 [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles), 
+[Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/), 
 My [CrowdInt][crowd] friends
 
 [about]: http://about.me/mariozaizar
