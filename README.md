@@ -47,6 +47,7 @@ This is the current list of files:
 - Mac OSX (Lion tested)
 - Git ([git-scm.com](http://git-scm.com))
 - GitHub account ([github.com](http://github.com))
+- Ruby installed (also rake) ([ruby-lang.org](http://www.ruby-lang.org/en/))
 
 ## Installation
 
