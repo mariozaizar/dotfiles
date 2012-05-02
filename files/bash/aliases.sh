@@ -28,8 +28,8 @@ alias go='git checkout '
 
 # Rails
 alias r='rails'
-alias rails_log='tail -f ./log/development.log'
-alias rails_test_log='tail -f ./log/test.log'
+alias rails_log='tail -f ./log/development.log | grep --invert-match DEBUG'
+alias rails_test_log='tail -f ./log/test.log | grep --invert-match DEBUG'
 
 # Rails 2 & 3 functions
 # http://tinyurl.com/4j83zdv
