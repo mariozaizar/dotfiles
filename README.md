@@ -20,24 +20,25 @@ like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 This is the current list of files:
 
-    ~/.bash_aliases
-    ~/.bash_completion
-    ~/.bash_config
-    ~/.bash_promt
-    ~/.bash_profile
-    ~/.bashrc
-    ~/.diffmerge.sh
-    ~/.gemrc
-    ~/.gitconfig
-    ~/.gitignore
-    ~/.hgignore_global
-    ~/.irbrc
-    ~/.rvmrc
-    ~/.smb/smb.conf
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings
-    ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-setting
+    ~/.bash_aliases",
+    ~/.bash_completion",
+    ~/.bash_config",
+    ~/.bash_promt",
+    ~/.bash_profile",
+    ~/.bashrc",
+    ~/.diffmerge.sh",
+    ~/.gemrc",
+    ~/.gitconfig",
+    ~/.gitignore",
+    ~/.Guardfile",
+    ~/.hgignore_global",
+    ~/.irbrc",
+    ~/.rvmrc",
+    ~/.smb/smb.conf",
+    ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings"
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
 
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_simple.png)
 > The default promt is pretty simple:

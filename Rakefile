@@ -14,14 +14,15 @@ FILES = {
   "files/gemrc.yml"               => "~/.gemrc",
   "files/gitconfig.ini"           => "~/.gitconfig",
   "files/gitignore"               => "~/.gitignore",
+  "files/guardfile.rb"            => "~/.Guardfile",
   "files/hgignore_global"         => "~/.hgignore_global",
   "files/irbrc.rb"                => "~/.irbrc",
   "files/rvmrc.sh"                => "~/.rvmrc",
   "files/smb.conf.ini"            => "~/.smb/smb.conf",
-  "files/sublime/keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-  "files/sublime/settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
   "files/sublime/gist.json"       => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+  "files/sublime/keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
   "files/sublime/packages.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings"
+  "files/sublime/settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
 }
 
 LINKS = {
