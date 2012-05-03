@@ -1,16 +1,15 @@
+################################################################################
 # Guardfile - The big example
 # Place this file as ~/.Guardfile and run: `bundle exec guard`
 
 # To customize, edit this list:
-# Or, limit by group and run `bundle exec guard -g frontend`
-watch_list = %w{ bundler pow sass shell rspec1 }
+watch_list = %w{ bundler pow sass minimize rspec1 }
 
 # Guard help: https://github.com/guard/guard
 # Plugins help: https://github.com/guard/guard-[plugin-name]
-# Example: https://github.com/guard/guard-sass
 
 ################################################################################
-# group :global do
+group :global do # `bundle exec guard -g group-name`
 
   guard :bundler do
     watch 'Gemfile'
@@ -27,16 +26,6 @@ watch_list = %w{ bundler pow sass shell rspec1 }
     watch %r{^config/.+\.rb$}
   end if watch_list.include? 'pow'
 
-# end
-################################################################################
-# group :frontend do
-
-  guard :shell do
-    # Minimize the css/js after restart pow
-    watch 'tmp/restart.txt' do |m| `bundle exec rake css:min` end
-    watch 'tmp/restart.txt' do |m| `bundle exec rake js:min` end
-  end if watch_list.include? 'minimize'
-
   guard :sass,  :input          => 'public/sass',
                 :output         => 'public/stylesheets',
                 :notification   => "true",
@@ -44,6 +33,11 @@ watch_list = %w{ bundler pow sass shell rspec1 }
                 :style          => "compressed",
                 :line_comments  => "true" do
   end if watch_list.include? 'sass'
+
+  guard :shell do
+    watch 'tmp/restart.txt' do |m| `bundle exec rake css:min` end
+    watch 'tmp/restart.txt' do |m| `bundle exec rake js:min` end
+  end if watch_list.include? 'minimize'
 
   guard 'puma' do
     watch 'Gemfile.lock'
@@ -62,20 +56,12 @@ watch_list = %w{ bundler pow sass shell rspec1 }
  #    watch %r{^config/locales/.+\.yml}
  # end if watch_list.include? 'livereload'
 
-# end
-# ################################################################################
-# group :backend do
-
   guard :redis if watch_list.include? 'redis'
 
   guard :resque, :environment => 'development' do
     watch %r{^app/(.+)\.rb$}
     watch %r{^lib/(.+)\.rb$}
   end if watch_list.include? 'resque'
-
-# end
-# ################################################################################
-# group :test do
 
 # TODO(mariozaizar) this is running all the tests
   # guard 'cucumber' do
@@ -95,8 +81,10 @@ watch_list = %w{ bundler pow sass shell rspec1 }
   #   watch 'spec/spec_helper.rb'
   # end if watch_list.include? 'spork'
 
-# TODO(mariozaizar) remove duplicates
-  guard 'rspec', :version => 1, :all_after_pass => true, :all_on_start => false do
+  guard :rspec, :version        => 1,
+                :all_after_pass => false,
+                :all_on_start   => false,
+                :keep_failed    => false do
     watch %r{^spec/.+_spec\.rb$}
     watch %r{^app/(.+)\.rb$}                           do |m| "spec/#{m[1]}_spec.rb" end
     watch %r{^lib/(.+)\.rb$}                           do |m| "spec/lib/#{m[1]}_spec.rb" end
@@ -105,7 +93,11 @@ watch_list = %w{ bundler pow sass shell rspec1 }
     watch 'config/routes.rb'                           do "spec/routing" end
   end if watch_list.include? 'rspec1'
 
-  # guard :rspec, :version => 2, :all_after_pass => true, :all_on_start => true do
+# TODO(mariozaizar) remove duplicated
+  # guard :rspec, :version        => 2,
+  #               :all_after_pass => false,
+  #               :all_on_start   => false,
+  #               :keep_failed    => false do
   #   watch %r{^app/(.*)(\.erb|\.haml)$}                 { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
   #   watch %r{^app/(.+)\.rb$}                           { |m| "spec/#{m[1]}_spec.rb" }
   #   watch %r{^app/(.+)\.rb}                                                   { |m| "spec/#{m[1]}_spec.rb" }
@@ -126,4 +118,4 @@ watch_list = %w{ bundler pow sass shell rspec1 }
   #   watch 'spec/spec_helper.rb')  { "spec" }
   # end if watch_list.include? 'rspec2'
 
-# end
+end
