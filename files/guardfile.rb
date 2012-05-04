@@ -3,10 +3,14 @@
 # Place this file as ~/.Guardfile and run: `bundle exec guard`
 
 # To customize, edit this list:
-watch_list = %w{ bundler pow sass minimize rspec1 }
+watch_list = %w{ bundler pow sass minimize cucumber rspec1 }
 
 # Guard help: https://github.com/guard/guard
 # Plugins help: https://github.com/guard/guard-[plugin-name]
+
+# Don't run all the guards when user press enter on guard console
+interactor :off
+ignore_paths 'public/stylesheets', 'public/javascripts/minimized'
 
 ################################################################################
 group :global do # `bundle exec guard -g group-name`
@@ -36,7 +40,7 @@ group :global do # `bundle exec guard -g group-name`
 
   guard :shell do
     watch 'tmp/restart.txt' do |m| `bundle exec rake css:min` end
-    watch 'tmp/restart.txt' do |m| `bundle exec rake js:min` end
+    # watch 'tmp/restart.txt' d o |m| `bundle exec rake js:min` end
   end if watch_list.include? 'minimize'
 
   guard 'puma' do
@@ -63,12 +67,11 @@ group :global do # `bundle exec guard -g group-name`
     watch %r{^lib/(.+)\.rb$}
   end if watch_list.include? 'resque'
 
-# TODO(mariozaizar) this is running all the tests
-  # guard 'cucumber' do
-  #   watch %r{^features/.+\.feature$}
-  #   watch %r{^features/step_definitions/(.+)_steps\.rb$}  do |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' end
-  #   watch %r{^features/support/.+$}                       do 'features' end
-  # end if watch_list.include? 'cucumber'
+  guard 'cucumber' do
+    watch %r{^features/.+\.feature$}
+    watch %r{^features/step_definitions/(.+)_steps\.rb$}  do |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' end
+    watch %r{^features/support/.+$}                       do 'features' end
+  end if watch_list.include? 'cucumber'
 
 # TODO(mariozaizar) test this
   # guard 'spork', wait: 60, cucumber: false, rspec: true, test_unit: false do
