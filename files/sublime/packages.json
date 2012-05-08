@@ -1,10 +1,15 @@
 {
-	"auto_upgrade_last_run": 1331855183,
+	"auto_upgrade_last_run": 1336490526,
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
+		"BracketHighlighter",
+		"Case Conversion",
+		"ChangeQuotes",
 		"CoffeeScript",
 		"Cucumber",
+		"DetectSyntax",
 		"Gist",
 		"Git",
 		"Guard",
@@ -13,10 +18,15 @@
 		"Markdown Preview",
 		"Package Control",
 		"SCSS",
+		"Shell Turtlestein",
+		"Simple Rails Navigator",
 		"SublimeExternalCommand",
+		"SublimeGoogle",
+		"Terminal",
 		"TestChooser",
 		"Theme - Pseudo OSX",
 		"Theme - Soda",
+		"Themr",
 		"TrailingSpaces"
 	]
 }
