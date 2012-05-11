@@ -21,7 +21,7 @@ FILES = {
   "files/smb.conf.ini"            => "~/.smb/smb.conf",
   "files/sublime/gist.json"       => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
   "files/sublime/keymap.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-  "files/sublime/packages.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings"
+  "files/sublime/packages.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
   "files/sublime/settings.json"   => "~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings",
 }
 
@@ -76,6 +76,11 @@ def create_files testing=true
   puts "\nReplace #{FILES.count} files:"
 
   FILES.each do |from, to|
+
+    # Abort if the destination parent folder doesn't exists, like when
+    # "~/Library/Application Support/Sublime Text 2/" is not installed at all
+    next unless Directory.exist?(File.expand_path(to))
+
     puts "\n - Moving #{from} to #{to}"
     to.gsub!('~', HOME_DIR)
 
@@ -126,6 +131,28 @@ task :install do
 
   puts "\nIf you like it, click here: http://goo.gl/QF88m"
   puts "-Mario"
+end
+
+namespace :install do
+  ##############################################################################
+  desc "Install on Linux support. Beta!"
+  ##############################################################################
+  task :linux do
+
+    # TODO(mariozaizar) For now just, fake data
+    @full_name        = "Your Name"
+    @github_user      = "YourGithubUsername"
+    @github_email     = "your@github.com"
+    @github_password  = "GitHub password"
+    @github_token     = "GitHub api token"
+    @projects_dir     = "~/Documents"
+
+    create_files false
+    system %Q{source ~/.bash_profile}
+
+    puts "\nIf you like it, click here: http://goo.gl/QF88m"
+    puts "-Mario"
+  end
 end
 
 ################################################################################
