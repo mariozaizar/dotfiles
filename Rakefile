@@ -148,7 +148,7 @@ namespace :install do
     @projects_dir     = "~/Documents"
 
     create_files false
-    system %Q{source ~/.bash_profile}
+    # system %Q{source ~/.bash_profile}
 
     puts "\nIf you like it, click here: http://goo.gl/QF88m"
     puts "-Mario"
