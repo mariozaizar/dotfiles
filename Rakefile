@@ -79,7 +79,7 @@ def create_files testing=true
 
     # Abort if the destination parent folder doesn't exists, like when
     # "~/Library/Application Support/Sublime Text 2/" is not installed at all
-    next unless Directory.exist?(File.expand_path(to))
+    next unless File.exist?(File.expand_path(File.dirname(to)))
 
     puts "\n - Moving #{from} to #{to}"
     to.gsub!('~', HOME_DIR)
