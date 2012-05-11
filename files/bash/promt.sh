@@ -30,6 +30,8 @@ function ruby_version {
   elif [ -f '.rvmrc' ]; then
     # rvmrc detected
     version="(.rvmrc)";
+  else
+    version="(unknown ruby)";
   fi
   [ "$version=" != '' ] && echo "$version  "
 }
