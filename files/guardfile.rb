@@ -3,7 +3,7 @@
 # Place this file as ~/.Guardfile and run: `bundle exec guard`
 
 # To customize, edit this list:
-watch_list = %w{ bundler pow sass minimize rspec1 livereload }
+watch_list = %w{ bundler pow sass minimize livereload }
 
 # Guard help: https://github.com/guard/guard
 # Plugins help: https://github.com/guard/guard-[plugin-name]
@@ -32,7 +32,7 @@ group :global do # `bundle exec guard -g group-name`
 
   guard :sass,  :input          => 'public/sass',
                 :output         => 'public/stylesheets',
-                :notification   => "true",
+                :notification   => "false",
                 :cache          => "true",
                 :style          => "compressed",
                 :line_comments  => "true" do
