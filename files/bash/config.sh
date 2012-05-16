@@ -33,5 +33,4 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 # Personal
-export DEV_ENV="vagrant";
 export EDITOR="subl -w"
