@@ -1,0 +1,20 @@
+{
+  // Path to the jslint jar.
+  // Leave blank to use bundled jar.
+  "jslint_jar": "",
+
+  // Options pass to jslint.
+  "jslint_options": "--indent 2",
+
+  // Ignore errors, regex.
+  "ignore_errors":
+  [
+      // "Expected an identifier and instead saw 'undefined' \(a reserved word\)"
+  ],
+
+  // run jslint on save.
+  "run_on_save": false,
+
+  // debug flag.
+  "debug": false
+}
