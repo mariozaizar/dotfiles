@@ -1,0 +1,12 @@
+{
+  // There are currently two options for terminal: iTerm or Terminal
+  "terminal": "iTerm",
+
+  // These are the search terms TestChooser will use when searching
+  // the RSpec or Cucumber file. Only terms listed here will show
+  // up in the choice list.
+  "search_terms": ["it", "describe", "context", "Scenario"],
+
+  "rspec_command": "bundle exec spec --drb",
+  "cucumber_command": "bundle exec cucumber --drb -r features/"
+}
