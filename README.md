@@ -99,6 +99,10 @@ restore the original files by removing the `*.old` extension.
 ![uninstall](http://github.com/mariozaizar/dotfiles/raw/master/images/uninstall.png)
 > Uninstall example
 
+## Other links
+
+- [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation)
+
 ## Contribute
 
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
