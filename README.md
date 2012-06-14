@@ -102,6 +102,7 @@ restore the original files by removing the `*.old` extension.
 ## Other links
 
 - [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation)
+- [Cucumber Bundle for Sublime](http://github.com/npverni/cucumber-sublime2-bundle)
 
 ## Contribute
 
