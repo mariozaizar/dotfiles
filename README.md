@@ -85,7 +85,10 @@ preview of the file content.
 
 *Note:* this will generate the files (for example `~/.gitconfig`) and then it
 will copy this files inside your home directory (making backups if necessary).
-
+So, that means that we will REPLACE the original files, but creating a backup 
+with `*.old` extension. Please go to 'Uninstall" section to see how to recover 
+your original files.
+ 
     $ rake install
     $ source ~/.bash_profile
 
