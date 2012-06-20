@@ -77,9 +77,6 @@ set showmatch
 set mat=5
 set list
 
-" Show $ at end of line and trailing space as ~ "
-set lcs=tab:\ \,eol:$,trail:.,extends:>,precedes:<
-
 " No blinking . "
 set novisualbell
 
