@@ -5,8 +5,8 @@
 
 require 'rubygems'
 
-IRB.conf[:HISTORY_FILE] = "~/.irb_history"
-IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:EVAL_HISTORY] = 200 # Try with: __
-IRB.conf[:PROMPT_MODE] = :INF_RUBY # DEFAULT, SIMPLE, XMP, INF_RUBY
-IRB.conf[:AUTO_INDENT] = true
+# IRB.conf[:HISTORY_FILE] = "~/.irb_history"
+# IRB.conf[:SAVE_HISTORY] = 1000
+# IRB.conf[:EVAL_HISTORY] = 200 # Try with: __
+# IRB.conf[:PROMPT_MODE] = :INF_RUBY # DEFAULT, SIMPLE, XMP, INF_RUBY
+# IRB.conf[:AUTO_INDENT] = true
