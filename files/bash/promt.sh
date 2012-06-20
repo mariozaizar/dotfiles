@@ -18,10 +18,10 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 ################################################################################
 function ruby_version {
   local version='';
-  if which rbenv > /dev/null; then
-    # rbenv installed
-    version="rbenv: $(rbenv_version)";
-  elif which rvm > /dev/null; then
+    if which rbenv > /dev/null; then
+      # rbenv installed
+      version="rbenv: $(rbenv_version)";
+    elif which rvm > /dev/null; then
     # rvm installed
     version=echo "rvm: $(rvm_version)";
   elif [ -f '.rbenv_version' ]; then
