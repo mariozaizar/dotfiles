@@ -44,6 +44,14 @@ function sc {
   fi
 }
 
+function sdbc {
+  if [ -x script/dbconsole ]; then
+    script/dbconsole
+  else
+    rake dbconsole
+  fi
+}
+
 sg () {
   if [ -f ./script/rails ]; then
     rails g $@

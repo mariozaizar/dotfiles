@@ -495,9 +495,9 @@ and don't need to be repeated here. Anything listed here will take precedence, h
   { "keys": ["super+9"], "command": "select_by_index", "args": { "index": 8 } },
   { "keys": ["super+0"], "command": "select_by_index", "args": { "index": 9 } },
 
-  { "keys": ["f2"], "command": "next_bookmark" },
+  { "keys": ["command+alt+b"], "command": "next_bookmark" },
   { "keys": ["shift+f2"], "command": "prev_bookmark" },
-  { "keys": ["super+f2"], "command": "toggle_bookmark" },
+  { "keys": ["command+b"], "command": "toggle_bookmark" },
   { "keys": ["super+shift+f2"], "command": "clear_bookmarks" },
   { "keys": ["alt+f2"], "command": "select_all_bookmarks" },
 
