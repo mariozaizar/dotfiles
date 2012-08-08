@@ -1,5 +1,5 @@
-source ~/.bash_config # rvm/rbenv, homebrew, paths
-source ~/.bash_promt
+source ~/.bash_config
+source ~/.bash_prompt
 source ~/.bash_aliases
 source ~/.bash_completion
 

@@ -2,17 +2,17 @@
 A simple way to configure your bash shell as developer [terminal][cli].  
 *by [Mario Zaizar](about)*
 
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_complete.png)
+![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_complete.png)
 
 ## Features
 
-- [Bash][bash] custom developer promt, nice colors, useful aliases…
-- [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, promt…
+- [Bash][bash] custom developer prompt, nice colors, useful aliases…
+- [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, prompt…
 - [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias (use the same for both).
 - [Ruby][ruby], [irb][irb] and [rubygems][gem] default settings.
-- Ruby versions like [rvm][rvm], [rbenv][rbenv] inside your promt.
-- Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in promt.
-- [Vagrant][vagrant] getting box state directly in promt!
+- Ruby versions like [rvm][rvm], [rbenv][rbenv] inside your prompt.
+- Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in prompt.
+- [Vagrant][vagrant] getting box state directly in prompt!
 
 - **Editor and Terminal themes.**  
 There is also a themes folder with some color skins for the most common apps,
@@ -23,7 +23,7 @@ This is the current list of files:
     ~/.bash_aliases
     ~/.bash_completion
     ~/.bash_config
-    ~/.bash_promt
+    ~/.bash_prompt
     ~/.bash_profile
     ~/.bashrc
     ~/.diffmerge.sh
@@ -41,8 +41,8 @@ This is the current list of files:
     ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings
     ~/.vimrc
 
-![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/promt_simple.png)
-> The default promt is pretty simple:
+![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_simple.png)
+> The default prompt is pretty simple:
 
 ## Requirements
 
@@ -125,7 +125,7 @@ Over the time I based my configurations on this awesome resources:
 
 [Ryan Bates dotFiles](https://github.com/ryanb/dotfiles), 
 [Git aliases](http://library.edgecase.com/git_immersion/lab_11.html), 
-Git promt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k), 
+Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k), 
 [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), <http://tinyurl.com/2dq9pkv>, 
 [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272), 
 [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips), 

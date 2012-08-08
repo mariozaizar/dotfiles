@@ -109,7 +109,7 @@ function git_info {
 }
 
 ################################################################################
-# Devpromt - http://tinyurl.com/4kzgb7k (colors from 0;30 to 0;37)
+# Devprompt - http://tinyurl.com/4kzgb7k (colors from 0;30 to 0;37)
 
 #  Negro       0;30     Gris Obscuro  1;30
 #  Azul        0;34     Azul Claro    1;34
@@ -120,7 +120,7 @@ function git_info {
 #  Café        0;33     Amarillo      1;33
 #  Gris Claro  0;37     Blanco        1;37
 
-# Note: don't mess with other's promts. Don't use export PS1
+# Note: don't mess with other's prompts. Don't use export PS1
 if [ "$color_prompt" = yes ]; then
   line1='\n\[\e[1;33m\]\w'
   line2='\n\[\e[1;36m\]$(git_info)$(ruby_version)$(vagrant_status)'
