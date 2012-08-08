@@ -1,5 +1,7 @@
 # OSX settings
 
+Others: <https://github.com/mathiasbynens/dotfiles/blob/master/.osx>
+
 #### Disable menu bar transparency
     defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 

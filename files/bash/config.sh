@@ -10,7 +10,11 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
-if [ -e "$HOME/.rbenv/bin/rbenv" ]; then
+if [ `which rbenv` ]; then
+  # rbenv installed with brew (or already in path)
+  eval "$(rbenv init -)"
+
+elif [ -e "$HOME/.rbenv/bin/rbenv" ]; then
   # rbenv installed
   export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
   eval "$(rbenv init -)"
