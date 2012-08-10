@@ -23,7 +23,7 @@ function ruby_version {
       version="rbenv: $(rbenv_version)";
     elif which rvm > /dev/null; then
     # rvm installed
-    version=echo "rvm: $(rvm_version)";
+    version="rvm: $(rvm_version)";
   elif [ -f '.rbenv_version' ]; then
     # rbenv_version detected
     version="(.rbenv_version)";
