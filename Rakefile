@@ -30,6 +30,7 @@ FILES = {
 
 LINKS = {
   "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
+  "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" => "/Applications/iPhoneSimulator.app",
   "~/.diffmerge.sh" => "/usr/bin/diffmerge"
 }
 
