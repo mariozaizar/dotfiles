@@ -36,8 +36,10 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
-# Make sublime your default editor
-export EDITOR="subl -w"
+# If sublime is installed, make it as your default editor
+if [ `which subl` ]; then
+  export EDITOR="subl -w"
+fi
 
 # Increase the Garbage Collector limits for Ruby: http://goo.gl/IP8Jj
 export RUBY_HEAP_MIN_SLOTS=1000000
