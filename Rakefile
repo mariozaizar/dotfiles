@@ -81,7 +81,7 @@ def create_files group
 
     # Folders
     folder = File.expand_path(File.dirname(to))
-    system %Q{ mkdir -p "#{folder}"} unless Directory.exist?(folder)
+    system %Q{ mkdir -p "#{folder}"} unless File.exist?(folder)
 
     # Backup
     if File.exist?(to) && !File.exist?("#{to}.old")
@@ -97,7 +97,7 @@ def create_files group
 end
 
 def list_files group
-  puts "\nGoing to replace this files:"
+  puts "Going to replace this files:"
   FILES[group].values.sort!.each do |value|
     puts "\t#{value}"
   end
@@ -125,7 +125,6 @@ task :install do
 end
 
 namespace :install do
-  # TODO(mariozaizar)
   # desc "Configures Sublime Text Editor"
   task :sublime do
     list_files :sublime
@@ -135,7 +134,6 @@ namespace :install do
     reload_bash
   end
 
-  # TODO(mariozaizar)
   # desc "Creates symbolic links"
   task :links do
     create_links
