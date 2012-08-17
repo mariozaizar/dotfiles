@@ -1,7 +1,7 @@
-source ~/.bash_config
-source ~/.bash_prompt
-source ~/.bash_aliases
-source ~/.bash_completion
+source ~/.bash/config
+source ~/.bash/prompt
+source ~/.bash/aliases
+source ~/.bash/completion
 
 # Use .localrc for settings specific to one system
 if [ -f ~/.localrc ]; then

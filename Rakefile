@@ -5,10 +5,10 @@ HOME_DIR = File.expand_path('~')
 
 FILES = {
   :dotfiles => {
-    "files/bash/aliases.sh"           => "~/.bash_aliases",
-    "files/bash/completion.sh"        => "~/.bash_completion",
-    "files/bash/config.sh"            => "~/.bash_config",
-    "files/bash/prompt.sh"            => "~/.bash_prompt",
+    "files/bash/aliases.sh"           => "~/.bash/aliases",
+    "files/bash/completion.sh"        => "~/.bash/completion",
+    "files/bash/config.sh"            => "~/.bash/config",
+    "files/bash/prompt.sh"            => "~/.bash/prompt",
     "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bashrc.sh"                 => "~/.bashrc",
     "files/gemrc.yml"                 => "~/.gemrc",
@@ -128,7 +128,7 @@ task :install do
   get_user_information
 
   list_files :dotfiles
-  exit if ask("Continue? y/n: ", false)!='y'
+  exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
   create_files :dotfiles
   reload_bash
@@ -139,7 +139,7 @@ namespace :install do
   # desc "Configures Sublime Text Editor"
   task :sublime do
     list_files :sublime
-    exit if ask("Continue? y/n: ", false)!='y'
+    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
     create_files :sublime
     reload_bash
@@ -148,7 +148,7 @@ namespace :install do
   # TODO(mariozaizar)
   # desc "Creates symbolic links"
   task :links do
-    exit if ask("Continue? y/n: ", false)!='y'
+    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
     create_links
     reload_bash
