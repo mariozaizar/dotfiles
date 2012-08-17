@@ -73,17 +73,14 @@ your original files.
 
     $ rake install
 
-#### Uninstall
-
-*Important!* This is not fully implemented. But at least you will see how to
-restore the original files by removing the `*.old` extension.
+### *) Uninstall
 
     $ rake uninstall
 
 ## Other links
 
+- [Sublime Text 2](http://sublimetext.com)
 - [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation)
-- [Cucumber Bundle for Sublime](http://github.com/npverni/cucumber-sublime2-bundle)
 
 ## Contribute
 
