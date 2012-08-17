@@ -75,7 +75,7 @@ def create_links
 end
 
 def create_files group
-  FILES[group].sort!.each do |from, to|
+  FILES[group].each do |from, to|
     puts "\t#{from} => #{to}"
     to.gsub!('~', HOME_DIR)
 
@@ -97,7 +97,7 @@ def create_files group
 end
 
 def list_files group
-  puts "\n#{group}:"
+  puts "\nGoing to replace this files:"
   FILES[group].values.sort!.each do |value|
     puts "\t#{value}"
   end
@@ -111,13 +111,6 @@ end
 desc "Help"
 task :help do
   puts "Please execute rake -T to see the available commands."
-end
-
-desc "List of files to be replaced"
-task :list do
-  [ :dotfiles, :sublime ].each do |group|
-    list_files group
-  end
 end
 
 desc "At user's home directory"
@@ -145,8 +138,6 @@ namespace :install do
   # TODO(mariozaizar)
   # desc "Creates symbolic links"
   task :links do
-    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
-
     create_links
     reload_bash
   end
