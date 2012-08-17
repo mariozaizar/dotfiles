@@ -118,8 +118,9 @@ def reload_bash
 end
 
 ################################################################################
-desc "List of files to be replaced"
+desc "Help"
 task :help do
+  puts "We will replace this files (creating a backup first):"
   [ :dotfiles, :sublime ].each do |group|
     list_files group
   end
@@ -151,7 +152,8 @@ end
 
 desc "Where to find the backup files"
 task :uninstall do
-  puts "\nYour original files are safe as *.old files:\n\n"
+  puts "\nYour original files are safe as *.old files."
+  puts "Searching for *.old files:\n\n"
   system %Q{find ~ -name "*.old"}
 
   puts "\nJust remove the '.old' extension and restart your terminal."
