@@ -43,7 +43,7 @@ def get_user_information
   @full_name        = ask(" - Your full name: ")
   @github_user      = ask(" - GitHub username: ")
   @github_email     = ask(" - GitHub email: ")
-  @projects_dir     = ask(" - Projects directory. Like `~/Projects`: ")
+  @projects_dir     = ask(" - Work directory. Like `~/Projects`: ")
 
   puts "\nHello! #{@full_name}"
 end
@@ -117,9 +117,15 @@ def reload_bash
 end
 
 ################################################################################
+task :default => :help
+
 desc "Help"
 task :help do
-  puts "We will replace this files (creating a backup first):"
+  puts "Please execute rake -T to see the available commands."
+end
+
+desc "List of files to be replaced"
+task :list do
   [ :dotfiles, :sublime ].each do |group|
     list_files group
   end
