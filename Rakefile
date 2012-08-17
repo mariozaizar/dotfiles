@@ -4,36 +4,39 @@ require 'erb'
 HOME_DIR = File.expand_path('~')
 
 FILES = {
-  "files/bash/aliases.sh"           => "~/.bash_aliases",
-  "files/bash/completion.sh"        => "~/.bash_completion",
-  "files/bash/config.sh"            => "~/.bash_config",
-  "files/bash/prompt.sh"            => "~/.bash_prompt",
-  "files/bash_profile.sh"           => "~/.bash_profile",
-  "files/bashrc.sh"                 => "~/.bashrc",
-  "files/diffmerge.sh"              => "~/.diffmerge.sh",
-  "files/gemrc.yml"                 => "~/.gemrc",
-  "files/gitconfig.ini"             => "~/.gitconfig",
-  "files/gitignore"                 => "~/.gitignore",
-  "files/guardfile.rb"              => "~/.Guardfile",
-  "files/hgignore_global"           => "~/.hgignore_global",
-  "files/irbrc.rb"                  => "~/.irbrc",
-  "files/rvmrc.sh"                  => "~/.rvmrc",
-  "files/smb.conf.ini"              => "~/.smb/smb.conf",
-  "files/sublime/gist.json"         => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
-  "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-  "files/sublime/packages.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
-  "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-  "files/sublime/jslint.json"       => "~/Library/Application Support/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings",
-  "files/sublime/test_chooser.json" => "~/Library/Application Support/Sublime Text 2/Packages/TestChooser/TestChooser.sublime-settings",
-  "files/vimrc.sh"                  => "~/.vimrc"
+  :dotfiles => {
+    "files/bash/aliases.sh"           => "~/.bash_aliases",
+    "files/bash/completion.sh"        => "~/.bash_completion",
+    "files/bash/config.sh"            => "~/.bash_config",
+    "files/bash/prompt.sh"            => "~/.bash_prompt",
+    "files/bash_profile.sh"           => "~/.bash_profile",
+    "files/bashrc.sh"                 => "~/.bashrc",
+    "files/gemrc.yml"                 => "~/.gemrc",
+    "files/gitconfig.ini"             => "~/.gitconfig",
+    "files/gitignore"                 => "~/.gitignore",
+    "files/guardfile.rb"              => "~/.Guardfile",
+    "files/hgignore_global"           => "~/.hgignore_global",
+    "files/irbrc.rb"                  => "~/.irbrc",
+    "files/rvmrc.sh"                  => "~/.rvmrc",
+    "files/smb.conf.ini"              => "~/.smb/smb.conf",
+    "files/vimrc.sh"                  => "~/.vimrc" },
+
+  :sublime => {
+    "files/sublime/gist.json"         => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+    "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+    "files/sublime/packages.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+    "files/sublime/jslint.json"       => "~/Library/Application Support/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings",
+    "files/sublime/test_chooser.json" => "~/Library/Application Support/Sublime Text 2/Packages/TestChooser/TestChooser.sublime-settings"
+  }
 }
 
 LINKS = {
   "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
-  "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" => "/Applications/iPhoneSimulator.app",
-  "~/.diffmerge.sh" => "/usr/bin/diffmerge"
+  "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" => "/Applications/iPhoneSimulator.app"
 }
 
+################################################################################
 def get_user_information
   puts "\nPlease write your information:"
 
@@ -74,10 +77,16 @@ def create_links
   end
 end
 
-def create_files
-  puts "\nReplace #{FILES.count} files:"
+def list_files group
+  puts "\n#{group}:"
+  FILES[group].values.each do |value|
+    puts "\t#{value}"
+  end
+end
 
-  FILES.each do |from, to|
+def create_files group
+  puts "\nReplace #{FILES[group].count} files:"
+  FILES[group].each do |from, to|
 
     # Abort if the destination parent folder doesn't exists, like when
     # "~/Library/Application Support/Sublime Text 2/" is not installed at all
@@ -104,42 +113,47 @@ def create_files
   end
 end
 
-desc "Install the dot files into user's home directory and create symbolic links."
-task :install do
-  get_user_information
-  create_files false
-  create_links false
+def reload_bash
   system %Q{source ~/.bash_profile}
-
-  puts "\nIf you like it, click here: http://goo.gl/QF88m"
-  puts "-Mario"
 end
 
-namespace :install do
-  desc "Install on Linux support. Beta!"
-  task :linux do
-
-    # TODO(mariozaizar) For now just, fake data
-    @full_name        = "Your Name"
-    @github_user      = "YourGithubUsername"
-    @github_email     = "your@github.com"
-    @projects_dir     = "~/Documents"
-
-    create_files false
-    # system %Q{source ~/.bash_profile}
-
-    puts "\nIf you like it, click here: http://goo.gl/QF88m"
-    puts "-Mario"
+################################################################################
+desc "List of files to be replaced"
+task :help do
+  [ :dotfiles, :sublime ].each do |group|
+    list_files group
   end
 end
 
-desc "List where are the backup files!"
-task :uninstall do
-  puts "SORRY FOR ANY TROUBLE. But don't worry, your original files are safe as (.old backups)."
-  puts "Just remove the '.old' extension from all of this files:\n\n"
+desc "At user's home directory"
+task :install do
+  get_user_information
+  list_files group :dotfiles
 
+  create_files :dotfiles
+  reload_bash
+end
+
+namespace :install do
+  desc "Configures Sublime Text Editor"
+  task :sublime do
+    list_files group :sublime
+    create_files :sublime
+    reload_bash
+  end
+
+  desc "Creates symbolic links"
+  task :links do
+    create_links
+    reload_bash
+  end
+end
+
+desc "Where to find the backup files"
+task :uninstall do
+  puts "\nYour original files are safe as *.old files:\n\n"
   system %Q{find ~ -name "*.old"}
 
-  puts "\nAnd then restart your terminal."
+  puts "\nJust remove the '.old' extension and restart your terminal."
   puts "-Mario"
 end
