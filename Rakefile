@@ -46,7 +46,6 @@ def get_user_information
   @projects_dir     = ask(" - Projects directory. Like `~/Projects`: ")
 
   puts "\nHello! #{@full_name}"
-  exit if ask("Continue? y/n: ", false)!='y'
 end
 
 def ask message="", required=true
@@ -129,7 +128,9 @@ end
 desc "At user's home directory"
 task :install do
   get_user_information
+
   list_files group :dotfiles
+  exit if ask("Continue? y/n: ", false)!='y'
 
   create_files :dotfiles
   reload_bash
@@ -139,12 +140,16 @@ namespace :install do
   desc "Configures Sublime Text Editor"
   task :sublime do
     list_files group :sublime
+    exit if ask("Continue? y/n: ", false)!='y'
+
     create_files :sublime
     reload_bash
   end
 
   desc "Creates symbolic links"
   task :links do
+    exit if ask("Continue? y/n: ", false)!='y'
+
     create_links
     reload_bash
   end
@@ -152,7 +157,7 @@ end
 
 desc "Where to find the backup files"
 task :uninstall do
-  puts "\nYour original files are safe as *.old files."
+  puts "Your original files are safe as *.old files."
   puts "Searching for *.old files:\n\n"
   system %Q{find ~ -name "*.old"}
 
