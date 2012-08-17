@@ -59,21 +59,11 @@ This is the current list of files:
 
 ### 1) Get it!
 
-    git clone https://github.com/mariozaizar/dotfiles.git;
-    cd dotfiles;
-
-![rake](http://github.com/mariozaizar/dotfiles/raw/master/images/rake.png)
-> Type rake -T to see the available commands:
+    $ git clone https://github.com/mariozaizar/dotfiles.git;
+    $ cd dotfiles/;
+    $ rake help;
 
 ### 2) Install it!
-
-*Important:* in order to generate some files, you'll be asked to fill some
-information like this:
-
-    - Full name, *Mario Zaizar*
-    - GitHub email, *mariozaizar@gmail.com*
-    - GitHub username, *mariozaizar*
-    - Git projects directory, *~/Documents/Repos*
 
 *Note:* this will generate the files (for example `~/.gitconfig`) and then it
 will copy this files inside your home directory (making backups if necessary).
@@ -82,7 +72,6 @@ with `*.old` extension. Please go to 'Uninstall" section to see how to recover
 your original files.
 
     $ rake install
-    $ source ~/.bash_profile
 
 #### Uninstall
 
@@ -90,9 +79,6 @@ your original files.
 restore the original files by removing the `*.old` extension.
 
     $ rake uninstall
-
-![uninstall](http://github.com/mariozaizar/dotfiles/raw/master/images/uninstall.png)
-> Uninstall example
 
 ## Other links
 
