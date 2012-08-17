@@ -4,7 +4,7 @@
   "username": "<%= @github_user %>",
 
   // Your password on GitHub
-  "password": "<%= @github_password %>",
+  "password": "",
   //############################################################################
 
   // Proxy server

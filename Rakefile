@@ -40,8 +40,6 @@ def get_user_information
   @full_name        = ask(" - Your full name: ")
   @github_user      = ask(" - GitHub username: ")
   @github_email     = ask(" - GitHub email: ")
-  @github_password  = ask(" - GitHub password: ")
-  @github_token     = ask(" - GitHub api token: ")
   @projects_dir     = ask(" - Projects directory. Like `~/Projects`: ")
 
   puts "\nHello! #{@full_name}"
@@ -60,7 +58,7 @@ def ask message="", required=true
   data
 end
 
-def create_links testing=true
+def create_links
   puts "\nCreate #{LINKS.count} symbolic links:"
 
   LINKS.each do |from, to|
@@ -68,7 +66,7 @@ def create_links testing=true
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(from) && !File.exist?(to)
-      system %Q{ln -s "#{from}" "#{to}"} unless testing
+      system %Q{ln -s "#{from}" "#{to}"}
     else
       puts "   Abort: destination already exists!" if File.exist?(to)
       puts "   Abort: origin file doesn't exist!" unless File.exist?(from)
@@ -76,7 +74,7 @@ def create_links testing=true
   end
 end
 
-def create_files testing=true
+def create_files
   puts "\nReplace #{FILES.count} files:"
 
   FILES.each do |from, to|
@@ -93,40 +91,20 @@ def create_files testing=true
       puts "   Info: backup created at: #{to}.old"
 
       unless File.exist?("#{to}.old")
-        system %Q{cp "#{to}" "#{to}.old"} unless testing
+        system %Q{cp "#{to}" "#{to}.old"}
       else
         puts "   Abort: backup already exists!"
       end
     end
 
     content = ERB.new(File.read(from)).result(binding)
-    if testing
-      puts "   File content:"
-      puts "\n"
-      puts "-------------------------------------------------------------------"
-      puts "#{content}"
-      puts "-------------------------------------------------------------------"
-      puts "\n"
-    end
-
     File.open(to, 'w') do |new_file|
       new_file.write content
-    end unless testing
+    end
   end
 end
 
-################################################################################
-desc "Just test and print the results, Don't do anything yet."
-################################################################################
-task :test do
-  get_user_information
-  create_files
-  create_links
-end
-
-################################################################################
 desc "Install the dot files into user's home directory and create symbolic links."
-################################################################################
 task :install do
   get_user_information
   create_files false
@@ -138,17 +116,13 @@ task :install do
 end
 
 namespace :install do
-  ##############################################################################
   desc "Install on Linux support. Beta!"
-  ##############################################################################
   task :linux do
 
     # TODO(mariozaizar) For now just, fake data
     @full_name        = "Your Name"
     @github_user      = "YourGithubUsername"
     @github_email     = "your@github.com"
-    @github_password  = "GitHub password"
-    @github_token     = "GitHub api token"
     @projects_dir     = "~/Documents"
 
     create_files false
@@ -159,9 +133,7 @@ namespace :install do
   end
 end
 
-################################################################################
-desc "Uninstall this! move back the .old files as normal!"
-################################################################################
+desc "List where are the backup files!"
 task :uninstall do
   puts "SORRY FOR ANY TROUBLE. But don't worry, your original files are safe as (.old backups)."
   puts "Just remove the '.old' extension from all of this files:\n\n"
