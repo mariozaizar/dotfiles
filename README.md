@@ -20,13 +20,13 @@ like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
 This is the current list of files:
 
-    ~/.bash_aliases
-    ~/.bash_completion
-    ~/.bash_config
-    ~/.bash_prompt
+*dotfiles:*
+    ~/.bash/aliases
+    ~/.bash/completion
+    ~/.bash/config
+    ~/.bash/prompt
     ~/.bash_profile
     ~/.bashrc
-    ~/.diffmerge.sh
     ~/.gemrc
     ~/.gitconfig
     ~/.gitignore
@@ -35,11 +35,15 @@ This is the current list of files:
     ~/.irbrc
     ~/.rvmrc
     ~/.smb/smb.conf
+    ~/.vimrc
+
+*sublime:*
     ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings"
-    ~/Library/Application Support/Sublime Text 2/Packages/User/Base File.sublime-settings
-    ~/.vimrc
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings
+    ~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings
+    ~/Library/Application Support/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings
+    ~/Library/Application Support/Sublime Text 2/Packages/TestChooser/TestChooser.sublime-settings
 
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_simple.png)
 > The default prompt is pretty simple:
@@ -61,7 +65,7 @@ This is the current list of files:
 ![rake](http://github.com/mariozaizar/dotfiles/raw/master/images/rake.png)
 > Type rake -T to see the available commands:
 
-### 2) Test it!
+### 2) Install it!
 
 *Important:* in order to generate some files, you'll be asked to fill some
 information like this:
@@ -69,26 +73,14 @@ information like this:
     - Full name, *Mario Zaizar*
     - GitHub email, *mariozaizar@gmail.com*
     - GitHub username, *mariozaizar*
-    - GitHub api token, *123456789012345678901234567890*
-    - Git projects directory, *~/Documents/Repositorios*
-
-When you get ready with this information, run a simple test by:
-
-    $ rake test
-
-![test screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/test.png)
-
-This will show a list with all the files and full paths. But also including a
-preview of the file content.
-
-### 3) Install it!
+    - Git projects directory, *~/Documents/Repos*
 
 *Note:* this will generate the files (for example `~/.gitconfig`) and then it
 will copy this files inside your home directory (making backups if necessary).
 So, that means that we will REPLACE the original files, but creating a backup 
 with `*.old` extension. Please go to 'Uninstall" section to see how to recover 
 your original files.
- 
+
     $ rake install
     $ source ~/.bash_profile
 
@@ -129,7 +121,6 @@ Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com
 [Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), <http://tinyurl.com/2dq9pkv>, 
 [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272), 
 [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips), 
-[Alias from @dabit](https://gist.github.com/1270654), 
 [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles), 
 [Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/), 
 My [CrowdInt][crowd] friends
