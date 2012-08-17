@@ -9,10 +9,8 @@ FILES = {
     "files/bash/completion.sh"        => "~/.bash/completion",
     "files/bash/config.sh"            => "~/.bash/config",
     "files/bash/prompt.sh"            => "~/.bash/prompt",
-
     "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bashrc.sh"                 => "~/.bashrc",
-
     "files/gemrc.yml"                 => "~/.gemrc",
     "files/gitconfig.ini"             => "~/.gitconfig",
     "files/gitignore"                 => "~/.gitignore",
@@ -63,36 +61,34 @@ def ask message="", required=true
 end
 
 def create_links
-  puts "\nCreate #{LINKS.count} symbolic links:"
-
-  LINKS.each do |from, to|
-    puts "\n - Linking #{from} to #{to}"
+  LINKS.sort!.each do |from, to|
+    puts "\t#{from} => #{to}"
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(from) && !File.exist?(to)
       system %Q{ln -s "#{from}" "#{to}"}
     else
-      puts "   Abort: destination already exists!" if File.exist?(to)
-      puts "   Abort: origin file doesn't exist!" unless File.exist?(from)
+      puts "Abort: destination already exists!" if File.exist?(to)
+      puts "Abort: origin file doesn't exist!" unless File.exist?(from)
     end
   end
 end
 
 def create_files group
   FILES[group].sort!.each do |from, to|
-
-    # Abort if the destination parent folder doesn't exists, like when
-    # "~/Library/Application Support/Sublime Text 2/" is not installed at all
-    next unless File.exist?(File.expand_path(File.dirname(to)))
-
     puts "\t#{from} => #{to}"
     to.gsub!('~', HOME_DIR)
 
-    if File.exist?(to)
-      puts "\t  (exists, backup created)"
-      system %Q{cp "#{to}" "#{to}.old"} unless File.exist?("#{to}.old")
+    # Folders
+    folder = File.expand_path(File.dirname(to))
+    system %Q{ mkdir -p "#{folder}"} unless Directory.exist?(folder)
+
+    # Backup
+    if File.exist?(to) && !File.exist?("#{to}.old")
+      system %Q{cp "#{to}" "#{to}.old"}
     end
 
+    # Content
     content = ERB.new(File.read(from)).result(binding)
     File.open(to, 'w') do |new_file|
       new_file.write content
