@@ -84,18 +84,12 @@ def create_files group
     # "~/Library/Application Support/Sublime Text 2/" is not installed at all
     next unless File.exist?(File.expand_path(File.dirname(to)))
 
-    puts "\n - Moving #{from} to #{to}"
+    puts "\t - Replacing #{to} with #{from}"
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(to)
-      puts "   Warning: #{to} exists!"
-      puts "   Info: backup created at: #{to}.old"
-
-      unless File.exist?("#{to}.old")
-        system %Q{cp "#{to}" "#{to}.old"}
-      else
-        puts "   Abort: backup already exists!"
-      end
+      puts "\t (exists! backup created)"
+      system %Q{cp "#{to}" "#{to}.old"} unless File.exist?("#{to}.old")
     end
 
     content = ERB.new(File.read(from)).result(binding)
@@ -113,7 +107,7 @@ def list_files group
 end
 
 def reload_bash
-  system %Q{source ~/.bash_profile}
+  system %Q{ bash }
 end
 
 ################################################################################
@@ -141,7 +135,8 @@ task :install do
 end
 
 namespace :install do
-  desc "Configures Sublime Text Editor"
+  # TODO(mariozaizar)
+  # desc "Configures Sublime Text Editor"
   task :sublime do
     list_files :sublime
     exit if ask("Continue? y/n: ", false)!='y'
@@ -150,7 +145,8 @@ namespace :install do
     reload_bash
   end
 
-  desc "Creates symbolic links"
+  # TODO(mariozaizar)
+  # desc "Creates symbolic links"
   task :links do
     exit if ask("Continue? y/n: ", false)!='y'
 
@@ -163,7 +159,7 @@ desc "Where to find the backup files"
 task :uninstall do
   puts "Your original files are safe as *.old files."
   puts "Searching for *.old files:\n\n"
-  system %Q{find ~ -name "*.old"}
+  system %Q{ find ~ -name "*.old" }
 
   puts "\nJust remove the '.old' extension and restart your terminal."
   puts "-Mario"
