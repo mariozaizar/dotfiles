@@ -9,8 +9,10 @@ FILES = {
     "files/bash/completion.sh"        => "~/.bash/completion",
     "files/bash/config.sh"            => "~/.bash/config",
     "files/bash/prompt.sh"            => "~/.bash/prompt",
+
     "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bashrc.sh"                 => "~/.bashrc",
+
     "files/gemrc.yml"                 => "~/.gemrc",
     "files/gitconfig.ini"             => "~/.gitconfig",
     "files/gitignore"                 => "~/.gitignore",
@@ -77,18 +79,17 @@ def create_links
 end
 
 def create_files group
-  puts "\nReplace #{FILES[group].count} files:"
-  FILES[group].each do |from, to|
+  FILES[group].sort!.each do |from, to|
 
     # Abort if the destination parent folder doesn't exists, like when
     # "~/Library/Application Support/Sublime Text 2/" is not installed at all
     next unless File.exist?(File.expand_path(File.dirname(to)))
 
-    puts "\t - Replacing #{to} with #{from}"
+    puts "\t#{from} => #{to}"
     to.gsub!('~', HOME_DIR)
 
     if File.exist?(to)
-      puts "\t (exists! backup created)"
+      puts "\t  (exists, backup created)"
       system %Q{cp "#{to}" "#{to}.old"} unless File.exist?("#{to}.old")
     end
 
@@ -101,7 +102,7 @@ end
 
 def list_files group
   puts "\n#{group}:"
-  FILES[group].values.each do |value|
+  FILES[group].values.sort!.each do |value|
     puts "\t#{value}"
   end
 end
