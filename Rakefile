@@ -76,13 +76,6 @@ def create_links
   end
 end
 
-def list_files group
-  puts "\n#{group}:"
-  FILES[group].values.each do |value|
-    puts "\t#{value}"
-  end
-end
-
 def create_files group
   puts "\nReplace #{FILES[group].count} files:"
   FILES[group].each do |from, to|
@@ -112,13 +105,18 @@ def create_files group
   end
 end
 
+def list_files group
+  puts "\n#{group}:"
+  FILES[group].values.each do |value|
+    puts "\t#{value}"
+  end
+end
+
 def reload_bash
   system %Q{source ~/.bash_profile}
 end
 
 ################################################################################
-task :default => :help
-
 desc "Help"
 task :help do
   puts "Please execute rake -T to see the available commands."
@@ -135,7 +133,7 @@ desc "At user's home directory"
 task :install do
   get_user_information
 
-  list_files group :dotfiles
+  list_files :dotfiles
   exit if ask("Continue? y/n: ", false)!='y'
 
   create_files :dotfiles
@@ -145,7 +143,7 @@ end
 namespace :install do
   desc "Configures Sublime Text Editor"
   task :sublime do
-    list_files group :sublime
+    list_files :sublime
     exit if ask("Continue? y/n: ", false)!='y'
 
     create_files :sublime
@@ -170,3 +168,5 @@ task :uninstall do
   puts "\nJust remove the '.old' extension and restart your terminal."
   puts "-Mario"
 end
+
+task :default => :help
