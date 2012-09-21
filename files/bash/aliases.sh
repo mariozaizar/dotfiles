@@ -3,14 +3,15 @@
 alias work='clear; cd <%= @projects_dir %>;'
 ###############################################################################
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias exot='exit'
 alias claer='clear;' # Nada puede malir sal
+alias cls='clear; ls;'
 alias create='touch'
+alias exot='exit'
 alias find_text='grep -Rin --color'
 alias find_usages='grep -ien --color'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
 alias reload='source ~/.bash_profile'
 alias s='subl .'
 
