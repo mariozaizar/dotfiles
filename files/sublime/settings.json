@@ -51,7 +51,8 @@
   "hot_exit": false,
   "ignored_packages":
   [
-    "Vintage"
+    "Vintage",
+    "sublime-jslint"
   ],
   "indent_guide_options":
   [
@@ -68,13 +69,13 @@
     80,
     100
   ],
-  "save_on_focus_lost": true,
+  "save_on_focus_lost": false,
   "scroll_past_end": true,
   "shift_tab_unindent": true,
   "smart_indent": true,
   "spell_check": false,
   "tab_size": 2,
-  "theme": "Soda Dark.sublime-theme",
+  "theme": "Nexus.sublime-theme",
   "translate_tabs_to_spaces": true,
   "use_tab_stops": true,
   "word_wrap": false
