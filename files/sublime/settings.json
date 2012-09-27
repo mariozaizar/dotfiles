@@ -1,7 +1,7 @@
 {
   "auto_indent": true,
   "close_windows_when_empty": true,
-  "color_scheme": "Packages/Color Scheme - Default/Solarized (Dark).tmTheme",
+  "color_scheme": "Packages/Theme - Refined/Color Schemes/Tomorrow Night Refined.tmTheme",
   "dictionary": "Packages/Language - English/en_US.dic",
   "draw_minimap_border": true,
   "ensure_newline_at_eof_on_save": true,
@@ -45,14 +45,12 @@
   [
     "bold"
   ],
-  "font_size": 12.0,
   "highlight_line": true,
   "highlight_modified_tabs": true,
   "hot_exit": false,
   "ignored_packages":
   [
-    "Vintage",
-    "sublime-jslint"
+    "Vintage"
   ],
   "indent_guide_options":
   [
@@ -75,7 +73,7 @@
   "smart_indent": true,
   "spell_check": false,
   "tab_size": 2,
-  "theme": "Nexus.sublime-theme",
+  "theme": "Refined-Dark.sublime-theme",
   "translate_tabs_to_spaces": true,
   "use_tab_stops": true,
   "word_wrap": false
