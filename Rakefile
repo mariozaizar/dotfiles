@@ -124,8 +124,8 @@ task :install do
   reload_bash
 end
 
-namespace :install do
-  # desc "Configures Sublime Text Editor"
+namespace :configure do
+  desc "Configures Sublime Text Editor"
   task :sublime do
     list_files :sublime
     exit if ask("\nContinue? [Y/N]: ", false)!='Y'
