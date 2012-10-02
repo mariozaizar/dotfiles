@@ -38,7 +38,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # If sublime is installed, make it as your default editor
 if [ `which subl` ]; then
-  export EDITOR="subl -w"
+  export EDITOR="subl -a"
 fi
 
 # Increase the Garbage Collector limits for Ruby: http://goo.gl/IP8Jj
