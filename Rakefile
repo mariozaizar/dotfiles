@@ -124,6 +124,17 @@ task :install do
   reload_bash
 end
 
+task :install_without_info do
+  @full_name        = "Developer"
+  @github_user      = ""
+  @github_email     = ""
+  @projects_dir     = "~/Projects"
+
+  create_files :dotfiles
+  reload_bash
+end
+
+
 namespace :configure do
   desc "Configures Sublime Text Editor"
   task :sublime do
