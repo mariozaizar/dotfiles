@@ -13,7 +13,7 @@ alias l='ls -CF'
 alias la='ls -A'
 alias ll='ls -alF'
 alias reload='source ~/.bash_profile'
-alias s='subl .'
+alias s='subl . -a'
 
 # Ruby
 alias be='bundle exec'
