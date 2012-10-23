@@ -17,6 +17,9 @@ alias s='subl . -a'
 
 # Ruby
 alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+
 alias cuke="be cucumber -rfeatures -fprogress"
 alias pow_log='tail -f ~/Library/Logs/Pow/access.log'
 alias pow_restart='echo "Restarting pow..."; touch tmp/restart.txt'
