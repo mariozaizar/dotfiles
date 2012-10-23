@@ -21,6 +21,7 @@ like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 This is the current list of files:
 
 *dotfiles:*
+```
     ~/.bash/aliases
     ~/.bash/completion
     ~/.bash/config
@@ -36,14 +37,17 @@ This is the current list of files:
     ~/.rvmrc
     ~/.smb/smb.conf
     ~/.vimrc
+```
 
 *sublime:*
+```
     ~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap
     ~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings
     ~/Library/Application Support/Sublime Text 2/Packages/TestChooser/TestChooser.sublime-settings
+```
 
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_simple.png)
 > The default prompt is pretty simple:
