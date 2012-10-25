@@ -4,6 +4,9 @@
   { "keys": ["command+alt+b"], "command": "next_bookmark" },
   { "keys": ["command+shif+b"], "command": "prev_bookmark" },
   { "keys": ["command+b"], "command": "toggle_bookmark" },
+  { "keys": ["super+shift+o"], "command": "prompt_open" },
+  { "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+
   { "keys": ["command+1"], "command": "unfold_all" },
   { "keys": ["command+2"], "command": "fold_by_level", "args": {"level": 3} },
   { "keys": ["command+3"], "command": "fold_by_level", "args": {"level": 2} },
