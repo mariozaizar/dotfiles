@@ -42,8 +42,9 @@ if [ `which subl` ]; then
 fi
 
 # Increase the Garbage Collector limits for Ruby: http://goo.gl/IP8Jj
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+# http://blog.gomiso.com/2011/02/25/adventures-in-scaling-part-1-using-ree/
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
