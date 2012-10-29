@@ -10,20 +10,15 @@ else
   color_prompt=no
 fi
 
-# TODO, verify if we really need this
-color_prompt=yes
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-
 ################################################################################
 function ruby_version {
   local version='';
     if which rbenv > /dev/null; then
       # rbenv installed
-      version="rbenv: $(rbenv_version)";
+      version="rbenv/$(rbenv_version)";
     elif which rvm > /dev/null; then
     # rvm installed
-    version="rvm: $(rvm_version)";
+    version="rvm/$(rvm_version)";
   elif [ -f '.rbenv_version' ]; then
     # rbenv_version detected
     version="(.rbenv_version)";
@@ -33,7 +28,7 @@ function ruby_version {
   else
     version="(unknown ruby)";
   fi
-  [ "$version=" != '' ] && echo "$version  "
+  [ "$version=" != '' ] && echo "$version"
 }
 
 function rbenv_version {
@@ -51,24 +46,26 @@ function rvm_version {
 
 function vagrant_status {
   local status=""
+
   if [ -f 'Vagrantfile' ]; then
-    # This will work only for Vagrant +1.0
     if which vagrant > /dev/null;  then
       status="$(vagrant status | sed -n 3p)"
       status="$(echo $status)"
     else
-      status="(vagrant)"
+      status="not installed"
     fi
+  else
+    status="NA"
   fi
-  [ "$status" != "" ] && echo "vagrant: $status "
+
+  echo "$status"
 }
 
 # https://gist.github.com/778558
-__git_ps1 ()
-{
+__git_ps1 () {
     local branch="$(git symbolic-ref HEAD 2>/dev/null)";
     if [ -n "$branch" ]; then
-        printf "%s" "${branch##refs/heads/}";
+      printf "%s" "${branch##refs/heads/}";
     fi
 }
 
@@ -98,6 +95,15 @@ function time_ago {
 }
 
 # http://tinyurl.com/4q6zehb, https://gist.github.com/778558
+function git_branch {
+  if [ -n "$(__gitdir)" ]; then
+    git_branch=`__git_ps1 "%s"`
+    echo "${git_branch}"
+  else
+    echo "NA"
+  fi
+}
+
 function git_info {
   if [ -n "$(__gitdir)" ]; then
     git_branch=`__git_ps1 "%s"`
@@ -109,7 +115,8 @@ function git_info {
 }
 
 ################################################################################
-# Devprompt - http://tinyurl.com/4kzgb7k (colors from 0;30 to 0;37)
+# Note: don't mess with other users promts. Don't use export PS1
+# http://tinyurl.com/4kzgb7k
 
 #  Negro       0;30     Gris Obscuro  1;30
 #  Azul        0;34     Azul Claro    1;34
@@ -120,17 +127,16 @@ function git_info {
 #  Café        0;33     Amarillo      1;33
 #  Gris Claro  0;37     Blanco        1;37
 
-# Note: don't mess with other's promts. Don't use export PS1
 if [ "$color_prompt" = yes ]; then
-  line1='\n\[\e[1;33m\]\w'
-  line2='\n\[\e[1;36m\]$(git_info)$(ruby_version)$(vagrant_status)'
-  line3='\n\[\e[1;34m\](\@) \[\e[1;34m\]\h/\W \[\e[1;33m\]\$ \[\e[0;37m\]'
+  line1='\n\[\e[1;36m\]\@ \[\e[1;35m\]\w\[\e[1;37m\]'
+  line2='\n\[\e[1;36m\]git: \[\e[1;35m\]$(git_branch), \[\e[1;36m\]ruby: \[\e[1;30m\]$(ruby_version), \[\e[1;36m\]vagrant: \[\e[1;30m\]$(vagrant_status)\[\e[1;37m\]'
+  line3='\n\[\e[1;36m\]\h \[\e[1;37m\]\$ '
 
   PS1="${line1}${line2}${line3}"
 else
-  line1='\n\w'
-  line2='\n$(git_info)$(ruby_version)$(vagrant_status)'
-  line3='\n(\@) \h/\W \$ '
+  line1='\n\@ \w'
+  line2='\ngit: $(git_branch), ruby: $(ruby_version), vagrant: $(vagrant_status)'
+  line3='\n@\h \$ '
 
   PS1="${line1}${line2}${line3}"
 fi
