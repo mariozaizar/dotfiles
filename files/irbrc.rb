@@ -10,3 +10,11 @@ require 'rubygems'
 # IRB.conf[:EVAL_HISTORY] = 200 # Try with: __
 # IRB.conf[:PROMPT_MODE] = :INF_RUBY # DEFAULT, SIMPLE, XMP, INF_RUBY
 # IRB.conf[:AUTO_INDENT] = true
+
+# Start using Pry instead of IRB
+# begin
+#   require 'pry'
+#   Pry.start
+#   exit
+# rescue LoadError
+# end
