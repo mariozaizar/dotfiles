@@ -124,16 +124,18 @@ task :install do
   reload_bash
 end
 
-task :install_without_info do
-  @full_name        = "Developer"
-  @github_user      = ""
-  @github_email     = ""
-  @projects_dir     = "~/Projects"
+namespace :install do
+  desc "Same as Install, but without asking anything. Quick and easy."
+  task :no_ask do
+    @full_name        = "Developer"
+    @github_user      = ""
+    @github_email     = ""
+    @projects_dir     = "~/Projects"
 
-  create_files :dotfiles
-  reload_bash
+    create_files :dotfiles
+    reload_bash
+  end
 end
-
 
 namespace :configure do
   desc "Configures Sublime Text Editor"
