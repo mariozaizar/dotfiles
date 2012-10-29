@@ -6,6 +6,14 @@
   { "keys": ["command+b"], "command": "toggle_bookmark" },
   { "keys": ["super+shift+o"], "command": "prompt_open" },
   { "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["super+shift+t"], "command": "reopen_last_file" },
+
+  { "keys": ["super+alt+v"], "command": "show_overlay", "args": {"overlay": "goto", "text": "app/views/"} },
+  { "keys": ["super+alt+m"], "command": "show_overlay", "args": {"overlay": "goto", "text": "app/models/"} },
+  { "keys": ["super+alt+c"], "command": "show_overlay", "args": {"overlay": "goto", "text": "app/controllers/"} },
+  { "keys": ["super+alt+h"], "command": "show_overlay", "args": {"overlay": "goto", "text": "app/helpers/"} },
+  { "keys": ["super+alt+s"], "command": "show_overlay", "args": {"overlay": "goto", "text": "spec/"} },
+  { "keys": ["super+alt+f"], "command": "show_overlay", "args": {"overlay": "goto", "text": "features/"} },
 
   { "keys": ["command+1"], "command": "unfold_all" },
   { "keys": ["command+2"], "command": "fold_by_level", "args": {"level": 3} },
