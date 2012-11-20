@@ -130,13 +130,13 @@ function git_info {
 if [ "$color_prompt" = yes ]; then
   line1='\n\[\e[1;36m\]\@ \[\e[1;35m\]\w\[\e[1;37m\] at \[\e[1;36m\]\h'
   line2='\n\[\e[1;36m\]git: \[\e[1;35m\]$(git_branch), \[\e[1;36m\]ruby: \[\e[1;30m\]$(ruby_version), \[\e[1;36m\]vagrant: \[\e[1;30m\]$(vagrant_status)\[\e[1;37m\]'
-  line3='\n\[\e[1;37m\]→ '
+  line3='\n\[\e[1;35m\]\W\[\e[1;37m\] → '
 
   PS1="${line1}${line2}${line3}"
 else
   line1='\n\@ \w at \h'
   line2='\ngit: $(git_branch), ruby: $(ruby_version), vagrant: $(vagrant_status)'
-  line3='\n@→ '
+  line3='\n\W → '
 
   PS1="${line1}${line2}${line3}"
 fi
