@@ -10,6 +10,10 @@ else
   color_prompt=no
 fi
 
+color_prompt=yes;
+export CLICOLOR=1;
+export LSCOLORS=ExFxCxDxBxegedabagacad;
+
 ################################################################################
 function ruby_version {
   local version='';
