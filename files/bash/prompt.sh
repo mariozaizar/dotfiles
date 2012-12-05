@@ -1,7 +1,13 @@
-# Enable colors for xterm-color
-case "$TERM" in
-  xterm-color) color_prompt=yes;;
-esac
+# Black magic related to xterm and colors
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+  export TERM='gnome-256color'
+elif infocmp xterm-256color >/dev/null 2>&1; then
+  export TERM='xterm-256color'
+elif [ -e /usr/share/terminfo/x/xterm-256color ]; then
+  export TERM='xterm-256color'
+else
+  export TERM='xterm-color'
+fi
 
 # We have color support; assume it's compliant with Ecma-48
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -10,7 +16,6 @@ else
   color_prompt=no
 fi
 
-color_prompt=yes;
 export CLICOLOR=1;
 export LSCOLORS=ExFxCxDxBxegedabagacad;
 
