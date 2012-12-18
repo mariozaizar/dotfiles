@@ -17,6 +17,7 @@ FILES = {
     "files/guardfile.rb"              => "~/.Guardfile",
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/irbrc.rb"                  => "~/.irbrc",
+    "files/rspec.rb"                  => "~/.rspec",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
     "files/vimrc.sh"                  => "~/.vimrc" },
