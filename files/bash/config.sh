@@ -10,6 +10,10 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
+
+# rbenv installed via home brew
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 if [ `which rbenv` ]; then
   # rbenv installed with brew (or already in path)
   eval "$(rbenv init -)"
