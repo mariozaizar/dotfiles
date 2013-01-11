@@ -22,21 +22,23 @@ This is the current list of files:
 
 *dotfiles:*
 ```
-    ~/.bash/aliases
-    ~/.bash/completion
-    ~/.bash/config
-    ~/.bash/prompt
-    ~/.bash_profile
-    ~/.bashrc
-    ~/.gemrc
-    ~/.gitconfig
-    ~/.gitignore
-    ~/.Guardfile
-    ~/.hgignore_global
-    ~/.irbrc
-    ~/.rvmrc
-    ~/.smb/smb.conf
-    ~/.vimrc
+~/.bash/aliases
+~/.bash/completion
+~/.bash/config
+~/.bash/prompt
+~/.bash_profile
+~/.bashrc
+~/.gemrc
+~/.gitconfig
+~/.gitignore
+~/.Guardfile
+~/.guardrc
+~/.hgignore_global
+~/.irbrc
+~/.rspec
+~/.rvmrc
+~/.smb/smb.conf
+~/.vimrc
 ```
 
 *sublime:*
