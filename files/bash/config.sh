@@ -10,17 +10,13 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
-
-# rbenv installed via home brew
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-if [ `which rbenv` ]; then
-  # rbenv installed with brew (or already in path)
+if [ -e "$HOME/.rbenv/bin/rbenv" ]; then
+  # rbenv installed using git
+  export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
   eval "$(rbenv init -)"
 
-elif [ -e "$HOME/.rbenv/bin/rbenv" ]; then
-  # rbenv installed
-  export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
+elif which rbenv > /dev/null; then
+  # rbenv installed with home brew
   eval "$(rbenv init -)"
 
 elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
@@ -31,6 +27,7 @@ elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
   # RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
   # export CC=/usr/bin/gcc-4.2
 fi
+
 
 ################################################################################
 # Homebrew should be before system-provided path
