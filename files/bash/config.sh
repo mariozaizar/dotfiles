@@ -10,14 +10,10 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
-if [ -e "$HOME/.rbenv/bin/rbenv" ]; then
-  # rbenv installed using git
-  export PATH="$HOME/.rbenv/bin:$PATH" # rbenv
-  eval "$(rbenv init -)"
-
-elif which rbenv > /dev/null; then
-  # rbenv installed with home brew
-  eval "$(rbenv init -)"
+if which rbenv > /dev/null; then
+  # rbenv installed
+  export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)";
 
 elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
   # RVM installed
@@ -27,7 +23,6 @@ elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
   # RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
   # export CC=/usr/bin/gcc-4.2
 fi
-
 
 ################################################################################
 # Homebrew should be before system-provided path
@@ -42,13 +37,12 @@ if [ `which subl` ]; then
   export EDITOR="subl -a"
 fi
 
-# Increase the Garbage Collector limits for Ruby: http://goo.gl/IP8Jj
-# http://blog.gomiso.com/2011/02/25/adventures-in-scaling-part-1-using-ree/
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
+# Ruby 1.9.3 Ruby GC settings
+export RUBY_GC_MALLOC_LIMIT=800000000    # 800,000,000 (100x 8,000,000)
+export RUBY_HEAP_FREE_MIN=4960           # 4,960 (11x 4,096)
+export RUBY_HEAP_MIN_SLOTS=5000000       # 5,000,000 (500x 10,000)
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1   # 1
+export RUBY_HEAP_SLOTS_INCREMENT=5000000 # 5,000,000 (500x 10,000)
 
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
