@@ -97,7 +97,6 @@ your original files.
 
 My name is [Mario Zaizar][about].  
 This is my [twitter][twitter] (en español).  
-I work for [Crowd Interactive][crowd].
 
 ### Thanks
 
