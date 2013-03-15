@@ -1,7 +1,7 @@
 {
   "auto_indent": true,
   "close_windows_when_empty": true,
-  "color_scheme": "Packages/Theme - Refined/Color Schemes/Tomorrow Night Refined.tmTheme",
+  "color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
   "dictionary": "Packages/Language - English/en_US.dic",
   "draw_minimap_border": true,
   "ensure_newline_at_eof_on_save": true,
@@ -73,7 +73,7 @@
   "smart_indent": true,
   "spell_check": false,
   "tab_size": 2,
-  "theme": "Refined-Dark.sublime-theme",
+  "theme": "Nexus.sublime-theme",
   "translate_tabs_to_spaces": true,
   "use_tab_stops": true,
   "word_wrap": false

@@ -1,6 +1,5 @@
 [
   { "keys": ["super+alt+t"], "command": "test_chooser" },
-  { "keys": ["command+shift+k"], "command": "toggle_side_bar" },
   { "keys": ["command+alt+b"], "command": "next_bookmark" },
   { "keys": ["command+shif+b"], "command": "prev_bookmark" },
   { "keys": ["command+b"], "command": "toggle_bookmark" },
