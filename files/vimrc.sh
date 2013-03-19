@@ -76,7 +76,7 @@ set showmatch
 
 " Bracket blinking. "
 set mat=5
-# set list
+" set list
 
 " No blinking . "
 set novisualbell

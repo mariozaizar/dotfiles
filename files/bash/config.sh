@@ -47,3 +47,7 @@ export RUBY_HEAP_SLOTS_INCREMENT=5000000 # 5,000,000 (500x 10,000)
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+
+################################################################################
+# NodeJs
+export NODE_PATH=/usr/local/lib/node;
