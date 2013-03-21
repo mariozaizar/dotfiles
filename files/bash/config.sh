@@ -50,4 +50,4 @@ export LANG="en_US"
 
 ################################################################################
 # NodeJs
-export NODE_PATH=/usr/local/lib/node;
+export PATH="/usr/local/share/npm/bin:$PATH";
