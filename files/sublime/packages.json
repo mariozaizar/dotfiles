@@ -1,32 +1,21 @@
 {
-	"auto_upgrade_last_run": 1348589586,
 	"installed_packages":
 	[
-		"AdvancedNewFile",
 		"Alignment",
 		"Case Conversion",
 		"ChangeQuotes",
 		"Cucumber",
-		"Gist",
 		"Git",
+		"GitGutter",
 		"Github Tools",
-		"LESS",
-		"LoremIpsum",
-		"Markdown Preview",
-		"New from Selection",
+		"Logs Colorize",
 		"Package Control",
 		"Rails Latest Migration",
 		"Rails Related Files",
 		"RailsCasts Colour Scheme",
-		"RSpec (snippets and syntax)",
-		"Ruby 1.9 Hash Converter",
-		"SCSS",
-		"SideBarEnhancements",
-		"Simple Rails Navigator",
-		"SublimeLinter",
-		"TestChooser",
+		"RSpec",
 		"Theme - Nexus",
-		"Theme - Soda",
-		"Themr"
+		"Themr",
+		"TrailingSpaces"
 	]
 }
