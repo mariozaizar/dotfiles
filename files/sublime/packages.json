@@ -1,6 +1,7 @@
 {
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Alignment",
 		"Case Conversion",
 		"ChangeQuotes",
@@ -10,15 +11,19 @@
 		"Github Tools",
 		"IndentGuides",
 		"LoremIpsum",
+		"Package Control",
 		"Rails Latest Migration",
 		"Rails Migrations List",
 		"RailsCasts Colour Scheme",
 		"RSpec",
+		"Ruby Block Converter",
 		"Ruby on Rails snippets",
 		"RubyTest",
 		"SideBarEnhancements",
 		"TestChooser",
+		"Theme - Flatland",
 		"Theme - Nexus",
+		"Theme - Soda",
 		"Themr",
 		"TrailingSpaces"
 	]
