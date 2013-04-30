@@ -1,7 +1,7 @@
 {
-  "auto_indent": true,
+	"auto_indent": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
+	"color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -75,7 +75,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Nexus.sublime-theme",
+	"theme": "Flatland Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
