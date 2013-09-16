@@ -8,37 +8,39 @@
   "fade_fold_buttons": false,
   "file_exclude_patterns":
   [
+    "*.a",
+    "*.class",
+    "*.db",
+    "*.dll",
+    "*.dylib",
+    "*.exe",
+    "*.idb",
+    "*.lib",
+    "*.ncb",
+    "*.o",
+    "*.obj",
+    "*.pdb",
+    "*.psd",
     "*.pyc",
     "*.pyo",
-    "*.exe",
-    "*.dll",
-    "*.obj",
-    "*.o",
-    "*.a",
-    "*.lib",
-    "*.so",
-    "*.dylib",
-    "*.ncb",
     "*.sdf",
+    "*.so",
     "*.suo",
-    "*.pdb",
-    "*.idb",
-    ".DS_Store",
-    "*.class",
-    "*.psd",
-    "*.db"
+    ".DS_Store"
   ],
   "find_selected_text": true,
   "folder_exclude_patterns":
   [
-    ".svn",
+    ".bundle",
     ".git",
     ".hg",
-    "CVS",
-    ".sass-cache",
     ".idea",
-    ".bundle",
-    "tmp"
+    ".jhw-cache",
+    ".sass-cache",
+    ".svn",
+    ".vagrant",
+    "CVS",
+    "vendor/cache"
   ],
   "font_face": "Monaco",
   "font_options":
@@ -51,8 +53,15 @@
   "hot_exit": false,
   "ignored_packages":
   [
+    "Ruby on Rails snippets",
+    "Theme - Nexus",
+    "Themr",
+    "Sass",
     "Vintage",
-    "Rails Partial"
+    "TestChooser",
+    "Theme - Soda",
+    "Rails Partial",
+    "Ruby Block Converter"
   ],
   "indent_guide_options":
   [
