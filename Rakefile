@@ -19,6 +19,7 @@ FILES = {
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/irbrc.rb"                  => "~/.irbrc",
     "files/powconfig.sh"              => "~/.powconfig",
+    "files/pryrc.rb"                  => "~/.pryrc",
     "files/rspec.rb"                  => "~/.rspec",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",

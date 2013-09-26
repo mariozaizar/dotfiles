@@ -1,5 +1,5 @@
 # dotFiles
-A simple way to configure your bash shell as developer [terminal][cli].  
+A simple way to configure your bash shell as developer [terminal][cli].
 *by [Mario Zaizar](about)*
 
 ![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_complete.png)
@@ -14,7 +14,7 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in prompt.
 - [Vagrant][vagrant] getting box state directly in prompt!
 
-- **Editor and Terminal themes.**  
+- **Editor and Terminal themes.**
 There is also a themes folder with some color skins for the most common apps,
 like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
 
@@ -35,6 +35,7 @@ This is the current list of files:
 ~/.guardrc
 ~/.hgignore_global
 ~/.irbrc
+~/.pryrc
 ~/.rspec
 ~/.rvmrc
 ~/.smb/smb.conf
@@ -73,8 +74,8 @@ This is the current list of files:
 
 *Note:* this will generate the files (for example `~/.gitconfig`) and then it
 will copy this files inside your home directory (making backups if necessary).
-So, that means that we will REPLACE the original files, but creating a backup 
-with `*.old` extension. Please go to 'Uninstall" section to see how to recover 
+So, that means that we will REPLACE the original files, but creating a backup
+with `*.old` extension. Please go to 'Uninstall" section to see how to recover
 your original files.
 
     $ rake install
@@ -95,22 +96,22 @@ your original files.
 
 ## About
 
-My name is [Mario Zaizar][about].  
-This is my [twitter][twitter] (en español).  
+My name is [Mario Zaizar][about].
+This is my [twitter][twitter] (en español).
 
 ### Thanks
 
 This project started as me grabbing scripts, mods and hacks to use better tools.
 Over the time I based my configurations on this awesome resources:
 
-[Ryan Bates dotFiles](https://github.com/ryanb/dotfiles), 
-[Git aliases](http://library.edgecase.com/git_immersion/lab_11.html), 
-Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k), 
-[Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), <http://tinyurl.com/2dq9pkv>, 
-[Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272), 
-[Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips), 
-[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles), 
-[Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/), 
+[Ryan Bates dotFiles](https://github.com/ryanb/dotfiles),
+[Git aliases](http://library.edgecase.com/git_immersion/lab_11.html),
+Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com/778558), [link3](http://tinyurl.com/4kzgb7k),
+[Rails & Sinatra alias](http://openmonkey.com/2009/03/06/adaptive-script-console-shell-alias-for-both-rails-and-sinatra/), <http://tinyurl.com/2dq9pkv>,
+[Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272),
+[Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips),
+[Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles),
+[Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/),
 My [CrowdInt][crowd] friends
 
 [about]: http://about.me/mariozaizar

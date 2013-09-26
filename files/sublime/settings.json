@@ -26,7 +26,8 @@
     "*.sdf",
     "*.so",
     "*.suo",
-    ".DS_Store"
+    ".DS_Store",
+    "jasmine-specs.js"
   ],
   "find_selected_text": true,
   "folder_exclude_patterns":
@@ -37,9 +38,11 @@
     ".idea",
     ".jhw-cache",
     ".sass-cache",
+    "coverage",
     ".svn",
     ".vagrant",
     "CVS",
+    "doc/fdoc",
     "vendor/cache"
   ],
   "font_face": "Monaco",
