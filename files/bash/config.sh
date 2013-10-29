@@ -49,5 +49,5 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 ################################################################################
-# NodeJs
+# NodeJs and CoffeeScript
 export PATH="/usr/local/share/npm/bin:$PATH";
