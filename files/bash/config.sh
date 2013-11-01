@@ -12,9 +12,9 @@ fi
 # Ruby and friends (warning rbenv/rvm are incompatibles)
 if which rbenv > /dev/null; then
   # rbenv installed
-  eval "$(rbenv init -)";
   export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
-
+  eval "$(rbenv init -)";
+  
 elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
   # RVM installed
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
