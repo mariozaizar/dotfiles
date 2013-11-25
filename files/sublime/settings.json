@@ -24,6 +24,7 @@
 		"*.pyc",
 		"*.pyo",
 		"*.sdf",
+		"*.xml",
 		"*.so",
 		"*.cvs",
 		"*.csv",
@@ -48,7 +49,11 @@
 		".vagrant",
 		"CVS",
 		"doc/fdoc",
-		"vendor/"
+		"vendor/",
+		"files",
+		"public/assets",
+		"public/fonts",
+		"public/images"
 	],
 	"font_face": "Monaco",
 	"font_options":
