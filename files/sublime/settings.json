@@ -24,9 +24,16 @@
 		"*.pyc",
 		"*.pyo",
 		"*.sdf",
+		"*.xml",
 		"*.so",
+		"*.cvs",
+		"*.csv",
+		"*.sql",
+		"*.svn",
 		"*.suo",
-		".DS_Store"
+		"*.svg",
+		".DS_Store",
+		"jasmine-specs.js"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -38,10 +45,15 @@
 		".jhw-cache",
 		".sass-cache",
 		"coverage",
-		".svn",
+		"tmp",
 		".vagrant",
 		"CVS",
-		"vendor/cache"
+		"doc/fdoc",
+		"vendor/",
+		"files",
+		"public/assets",
+		"public/fonts",
+		"public/images"
 	],
 	"font_face": "Monaco",
 	"font_options":

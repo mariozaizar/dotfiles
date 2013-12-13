@@ -10,9 +10,11 @@ fi
 
 ################################################################################
 # Ruby and friends (warning rbenv/rvm are incompatibles)
+export PATH="$HOME/.rbenv/bin:$PATH";
+
 if which rbenv > /dev/null; then
   # rbenv installed
-  export PATH="$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
+  export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
   eval "$(rbenv init -)";
 
 elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
@@ -49,5 +51,5 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 ################################################################################
-# NodeJs
+# NodeJs and CoffeeScript
 export PATH="/usr/local/share/npm/bin:$PATH";
