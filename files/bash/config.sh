@@ -52,4 +52,6 @@ export LANG="en_US"
 
 ################################################################################
 # NodeJs and CoffeeScript
+# http://c.kat.pe/how-to-install-coffeescript-on-mac-os-x
 export PATH="/usr/local/share/npm/bin:$PATH";
+export NODE_PATH="/usr/local/lib/node";
