@@ -15,6 +15,9 @@
   { "keys": ["super+alt+s"], "command": "show_overlay", "args": {"overlay": "goto", "text": "spec/"} },
   { "keys": ["super+alt+f"], "command": "show_overlay", "args": {"overlay": "goto", "text": "features/"} },
 
+  { "keys": ["super+alt+q"], "command": "wrap_lines" },
+  { "keys": ["alt+tab"], "command": "wrap_lines" },
+
   { "keys": ["command+0"], "command": "unfold_all" },
   { "keys": ["command+4"], "command": "fold_by_level", "args": {"level": 4} },
   { "keys": ["command+3"], "command": "fold_by_level", "args": {"level": 3} },
