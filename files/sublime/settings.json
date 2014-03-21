@@ -1,9 +1,10 @@
 {
 	"auto_indent": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Theme - Flatland/Flatland Dark.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_minimap_border": true,
+	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
@@ -47,12 +48,11 @@
 		"coverage",
 		"tmp",
 		".vagrant",
+		"db/migrate",
 		"CVS",
 		"doc/fdoc",
-		"vendor/",
-		"files",
+		"vendor/plugins",
 		"public/assets",
-		"public/fonts",
 		"public/images"
 	],
 	"font_face": "Monaco",
@@ -67,14 +67,14 @@
 	"ignored_packages":
 	[
 		"Ruby on Rails snippets",
-		"Theme - Nexus",
-		"Themr",
+		"Rails Partial",
 		"Sass",
+		"AdvancedNewFile",
+		"Ruby Block Converter",
+		"Theme - Soda",
 		"Vintage",
 		"TestChooser",
-		"Theme - Soda",
-		"Rails Partial",
-		"Ruby Block Converter"
+		"Theme - Nexus"
 	],
 	"indent_guide_options":
 	[
@@ -82,6 +82,11 @@
 	],
 	"indent_subsequent_lines": true,
 	"indent_to_bracket": false,
+	"index_exclude_patterns":
+	[
+		"*.log",
+		"/Users/mariozaizar/.rbenv/versions/ree-1.8.7-2011.12/lib/ruby/gems/1.8/gems/billfloat_common-1.2.4*"
+	],
 	"line_numbers": true,
 	"move_to_limit_on_up_down": true,
 	"open_files_in_new_window": false,
@@ -97,7 +102,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
