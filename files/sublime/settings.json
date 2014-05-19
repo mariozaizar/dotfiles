@@ -50,7 +50,6 @@
 		".vagrant",
 		"CVS",
 		"doc/fdoc",
-		"vendor/plugins",
 		"public/assets",
 		"public/images"
 	],
@@ -59,21 +58,16 @@
 	[
 		"bold"
 	],
-	"font_size": 13.0,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Rails Partial",
 		"Vintage",
-		"ColorPicker",
-		"Sass",
-		"AdvancedNewFile",
 		"TestChooser",
-		"Ruby on Rails snippets",
-		"Theme - Soda",
-		"Ruby Block Converter"
+		"TrailingSpaces",
+		"Rails Partial"
 	],
 	"indent_guide_options":
 	[
@@ -101,7 +95,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Flatland Dark.sublime-theme",
+	"theme": "Glacier.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
