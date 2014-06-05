@@ -25,17 +25,15 @@ FILES = {
     "files/vimrc.sh"                  => "~/.vimrc" },
 
   :sublime => {
-    "files/sublime/gist.json"         => "~/Library/Application Support/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
-    "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
-    "files/sublime/packages.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Package Control.sublime-settings",
-    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-    "files/sublime/jslint.json"       => "~/Library/Application Support/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings",
-    "files/sublime/test_chooser.json" => "~/Library/Application Support/Sublime Text 2/Packages/TestChooser/TestChooser.sublime-settings"
+    "files/sublime/gist.json"         => "/Applications/Sublime Text.app/Packages/Gist/Gist.sublime-settings",
+    "files/sublime/keymap.json"       => "/Applications/Sublime Text.app/Packages/User/Default (OSX).sublime-keymap",
+    "files/sublime/packages.json"     => "/Applications/Sublime Text.app/Packages/User/Package Control.sublime-settings",
+    "files/sublime/settings.json"     => "/Applications/Sublime Text.app/Packages/User/Preferences.sublime-settings"
   }
 }
 
 LINKS = {
-  "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
+  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
   "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" => "/Applications/iPhoneSimulator.app"
 }
 
