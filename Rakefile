@@ -25,10 +25,10 @@ FILES = {
     "files/vimrc.sh"                  => "~/.vimrc" },
 
   :sublime => {
-    "files/sublime/gist.json"         => "/Applications/Sublime Text.app/Packages/Gist/Gist.sublime-settings",
-    "files/sublime/keymap.json"       => "/Applications/Sublime Text.app/Packages/User/Default (OSX).sublime-keymap",
-    "files/sublime/packages.json"     => "/Applications/Sublime Text.app/Packages/User/Package Control.sublime-settings",
-    "files/sublime/settings.json"     => "/Applications/Sublime Text.app/Packages/User/Preferences.sublime-settings"
+    "files/sublime/gist.json"         => "~/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
+    "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+    "files/sublime/packages.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
   }
 }
 

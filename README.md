@@ -44,12 +44,12 @@ This is the current list of files:
 
 *sublime:*
 ```
-    /Applications/Sublime Text.app/Packages/Gist/Gist.sublime-settings
-    /Applications/Sublime Text.app/Packages/User/Default (OSX).sublime-keymap
-    /Applications/Sublime Text.app/Packages/User/Package Control.sublime-settings
-    /Applications/Sublime Text.app/Packages/User/Preferences.sublime-settings
-    /Applications/Sublime Text.app/Packages/sublime-jslint/sublime-jslint.sublime-settings
-    /Applications/Sublime Text.app/Packages/TestChooser/TestChooser.sublime-settings
+    ~/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings
+    ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
+    ~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings
+    ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
+    ~/Library/Application Support/Sublime Text 3/Packages/sublime-jslint/sublime-jslint.sublime-settings
+    ~/Library/Application Support/Sublime Text 3/Packages/TestChooser/TestChooser.sublime-settings
 ```
 
 ![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_simple.png)
