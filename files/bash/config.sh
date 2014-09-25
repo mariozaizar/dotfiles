@@ -12,6 +12,7 @@ fi
 # Ruby and friends (warning rbenv/rvm are incompatibles)
 export PATH="$HOME/.rbenv/bin:$PATH";
 
+# TODO, http://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script/677212#677212
 if which rbenv > /dev/null; then
   # rbenv installed
   export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
