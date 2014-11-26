@@ -1,12 +1,2 @@
 ---
 gem: --no-ri --no-rdoc
-:update_sources: true
-:sources:
-- http://rubygems.org/
-- http://gems.github.com
-- http://gems.rubyforge.org
-- http://gemcutter.org
-:backtrace: false
-:verbose: true
-:bulk_threshold: 1000
-:benchmark: false
