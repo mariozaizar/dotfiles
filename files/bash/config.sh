@@ -40,13 +40,6 @@ if [ `which subl` ]; then
   export EDITOR="subl -a"
 fi
 
-# Ruby 1.9.3 Ruby GC settings
-export RUBY_GC_MALLOC_LIMIT=800000000    # 800,000,000 (100x 8,000,000)
-export RUBY_HEAP_FREE_MIN=4960           # 4,960 (11x 4,096)
-export RUBY_HEAP_MIN_SLOTS=5000000       # 5,000,000 (500x 10,000)
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1   # 1
-export RUBY_HEAP_SLOTS_INCREMENT=5000000 # 5,000,000 (500x 10,000)
-
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
