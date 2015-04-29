@@ -1,7 +1,7 @@
 {
 	"auto_indent": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Theme - Glacier/glacier.tmTheme",
+	"color_scheme": "Packages/Theme - Asphalt/Asphalt.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_minimap_border": true,
 	"enable_tab_scrolling": false,
@@ -50,6 +50,7 @@
 		".vagrant",
 		"CVS",
 		"doc/fdoc",
+		"vendor",
 		"public/assets",
 		"public/images"
 	],
@@ -58,16 +59,15 @@
 	[
 		"bold"
 	],
-	"font_size": 12.0,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage",
 		"TestChooser",
-		"TrailingSpaces",
-		"Rails Partial"
+		"Rails Partial",
+		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -95,7 +95,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Glacier.sublime-theme",
+	"theme": "Asphalt-orange.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
