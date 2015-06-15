@@ -1,7 +1,7 @@
 {
 	"auto_indent": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Theme - Asphalt/Asphalt.tmTheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"drag_text": false,
 	"draw_minimap_border": true,
@@ -96,7 +96,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Asphalt-orange.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
