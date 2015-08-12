@@ -16,7 +16,7 @@ A simple way to configure your bash shell as developer [terminal][cli].
 
 - **Editor and Terminal themes.**
 There is also a themes folder with some color skins for the most common apps,
-like `iTerm`, `Terminal.app`, `Textmate`, `Sublime` and `RubyMine`.
+like `iTerm`, `Terminal.app` and `RubyMine`.
 
 This is the current list of files:
 

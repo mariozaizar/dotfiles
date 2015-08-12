@@ -15,7 +15,6 @@ FILES = {
     "files/gitconfig.ini"             => "~/.gitconfig",
     "files/gitignore"                 => "~/.gitignore",
     "files/guardfile.rb"              => "~/.Guardfile",
-    "files/guardrc.rb"                => "~/.guardrc",
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/irbrc.rb"                  => "~/.irbrc",
     "files/powconfig.sh"              => "~/.powconfig",
