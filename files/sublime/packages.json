@@ -1,23 +1,34 @@
 {
-	"installed_packages":
-	[
-		"AdvancedNewFile",
-		"Alignment",
-		"Better CoffeeScript",
-		"Case Conversion",
-		"ChangeQuotes",
-		"ColorPicker",
-		"Cucumber",
-		"Default File Type",
-		"Git",
-		"GitGutter",
-		"GitHubinator",
-		"Haml",
-		"RSpec",
-		"Sass",
-		"SideBarEnhancements",
-		"Solarized Color Scheme",
-		"Themr",
-		"TrailingSpaces"
-	]
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "Alignment",
+    "Better CoffeeScript",
+    "Better RSpec",
+    "Case Conversion",
+    "ChangeQuotes",
+    "Cucumber",
+    "Devastate",
+    "Git",
+    "GitGutter",
+    "GitHubinator",
+    "Haml",
+    "MarkdownLight",
+    "Material Theme",
+    "Package Control",
+    "RSpec",
+    "RSpecNavigator",
+    "Sass",
+    "SideBarEnhancements",
+    "Solarized Color Scheme",
+    "Syntax Highlighting for Sass",
+    "Theme - Flatland",
+    "Theme - Glacier",
+    "Theme - Spacegray",
+    "Theme - Tech49",
+    "Themr",
+    "TrailingSpaces"
+  ]
 }
