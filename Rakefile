@@ -124,6 +124,17 @@ task :install do
   reload_bash
 end
 
+desc "Install some Brews"
+task :install_brew do
+  puts "Will install some basic brews (you need brew installed)"
+  exit if ask("\nContinue? [Y/N]: ", false)!='Y'
+
+  `brew update`
+  `brew install mysql wget rbenv` 
+  `brew tap universal-ctags/universal-ctags`
+  `brew install --HEAD universal-ctags`
+end
+
 namespace :install do
   desc "Same as Install, but without asking anything. Quick and easy."
   task :no_ask do
