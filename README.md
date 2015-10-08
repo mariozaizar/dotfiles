@@ -1,8 +1,5 @@
 # dotFiles
 A simple way to configure your bash shell as developer [terminal][cli].
-*by [Mario Zaizar](about)*
-
-![editor screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_complete.png)
 
 ## Features
 
@@ -52,9 +49,6 @@ This is the current list of files:
     ~/Library/Application Support/Sublime Text 3/Packages/TestChooser/TestChooser.sublime-settings
 ```
 
-![rbenv screenshoot](http://github.com/mariozaizar/dotfiles/raw/master/images/prompt_simple.png)
-> The default prompt is pretty simple:
-
 ## Requirements
 
 - Mac OSX (Lion tested)
@@ -86,18 +80,13 @@ your original files.
 
 ## Other links
 
-- [Sublime Text 2](http://sublimetext.com)
+- [Sublime Text](http://sublimetext.com)
 - [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation)
 
 ## Contribute
 
 [Report issues!](https://github.com/mariozaizar/dotfiles/issues?labels=Bugs) and
 [suggest new features!](https://github.com/mariozaizar/dotfiles/issues?labels=Features)
-
-## About
-
-My name is [Mario Zaizar][about].
-This is my [twitter][twitter] (en español).
 
 ### Thanks
 
