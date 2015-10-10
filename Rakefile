@@ -16,7 +16,6 @@ FILES = {
     "files/gitignore"                 => "~/.gitignore",
     "files/guardfile.rb"              => "~/.Guardfile",
     "files/hgignore_global"           => "~/.hgignore_global",
-    "files/irbrc.rb"                  => "~/.irbrc",
     "files/powconfig.sh"              => "~/.powconfig",
     "files/rspec.rb"                  => "~/.rspec",
     "files/rvmrc.sh"                  => "~/.rvmrc",
