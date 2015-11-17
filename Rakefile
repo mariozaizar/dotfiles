@@ -20,19 +20,9 @@ FILES = {
     "files/rspec.rb"                  => "~/.rspec",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
+    "files/ruby-version"              => "~/Projects/.ruby-version",
+    "files/ruby-gemset"               => "~/Projects/.ruby-gemset",
     "files/vimrc.sh"                  => "~/.vimrc" },
-
-  :sublime => {
-    "files/sublime/gist.json"         => "~/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings",
-    "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-    "files/sublime/packages.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
-  }
-}
-
-LINKS = {
-  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" => "/usr/bin/subl",
-  "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app" => "/Applications/iPhoneSimulator.app"
 }
 
 ################################################################################
@@ -129,9 +119,7 @@ task :install_brew do
   exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
   `brew update`
-  `brew install mysql wget rbenv` 
-  `brew tap universal-ctags/universal-ctags`
-  `brew install --HEAD universal-ctags`
+  `brew install mysql wget rbenv`
 end
 
 namespace :install do
@@ -143,23 +131,6 @@ namespace :install do
     @projects_dir     = "~/Projects"
 
     create_files :dotfiles
-    reload_bash
-  end
-end
-
-namespace :configure do
-  desc "Configures Sublime Text Editor"
-  task :sublime do
-    list_files :sublime
-    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
-
-    create_files :sublime
-    reload_bash
-  end
-
-  # desc "Creates symbolic links"
-  task :links do
-    create_links
     reload_bash
   end
 end
