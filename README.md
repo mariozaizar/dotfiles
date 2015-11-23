@@ -11,10 +11,6 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in prompt.
 - [Vagrant][vagrant] getting box state directly in prompt!
 
-- **Editor and Terminal themes.**
-There is also a themes folder with some color skins for the most common apps,
-like `iTerm`, `Terminal.app` and `RubyMine`.
-
 This is the current list of files:
 
 *dotfiles:*
@@ -39,22 +35,12 @@ This is the current list of files:
 ~/.vimrc
 ```
 
-*sublime:*
-```
-    ~/Library/Application Support/Sublime Text 3/Packages/Gist/Gist.sublime-settings
-    ~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap
-    ~/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings
-    ~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings
-    ~/Library/Application Support/Sublime Text 3/Packages/sublime-jslint/sublime-jslint.sublime-settings
-    ~/Library/Application Support/Sublime Text 3/Packages/TestChooser/TestChooser.sublime-settings
-```
-
 ## Requirements
 
-- Mac OSX (Lion tested)
+- Mac OSX
 - Git ([git-scm.com](http://git-scm.com))
 - GitHub account ([github.com](http://github.com))
-- Ruby installed (also rake) ([ruby-lang.org](http://www.ruby-lang.org/en/))
+- System's Ruby (also rake) ([ruby-lang.org](http://www.ruby-lang.org/en/))
 
 ## Installation
 
@@ -100,12 +86,8 @@ Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com
 [Rails 3 alias](http://matthewhutchinson.net/2010/9/19/rails-3-bash-aliases-and-irbrc-configs),  and [snippets](http://snippets.rorbuilder.info/posts/show/272),
 [Custom irb](http://iain.nl/2010/07/customizing-irb-2010-edition/), and [tips](http://robots.thoughtbot.com/post/159806033/irb-script-console-tips),
 [Thoughtbot dotfiles](https://github.com/thoughtbot/dotfiles),
-[Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/),
-My [CrowdInt][crowd] friends
+[Mathias Bynens dotfiles](https://github.com/mathiasbynens/dotfiles/)
 
-[about]: http://about.me/mariozaizar
-[twitter]: http://twitter.com/mariozaizar
-[crowd]: http://blog.crowdint.com
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [git]: http://git-scm.com/
 [sinatra]: http://www.sinatrarb.com/
