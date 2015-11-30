@@ -36,8 +36,11 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 # If sublime is installed, make it as your default editor
-if [ `which subl` ]; then
-  export EDITOR="subl -a"
+# If sublime is installed, make it as your default editor
+if [ `which atom` ]; then
+  export EDITOR="atom"
+elif [ `which subl` ]; then
+    export EDITOR="subl -a"
 fi
 
 # Prefer US English and use UTF-8
