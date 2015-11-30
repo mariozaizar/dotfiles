@@ -118,8 +118,13 @@ task :install_brew do
   puts "Will install some basic brews (you need brew installed)"
   exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
+  # Basics
   `brew update`
   `brew install mysql wget rbenv`
+
+  # CodeCliamte for Atom editor.
+  `brew tap codeclimate/formulae`
+  `brew install codeclimate`
 end
 
 namespace :install do
