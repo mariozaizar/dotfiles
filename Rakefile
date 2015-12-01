@@ -6,10 +6,10 @@ HOME_DIR = File.expand_path('~')
 FILES = {
   :dotfiles => {
     "files/bash/aliases.sh"           => "~/.bash/aliases",
+    "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bash/completion.sh"        => "~/.bash/completion",
     "files/bash/config.sh"            => "~/.bash/config",
     "files/bash/prompt.sh"            => "~/.bash/prompt",
-    "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bashrc.sh"                 => "~/.bashrc",
     "files/gemrc.yml"                 => "~/.gemrc",
     "files/gitconfig.ini"             => "~/.gitconfig",
@@ -18,10 +18,11 @@ FILES = {
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/powconfig.sh"              => "~/.powconfig",
     "files/rspec.rb"                  => "~/.rspec",
+    "files/ruby-gemset"               => "~/Projects/.ruby-gemset",
+    "files/ruby-version"              => "~/Projects/.ruby-version",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
-    "files/ruby-version"              => "~/Projects/.ruby-version",
-    "files/ruby-gemset"               => "~/Projects/.ruby-gemset",
+    "files/styles.less"               => "~/.atom/styles.less",
     "files/vimrc.sh"                  => "~/.vimrc" },
 }
 
