@@ -5,7 +5,8 @@ export ZSH=/Users/mzaizar/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell" # robbyrussell (default), agnoster
+ZSH_THEME="agnoster" # robbyrussell (default), agnoster
+# NOTE: The agnoster theme needs git@github.com:powerline/fonts.git installed.
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -18,7 +19,7 @@ ZSH_THEME="robbyrussell" # robbyrussell (default), agnoster
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=5
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -82,3 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Bash aliases
+source ~/.bash/aliases
+
+# Personal settings (should not overrided)
+if [ -f ~/.personal ]; then
+  source ~/.personal;
+fi
