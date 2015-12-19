@@ -41,6 +41,12 @@ alias r='rails'
 alias rails_log='tail -f ./log/development.log | grep --invert-match DEBUG'
 alias rails_test_log='tail -f ./log/test.log | grep --invert-match DEBUG'
 
+# OSX
+alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+
+alias zdstart="zdi vm start; zdi services restart; zdi apps restart"
+
 # Rails 2 & 3 functions
 # http://tinyurl.com/4j83zdv
 # http://tinyurl.com/2dq9pkv
