@@ -125,7 +125,8 @@ task :install_brew do
 
   # Basics
   `brew update`
-  `brew install mysql wget rbenv zsh curl`
+  `brew install mysql wget rbenv zsh curl openssl`
+  `brew link openssl --force`
 
   # CodeCliamte for Atom editor.
   `brew tap codeclimate/formulae`
