@@ -29,8 +29,15 @@ FILES = {
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
     "files/styles.less"               => "~/.atom/styles.less",
-    "files/vimrc.sh"                  => "~/.vimrc" },
+    "files/vimrc.sh"                  => "~/.vimrc",
+    "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+  },
 }
+
+# NOTE: First install https://packagecontrol.io/ then run "advance install" and paste:
+# Alignment, Better CoffeeScript, Better RSpec, Case Conversion, ChangeQuotes, Cucumber, Devastate, Git, GitGutter, GitHubinator, Haml, MarkdownLight, Material Theme, RSpec, RSpecNavigator, Sass, SideBarEnhancements, Solarized Color Scheme, Syntax Highlighting for Sass, Theme - Flatland, Theme - Glacier, Theme - Spacegray, Theme - Tech49, Themr, TrailingSpaces
+
 
 ################################################################################
 def get_user_information

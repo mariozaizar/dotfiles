@@ -5,8 +5,9 @@ export ZSH=/Users/mzaizar/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster" # robbyrussell (default), agnoster
+ZSH_THEME="robbyrussell" # robbyrussell (default), agnoster, dracula
 # NOTE: The agnoster theme needs git@github.com:powerline/fonts.git installed.
+# NOTE: The drakula is from http://zenorocha.github.io/dracula-theme/
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
