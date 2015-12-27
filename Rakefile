@@ -20,6 +20,7 @@ FILES = {
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/bundle_config"             => "~/.bundle/config",
     "files/zshrc"                     => "~/.zshrc",
+    "files/hub.zsh_completion.sh"     => "~/.zsh/completions/hub.zsh_completion",
     "files/oh-my-zsh"                 => "~/.oh-my-zsh",
     "files/powconfig.sh"              => "~/.powconfig",
     "files/rspec.rb"                  => "~/.rspec",
@@ -134,7 +135,7 @@ task :install_brew do
 
   # Basics
   `brew update`
-  `brew install mysql wget rbenv zsh curl openssl`
+  `brew install mysql wget rbenv zsh curl openssl hub`
   `brew link openssl --force`
 
   # CodeCliamte for Atom editor.

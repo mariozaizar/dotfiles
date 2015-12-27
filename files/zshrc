@@ -51,7 +51,7 @@ export UPDATE_ZSH_DAYS=5
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler osx rake ruby)
+plugins=(git github bundler osx rake ruby)
 
 # User configuration
 export PATH="/Users/mzaizar/Projects/zendesk/docker-images/dockmaster/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/bin:/Users/mzaizar/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -85,7 +85,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Bash aliases
+########################################################################################################################
+# Hub ~ Github
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+
+########################################################################################################################
+# Bash Legacy
 source ~/.bash/aliases
 
 # Personal settings (should not overrided)
