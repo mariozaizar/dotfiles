@@ -18,18 +18,18 @@ FILES = {
     "files/gitignore"                 => "~/.gitignore",
     "files/guardfile.rb"              => "~/.Guardfile",
     "files/hgignore_global"           => "~/.hgignore_global",
-    "files/bundle_config"             => "~/.bundle/config",
+    "files/bundle_config.ini"         => "~/.bundle/config",
     "files/zshrc"                     => "~/.zshrc",
     "files/hub.zsh_completion.sh"     => "~/.zsh/completions/hub.zsh_completion",
-    "files/oh-my-zsh"                 => "~/.oh-my-zsh",
+    # "files/oh-my-zsh.rb"              => "~/.oh-my-zsh", # MISSING
     "files/powconfig.sh"              => "~/.powconfig",
     "files/rspec.rb"                  => "~/.rspec",
-    "files/ruby-gemset"               => "~/Projects/.ruby-gemset",
-    "files/ruby-version"              => "~/Projects/.ruby-version",
+    "files/ruby-gemset"               => "~/Code/.ruby-gemset",
+    "files/ruby-version"              => "~/Code/.ruby-version",
     "files/git-push-request.rb"       => "~/.git-push-request.rb",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
-    "files/styles.less"               => "~/.atom/styles.less",
+    "files/atom/styles.less"          => "~/.atom/styles.less",
     "files/vimrc.sh"                  => "~/.vimrc",
     "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
     "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
@@ -47,7 +47,7 @@ def get_user_information
   @full_name        = ask(" - Your full name: ")
   @github_user      = ask(" - GitHub username: ")
   @github_email     = ask(" - GitHub email: ")
-  @projects_dir     = ask(" - Work directory. Like `~/Projects`: ")
+  @projects_dir     = ask(" - Work directory. Like `~/Code`: ")
 
   puts "\nHello! #{@full_name}"
 end
@@ -149,7 +149,7 @@ namespace :install do
     @full_name        = "Developer"
     @github_user      = ""
     @github_email     = ""
-    @projects_dir     = "~/Projects"
+    @projects_dir     = "~/Code"
 
     create_files :dotfiles
     reload_bash
