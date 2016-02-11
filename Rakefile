@@ -135,7 +135,7 @@ task :install_brew do
 
   # Basics
   `brew update`
-  `brew install mysql wget rbenv zsh curl openssl hub ctags`
+  `brew install mysql wget rbenv zsh curl openssl hub ctags watchman`
   `brew link openssl --force`
 
   # CodeCliamte for Atom editor.
