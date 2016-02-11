@@ -1,4 +1,8 @@
 {
+	"added_words":
+	[
+		"Zendesk"
+	],
 	"auto_indent": true,
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
@@ -34,7 +38,8 @@
 		"*.suo",
 		"*.svg",
 		".DS_Store",
-		"jasmine-specs.js"
+		"jasmine-specs.js",
+		".byebug_history"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -48,6 +53,7 @@
 		"coverage",
 		".vagrant",
 		"CVS",
+		"logs/",
 		"doc/fdoc",
 		"vendor",
 		"spec/test_files",
@@ -60,7 +66,7 @@
 	[
 		"bold"
 	],
-	"font_size": 12,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
