@@ -1,5 +1,6 @@
 *~
 .*.swp
+.bundle
+.byebug_history
 .DS_Store
 .svn
-.byebug_history
