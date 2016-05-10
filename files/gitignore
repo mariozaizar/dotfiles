@@ -5,3 +5,4 @@
 .DS_Store
 .svn
 pkg
+log/test.log
