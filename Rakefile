@@ -5,34 +5,34 @@ HOME_DIR = File.expand_path('~')
 
 FILES = {
   :dotfiles => {
-    "files/bash_profile.sh"           => "~/.bash_profile",
+    "files/atom/styles.less"          => "~/.atom/styles.less",
     "files/bash/aliases.sh"           => "~/.bash/aliases",
     "files/bash/completion.sh"        => "~/.bash/completion",
     "files/bash/config.sh"            => "~/.bash/config",
     "files/bash/prompt.sh"            => "~/.bash/prompt",
+    "files/bash_profile.sh"           => "~/.bash_profile",
     "files/bashrc.sh"                 => "~/.bashrc",
+    "files/bundle_config.ini"         => "~/.bundle/config",
     "files/gemrc.yml"                 => "~/.gemrc",
+    "files/git-push-request.rb"       => "~/.git-push-request.rb",
     "files/gitconfig.ini"             => "~/.gitconfig",
-    "files/irbrc.ini"                 => "~/.irbrc",
-    "files/pryrc.ini"                 => "~/.pryrc",
     "files/gitignore"                 => "~/.gitignore",
     "files/guardfile.rb"              => "~/.Guardfile",
     "files/hgignore_global"           => "~/.hgignore_global",
-    "files/bundle_config.ini"         => "~/.bundle/config",
-    "files/zshrc"                     => "~/.zshrc",
     "files/hub.zsh_completion.sh"     => "~/.zsh/completions/hub.zsh_completion",
-    # "files/oh-my-zsh.rb"              => "~/.oh-my-zsh", # MISSING
+    "files/irbrc.ini"                 => "~/.irbrc",
     "files/powconfig.sh"              => "~/.powconfig",
+    "files/pryrc.ini"                 => "~/.pryrc",
     "files/rspec.rb"                  => "~/.rspec",
     "files/ruby-gemset"               => "~/Code/.ruby-gemset",
     "files/ruby-version"              => "~/Code/.ruby-version",
-    "files/git-push-request.rb"       => "~/.git-push-request.rb",
     "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
-    "files/atom/styles.less"          => "~/.atom/styles.less",
-    "files/vimrc.sh"                  => "~/.vimrc",
+    "files/stCommitMsg.txt"           => "~/.stCommitMsg",
     "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+    "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+    "files/vimrc.sh"                  => "~/.vimrc",
+    "files/zshrc"                     => "~/.zshrc"
   },
 }
 
