@@ -6,6 +6,7 @@
   { "keys": ["command+b"], "command": "toggle_bookmark" },
   { "keys": ["super+shift+o"], "command": "prompt_open" },
   { "keys": ["super+o"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+  { "keys": ["super+alt+p"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} },
   { "keys": ["super+shift+t"], "command": "reopen_last_file" },
 
   { "keys": ["super+alt+v"], "command": "show_overlay", "args": {"overlay": "goto", "text": "app/views/"} },
