@@ -9,7 +9,6 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - [Ruby][ruby], [irb][irb] and [rubygems][gem] default settings.
 - Ruby versions like [rvm][rvm], [rbenv][rbenv] inside your prompt.
 - Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in prompt.
-- [Vagrant][vagrant] getting box state directly in prompt!
 
 This is the current list of files:
 
@@ -97,5 +96,4 @@ Git prompt: [link1](http://tinyurl.com/4q6zehb), [link2](https://gist.github.com
 [rbenv]: https://github.com/sstephenson/rbenv
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
-[vagrant]: http://vagrantup.com
 [irb]: http://en.wikipedia.org/wiki/Interactive_Ruby_Shell
