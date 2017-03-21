@@ -146,16 +146,14 @@ function git_dirty_status {
 
 if [ "$color_prompt" = yes ]; then
   line1='\n\[\e[1;36m\]\@ \[\e[1;35m\]\w\[\e[1;37m\] at \[\e[1;36m\]\h'
-  line2='\n\[\e[1;36m\]git: \[\e[1;35m\]$(git_dirty_status)$(git_branch), \[\e[1;36m\]ruby: \[\e[1;30m\]$(ruby_version)\[\e[1;37m\]'
-  line3='\n\[\e[1;35m\]\W\[\e[1;37m\] → '
+  line2='\n\[\e[1;36m\]$(git_dirty_status)$(git_branch)\[\e[1;37m\] → \[\e[1;35m\]\W\[\e[1;37m\] → '
 
-  PS1="${line1}${line2}${line3}"
+  PS1="${line1}${line2}"
 else
   line1='\n\@ \w at \h'
-  line2='\ngit: $(git_branch), ruby: $(ruby_version)'
-  line3='\n\W → '
+  line2='\n$(git_dirty_status)$(git_branch) → \W → '
 
-  PS1="${line1}${line2}${line3}"
+  PS1="${line1}${line2}"
 fi
 
 unset color_prompt
