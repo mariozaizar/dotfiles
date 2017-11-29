@@ -128,19 +128,15 @@ task :install do
   reload_bash
 end
 
-desc "Install some Brews"
+desc "Install some brews"
 task :install_brew do
   puts "Will install some basic brews (you need brew installed)"
   exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
   # Basics
   `brew update`
-  `brew install mysql wget rbenv zsh curl openssl hub ctags watchman`
+  `brew install mysql wget rbenv curl openssl hub ctags`
   `brew link openssl --force`
-
-  # CodeCliamte for Atom editor.
-  `brew tap codeclimate/formulae`
-  `brew install codeclimate`
 end
 
 namespace :install do

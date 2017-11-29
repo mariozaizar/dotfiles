@@ -1,6 +1,6 @@
 # Utils
 ###############################################################################
-alias work='clear; cd <%= @projects_dir %>;'
+alias code='clear; cd <%= @projects_dir %>;'
 ###############################################################################
 
 alias claer='clear;' # Nada puede malir sal
@@ -14,7 +14,14 @@ alias ls='ls -G'
 alias la='ls -A'
 alias ll='ls -alF'
 alias reload='source ~/.bash_profile'
-alias s='subl -n .'
+
+# Text Editors
+alias st='stree .';  # SourceTree
+alias s='subl -a .'; # Sublime
+alias a='atom -a .'; # Atom
+
+# Default Editor
+export EDITOR="sublime"; # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
 
 # Ruby & Bundler
 alias be='bundle exec'
