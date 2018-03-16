@@ -20,9 +20,6 @@ alias st='stree .';  # SourceTree
 alias s='subl -a .'; # Sublime
 alias a='atom -a .'; # Atom
 
-# Default Editor
-export EDITOR="sublime"; # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-
 # Ruby & Bundler
 alias be='bundle exec'
 alias bi='bundle check || bundle install --local'

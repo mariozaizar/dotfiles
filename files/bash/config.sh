@@ -35,13 +35,17 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
-# If sublime is installed, make it as your default editor
-# If sublime is installed, make it as your default editor
+# If atom is installed, make it as your default editor
 if [ `which atom` ]; then
   export EDITOR="atom"
 elif [ `which subl` ]; then
-    export EDITOR="subl -a"
+  # If sublime is installed, make it as your default editor
+  # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+  export EDITOR="subl -a"
 fi
+
+# git editor
+export GIT_EDITOR="atom --wait"
 
 # Prefer US English and use UTF-8
 export LC_CTYPE="UTF-8"
