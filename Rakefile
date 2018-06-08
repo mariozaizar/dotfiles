@@ -136,7 +136,7 @@ task :install_brew do
 
   # Basics
   `brew update`
-  `brew install mysql wget rbenv curl openssl hub ctags`
+  `brew install autoconf autojump awscli ctags curl docker gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre phantomjs pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
   `brew link openssl --force`
 end
 
