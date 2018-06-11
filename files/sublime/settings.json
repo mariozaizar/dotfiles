@@ -4,11 +4,14 @@
 		"Zendesk"
 	],
 	"auto_indent": true,
+	"auto_match_enabled": true,
+	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"drag_text": false,
-	"draw_minimap_border": true,
+	"draw_minimap_border": false,
+	"draw_white_space": "selection",
 	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
@@ -16,12 +19,16 @@
 	[
 		"*.a",
 		"*.class",
+		"*.csv",
+		"*.cvs",
 		"*.db",
 		"*.dll",
 		"*.dylib",
 		"*.exe",
 		"*.idb",
 		"*.lib",
+		"*.log",
+		"*.log.json",
 		"*.ncb",
 		"*.o",
 		"*.obj",
@@ -30,16 +37,14 @@
 		"*.pyc",
 		"*.pyo",
 		"*.sdf",
-		"*.xml",
 		"*.so",
-		"*.cvs",
-		"*.csv",
-		"*.svn",
 		"*.suo",
 		"*.svg",
-		".DS_Store",
-		"jasmine-specs.js",
-		".byebug_history"
+		"*.svn",
+		"*.tmp",
+		"*.xml",
+		".byebug_history",
+		".DS_Store"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -50,42 +55,30 @@
 		".idea",
 		".jhw-cache",
 		".sass-cache",
-		"coverage",
 		".vagrant",
+		"coverage",
 		"CVS",
-		"logs/",
 		"doc/fdoc",
-		"vendor",
-		"spec/test_files",
-		"public/assets",
 		"files/cybersource",
-		"public/images"
+		"logs/",
+		"node_modules",
+		"public/assets",
+		"public/images",
+		"spec/test_files",
+		"tmp/",
+		"vendor"
 	],
 	"font_face": "Monaco",
 	"font_options":
 	[
 		"bold"
 	],
-	"font_size": 16,
+	"font_size": 14,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"\"Package Control\"",
-		"\"RSpec\"",
-		"\"RSpecNavigator\"",
-		"\"Sass\"",
-		"\"SideBarEnhancements\"",
-		"\"Solarized Color Scheme\"",
-		"\"Syntax Highlighting for Sass\"",
-		"\"Theme - Flatland\"",
-		"\"Theme - Glacier\"",
-		"\"Theme - Spacegray\"",
-		"\"Theme - Tech49\"",
-		"\"Themr\"",
-		"Rails Partial",
-		"TestChooser",
 		"Vintage"
 	],
 	"indent_guide_options":
@@ -96,7 +89,8 @@
 	"indent_to_bracket": false,
 	"index_exclude_patterns":
 	[
-		"*.log"
+		"*.log",
+		"*.json"
 	],
 	"line_numbers": true,
 	"move_to_limit_on_up_down": true,
@@ -113,8 +107,9 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "One Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
 	"word_wrap": false

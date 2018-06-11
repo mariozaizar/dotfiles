@@ -1,0 +1,62 @@
+"*":
+  core:
+    closeDeletedFileTabs: true
+    customFileTypes:
+      "source.ini": [
+        ".hgrc"
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "highlight-selected"
+    ]
+    restorePreviousWindowsOnStart: "no"
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "dracula-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    fontSize: 14
+    zoomFontWhenCtrlScrolling: true
+  "exception-reporting":
+    userId: "cc5b57a0-6fe1-4be5-93c4-bb9a315bb0ea"
+  linter:
+    disabledProviders: [
+      "Ruby"
+    ]
+  "linter-ui-default":
+    panelHeight: 205
+    showPanel: true
+  minimap:
+    displayCodeHighlights: false
+    plugins:
+      bookmarks: false
+      bookmarksDecorationsZIndex: 0
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": false
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+  "prettier-atom":
+    formatOnSaveOptions:
+      showInStatusBar: true
+    useEslint: true
+  "tree-view":
+    alwaysOpenExisting: true
+    autoReveal: true
+    squashDirectoryNames: true
+  welcome:
+    showOnStartup: false
