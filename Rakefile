@@ -3,6 +3,11 @@ require 'erb'
 
 HOME_DIR = File.expand_path('~')
 
+LINKS = {
+  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
+    "/usr/local/bin/sublime"
+}
+
 FILES = {
   :dotfiles => {
     "files/atom/styles.less"          => "~/.atom/styles.less",
@@ -42,7 +47,6 @@ FILES = {
 # NOTE: First install https://packagecontrol.io/ then run "advance install" and paste:
 # Alignment, Better CoffeeScript, Better RSpec, Case Conversion, ChangeQuotes, Cucumber, Devastate, Git, GitGutter, GitHubinator, Haml, MarkdownLight, Material Theme, RSpec, RSpecNavigator, Sass, SideBarEnhancements, Solarized Color Scheme, Syntax Highlighting for Sass, Theme - Flatland, Theme - Glacier, Theme - Spacegray, Theme - Tech49, Themr, TrailingSpaces
 
-
 ################################################################################
 def get_user_information
   puts "\nPlease write your information:"
@@ -68,7 +72,7 @@ def ask message="", required=true
 end
 
 def create_links
-  LINKS.sort!.each do |from, to|
+  LINKS.each do |from, to|
     puts "\t#{from} => #{to}"
     to.gsub!('~', HOME_DIR)
 
@@ -131,17 +135,6 @@ task :install do
   reload_bash
 end
 
-desc "Install some brews"
-task :install_brew do
-  puts "Will install some basic brews (you need brew installed)"
-  exit if ask("\nContinue? [Y/N]: ", false)!='Y'
-
-  # Basics
-  `brew update`
-  `brew install autoconf autojump awscli ctags curl docker gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre phantomjs pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
-  `brew link openssl --force`
-end
-
 namespace :install do
   desc "Same as Install, but without asking anything. Quick and easy."
   task :no_ask do
@@ -152,6 +145,23 @@ namespace :install do
 
     create_files :dotfiles
     reload_bash
+  end
+
+  desc "Create some sublinks"
+  task :links do
+    create_links
+    reload_bash
+  end
+
+  desc "Install some brews"
+  task :brews do
+    puts "Will install some basic brews (you need brew installed)"
+    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
+
+    # Basics
+    `brew update`
+    `brew install autoconf autojump awscli ctags curl docker gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre phantomjs pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
+    `brew link openssl --force`
   end
 end
 
