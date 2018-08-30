@@ -5,7 +5,9 @@ HOME_DIR = File.expand_path('~')
 
 LINKS = {
   "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
-    "/usr/local/bin/sublime"
+    "/usr/local/bin/sublime",
+  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
+    "/usr/local/bin/subl"
 }
 
 FILES = {
