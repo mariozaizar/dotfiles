@@ -7,7 +7,9 @@ LINKS = {
   "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
     "/usr/local/bin/sublime",
   "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
-    "/usr/local/bin/subl"
+    "/usr/local/bin/subl",
+  "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" =>
+    "/usr/local/bin/smerge"
 }
 
 FILES = {
