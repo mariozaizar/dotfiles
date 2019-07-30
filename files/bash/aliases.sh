@@ -36,6 +36,7 @@ alias gb='git branch'
 alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout'
+alias repush='git commit --amend --no-edit; git push --force;'
 
 # vim
 alias vi='vim'
