@@ -84,5 +84,5 @@ alias repush='git commit --amend --no-edit; git push --force;'
 alias vi='vim'
 
 # OSX
-alias show_hidden_fikes_mac='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias show_hidden_files_mac='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
 alias hide_hidden_files_mac='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
