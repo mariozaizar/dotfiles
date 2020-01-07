@@ -1,7 +1,5 @@
-source ~/.bash/config
-source ~/.bash/prompt
-source ~/.bash/aliases
-source ~/.bash/completion
+# The source of magic
+source ~/.dotfiles
 
 # Personal settings (should not overrided)
 if [ -f ~/.personal ]; then

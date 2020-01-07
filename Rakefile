@@ -12,15 +12,12 @@ LINKS = {
 
 FILES = {
   :dotfiles => {
-    "files/atom/styles.less"          => "~/.atom/styles.less",
     "files/atom/config.cson"          => "~/.atom/config.cson",
     "files/atom/snippets.cson"        => "~/.atom/snippets.cson",
+    "files/atom/keymap.cson"          => "~/.atom/keymap.cson",
     "files/aws-credentials.yml"       => "~/.aws/credentials",
     "files/bash_profile.sh"           => "~/.bash_profile",
-    "files/bash/aliases.sh"           => "~/.bash/aliases",
-    "files/bash/completion.sh"        => "~/.bash/completion",
-    "files/bash/config.sh"            => "~/.bash/config",
-    "files/bash/prompt.sh"            => "~/.bash/prompt",
+    "files/dotfiles.sh"               => "~/.dotfiles",
     "files/bashrc.sh"                 => "~/.bashrc",
     "files/bundle_config.ini"         => "~/.bundle/config",
     "files/gemrc.yml"                 => "~/.gemrc",
@@ -134,17 +131,6 @@ namespace :install do
     create_links
     reload_bash
   end
-
-  desc "Install some brews"
-  task :brews do
-    puts "Will install some basic brews (you need brew installed)"
-    exit if ask("\nContinue? [Y/N]: ", false)!='Y'
-
-    # Basics
-    `brew update`
-    `brew install autoconf autojump awscli ctags curl gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
-    `brew link openssl --force`
-  end
 end
 
 desc "Where to find the backup files"
@@ -154,7 +140,6 @@ task :uninstall do
   system %Q{ find ~ -name "*.dotfiles-backup" }
 
   puts "\nJust remove the '.dotfiles-backup' extension and restart your terminal."
-  puts "-Mario"
 end
 
 task :default => :help

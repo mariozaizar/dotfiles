@@ -29,10 +29,80 @@ This is the current list of files:
 ~/.vimrc
 ```
 
-### Sublime packages
+### Sublime Packages
 
-Run "advance install" and paste:
-> Alignment, Better CoffeeScript, Better RSpec, Case Conversion, ChangeQuotes, Devastate, Git, GitGutter, GitHubinator, Haml, MarkdownLight, RSpec, RSpecNavigator, Sass, SideBarEnhancements, Syntax Highlighting for Sass, TrailingSpaces
+Run "advance install" command and paste:
+```
+A File Icon,
+Alignment,
+Base Encoder,
+Better CoffeeScript,
+Better RSpec,
+Case Conversion,
+ChangeQuotes,
+Copy Relative Path,
+Devastate,
+EML (E-Mail),
+Git,
+GitGutter,
+GitHubinator,
+Haml,
+Handlebars,
+JSX,
+MarkdownLight,
+Path Tools,
+Razor,
+ReactJS,
+RSpec,
+RSpecNavigator,
+Ruby Block Converter,
+Sass,
+SideBarEnhancements,
+Spec Finder,
+SublimeLinter,
+SublimeLinter-annotations,
+SublimeLinter-rubocop,
+Syntax Highlighting for Sass,
+Toggle Symbol to String,
+ToggleMinimapOnScroll,
+ToggleWrap,
+TrailingSpaces
+```
+
+### Brew Packages
+
+Run in the terminal:
+```
+brew install \
+autoconf \
+autojump \
+awscli \
+ctags \
+curl \
+gdbm \
+gettext \
+git \
+htop \
+hub \
+icu4c \
+libidn \
+libidn2 \
+libunistring \
+mysql \
+node \
+openssl \
+pcre \
+pkg-config \
+python \
+rbenv \
+readline \
+ruby-build \
+sqlite \
+tree \
+watchman \
+wget \
+xz
+```
 
 ## Requirements
 
