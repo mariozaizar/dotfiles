@@ -26,7 +26,7 @@ if [ `which atom` ]; then
 elif [ `which subl` ]; then
   # If sublime is installed, make it as your default editor
   # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
-  export EDITOR="subl -a"
+  export EDITOR="sublime -a"
 fi
 
 #-------------------------------------------------------------------------------
