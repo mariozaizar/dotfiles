@@ -6,9 +6,9 @@ A simple way to configure your bash shell as developer [terminal][cli].
 - [Bash][bash] custom developer prompt, nice colors, useful aliases…
 - [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, prompt…
 - [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias (use the same for both).
-- [Ruby][ruby], [irb][irb] and [rubygems][gem] default settings.
-- Ruby versions like [rvm][rvm], [rbenv][rbenv] inside your prompt.
-- Default [rvm][rvm], [rubygems][gem] default settings, rvm gemset and ruby version in prompt.
+- [Ruby][ruby], and [rubygems][gem] default settings.
+- Ruby versions like [rbenv][rbenv] inside your prompt.
+- Default [rubygems][gem] default settings, gemset and ruby version in prompt.
 
 This is the current list of files:
 
@@ -26,10 +26,7 @@ This is the current list of files:
 ~/.Guardfile
 ~/.guardrc
 ~/.hgignore_global
-~/.irbrc
-~/.pryrc
 ~/.rspec
-~/.rvmrc
 ~/.smb/smb.conf
 ~/.vimrc
 ```
@@ -43,13 +40,13 @@ This is the current list of files:
 
 ## Installation
 
-### 1) Get it!
+### Get it!
 
     $ git clone https://github.com/mariozaizar/dotfiles.git;
     $ cd dotfiles/;
     $ rake help;
 
-### 2) Install it!
+### Install it!
 
 *Note:* this will generate the files (for example `~/.gitconfig`) and then it
 will copy this files inside your home directory (making backups if necessary).
@@ -59,7 +56,7 @@ your original files.
 
     $ rake install
 
-### *) Uninstall
+### Uninstall
 
     $ rake uninstall
 
@@ -72,4 +69,3 @@ your original files.
 [rbenv]: https://github.com/sstephenson/rbenv
 [gem]: http://rubygems.org/
 [bash]: http://www.gnu.org/software/bash/
-[irb]: http://en.wikipedia.org/wiki/Interactive_Ruby_Shell

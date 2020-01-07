@@ -22,18 +22,12 @@ export LSCOLORS=ExFxCxDxBxegedabagacad;
 ################################################################################
 function ruby_version {
   local version='';
-    if which rbenv > /dev/null; then
-      # rbenv installed
-      version="rbenv/$(rbenv_version)";
-    elif which rvm > /dev/null; then
-    # rvm installed
-    version="rvm/$(rvm_version)";
+  if which rbenv > /dev/null; then
+    # rbenv installed
+    version="rbenv/$(rbenv_version)";
   elif [ -f '.rbenv_version' ]; then
     # rbenv_version detected
     version="(.rbenv_version)";
-  elif [ -f '.rvmrc' ]; then
-    # rvmrc detected
-    version="(.rvmrc)";
   else
     version="(unknown ruby)";
   fi
@@ -42,15 +36,6 @@ function ruby_version {
 
 function rbenv_version {
   echo "$(rbenv version | awk '{print $1}')"
-}
-
-function rvm_version {
-  local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
-  local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-  [ "$version" != "" ] && version="$version"
-  local full="$version$gemset"
-  [ "$full" != "" ] && echo "$full"
 }
 
 function vagrant_status {

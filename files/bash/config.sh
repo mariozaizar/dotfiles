@@ -9,22 +9,13 @@ else
 fi
 
 ################################################################################
-# Ruby and friends (warning rbenv/rvm are incompatibles)
+# Ruby
 export PATH="$HOME/.rbenv/bin:$PATH";
 
-# TODO, http://stackoverflow.com/questions/592620/how-to-check-if-a-program-exists-from-a-bash-script/677212#677212
 if which rbenv > /dev/null; then
   # rbenv installed
   export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
   eval "$(rbenv init -)";
-
-elif [ -e "$HOME/.rvm/scripts/rvm" ]; then
-  # RVM installed
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-  export PATH=$PATH:$HOME/.rvm/bin;
-
-  # RVM + XCode with osx-gcc-installer - https://github.com/kennethreitz/osx-gcc-installer
-  # export CC=/usr/bin/gcc-4.2
 fi
 
 ################################################################################
