@@ -54,7 +54,7 @@ export UPDATE_ZSH_DAYS=5
 plugins=(git github bundler osx rake ruby)
 
 # User configuration
-export PATH="/Users/mzaizar/Code/zendesk/zendesk/docker-images/dockmaster/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/bin:/Users/mzaizar/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/~/Code/zendesk/zendesk/docker-images/dockmaster/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/shims:/Users/mzaizar/.rbenv/bin:/Users/mzaizar/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -85,14 +85,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-########################################################################################################################
+#-------------------------------------------------------------------------------
 # Hub ~ Github
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
-########################################################################################################################
-# Bash Legacy
-source ~/.bash/aliases
+#-------------------------------------------------------------------------------
+# The source of magic
+source ~/.dotfiles
 
 # Personal settings (should not overrided)
 if [ -f ~/.personal ]; then

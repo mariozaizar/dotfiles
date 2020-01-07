@@ -1,23 +1,13 @@
 # dotFiles
+
 A simple way to configure your bash shell as developer [terminal][cli].
 
-## Features
-
-- [Bash][bash] custom developer prompt, nice colors, useful aliases…
-- [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, prompt…
-- [Sinatra][sinatra] and [Ruby on Rails][rails] smart alias (use the same for both).
-- [Ruby][ruby], and [rubygems][gem] default settings.
-- Ruby versions like [rbenv][rbenv] inside your prompt.
-- Default [rubygems][gem] default settings, gemset and ruby version in prompt.
+## Dotfiles
 
 This is the current list of files:
 
-*dotfiles:*
 ```
-~/.bash/aliases
-~/.bash/completion
-~/.bash/config
-~/.bash/prompt
+~/.dotfiles
 ~/.bash_profile
 ~/.bashrc
 ~/.gemrc
@@ -27,6 +17,7 @@ This is the current list of files:
 ~/.rspec
 ~/.smb/smb.conf
 ~/.vimrc
+~/zshrc
 ```
 
 ### Sublime Packages
@@ -36,25 +27,17 @@ Run "advance install" command and paste:
 A File Icon,
 Alignment,
 Base Encoder,
-Better CoffeeScript,
 Better RSpec,
 Case Conversion,
 ChangeQuotes,
 Copy Relative Path,
-Devastate,
 EML (E-Mail),
 Git,
 GitGutter,
-GitHubinator,
-Haml,
 Handlebars,
+Ember Syntax,
 JSX,
-MarkdownLight,
-Path Tools,
-Razor,
 ReactJS,
-RSpec,
-RSpecNavigator,
 Ruby Block Converter,
 Sass,
 SideBarEnhancements,
@@ -62,10 +45,7 @@ Spec Finder,
 SublimeLinter,
 SublimeLinter-annotations,
 SublimeLinter-rubocop,
-Syntax Highlighting for Sass,
 Toggle Symbol to String,
-ToggleMinimapOnScroll,
-ToggleWrap,
 TrailingSpaces
 ```
 
@@ -115,9 +95,11 @@ xz
 
 ### Get it!
 
-    $ git clone https://github.com/mariozaizar/dotfiles.git;
-    $ cd dotfiles/;
-    $ rake help;
+```sh
+git clone https://github.com/mariozaizar/dotfiles.git;
+cd dotfiles/;
+rake help;
+```
 
 ### Install it!
 
@@ -127,11 +109,15 @@ So, that means that we will REPLACE the original files, but creating a backup
 with `*.old` extension. Please go to 'Uninstall" section to see how to recover
 your original files.
 
-    $ rake install
+```sh
+rake install
+```
 
 ### Uninstall
 
-    $ rake uninstall
+```sh
+rake uninstall
+```
 
 [cli]: http://en.wikipedia.org/wiki/Command_line_interface
 [git]: http://git-scm.com/

@@ -13,7 +13,6 @@ LINKS = {
 FILES = {
   :dotfiles => {
     "files/atom/config.cson"          => "~/.atom/config.cson",
-    "files/atom/snippets.cson"        => "~/.atom/snippets.cson",
     "files/atom/keymap.cson"          => "~/.atom/keymap.cson",
     "files/aws-credentials.yml"       => "~/.aws/credentials",
     "files/bash_profile.sh"           => "~/.bash_profile",
@@ -33,7 +32,7 @@ FILES = {
     "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
     "files/sublime/settings.json"     => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
     "files/vimrc.sh"                  => "~/.vimrc",
-    "files/zshrc"                     => "~/.zshrc"
+    "files/zshrc.sh"                  => "~/.zshrc"
   },
 }
 
@@ -105,7 +104,7 @@ def list_files group
 end
 
 def reload_bash
-  system %Q{ bash }
+  puts "Please reload your terminal"
 end
 
 ################################################################################
