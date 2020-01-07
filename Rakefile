@@ -88,8 +88,8 @@ def create_files group
     system %Q{ mkdir -p "#{folder}"} unless File.exist?(folder)
 
     # Backup
-    if File.exist?(to) && !File.exist?("#{to}.old")
-      system %Q{cp "#{to}" "#{to}.old"}
+    if File.exist?(to) && !File.exist?("#{to}.dotfiles-backup")
+      system %Q{cp "#{to}" "#{to}.dotfiles-backup"}
     end
 
     # Content
@@ -149,11 +149,11 @@ end
 
 desc "Where to find the backup files"
 task :uninstall do
-  puts "Your original files are safe as *.old files."
-  puts "Searching for *.old files:\n\n"
-  system %Q{ find ~ -name "*.old" }
+  puts "Your original files are safe as *.dotfiles-backup files."
+  puts "Searching for *.dotfiles-backup files:\n\n"
+  system %Q{ find ~ -name "*.dotfiles-backup" }
 
-  puts "\nJust remove the '.old' extension and restart your terminal."
+  puts "\nJust remove the '.dotfiles-backup' extension and restart your terminal."
   puts "-Mario"
 end
 
