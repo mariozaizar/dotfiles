@@ -25,10 +25,6 @@ alias be='bundle exec'
 alias bi='bundle check || bundle install --local'
 alias bu='bundle update'
 
-alias cuke="be cucumber -rfeatures -fprogress"
-alias pow_log='tail -f ~/Library/Logs/Pow/access.log'
-alias pow_restart='echo "Restarting pow..."; touch tmp/restart.txt'
-
 # Git
 alias gs='git status'
 alias ga='git add'
@@ -41,48 +37,6 @@ alias repush='git commit --amend --no-edit; git push --force;'
 # vim
 alias vi='vim'
 
-# Rails
-alias r='rails'
-alias rails_log='tail -f ./log/development.log | grep --invert-match DEBUG'
-alias rails_test_log='tail -f ./log/test.log | grep --invert-match DEBUG'
-
 # OSX
-alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
-alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
-
-alias zdstart="zdi vm start; zdi services restart; zdi apps restart"
-
-# Rails 2 & 3 functions
-# http://tinyurl.com/4j83zdv
-# http://tinyurl.com/2dq9pkv
-function sc {
-  if [ -x script/console ]; then
-    script/console
-  else
-    rake console
-  fi
-}
-
-function sdbc {
-  if [ -x script/dbconsole ]; then
-    script/dbconsole
-  else
-    rake dbconsole
-  fi
-}
-
-sg () {
-  if [ -f ./script/rails ]; then
-    rails g $@
-  else
-    ./script/generate $@
-  fi
-}
-
-ss () {
-  if [ -f ./script/rails ]; then
-    rails s $@
-  else
-    ./script/server $@
-  fi
-}
+alias show_hidden_fikes_mac='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
+alias hide_hidden_files_mac='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'

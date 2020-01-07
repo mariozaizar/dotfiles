@@ -23,8 +23,6 @@ This is the current list of files:
 ~/.gemrc
 ~/.gitconfig
 ~/.gitignore
-~/.Guardfile
-~/.guardrc
 ~/.hgignore_global
 ~/.rspec
 ~/.smb/smb.conf

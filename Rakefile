@@ -6,8 +6,6 @@ HOME_DIR = File.expand_path('~')
 LINKS = {
   "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
     "/usr/local/bin/sublime",
-  "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
-    "/usr/local/bin/subl",
   "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" =>
     "/usr/local/bin/smerge"
 }
@@ -26,19 +24,13 @@ FILES = {
     "files/bashrc.sh"                 => "~/.bashrc",
     "files/bundle_config.ini"         => "~/.bundle/config",
     "files/gemrc.yml"                 => "~/.gemrc",
-    "files/git-push-request.rb"       => "~/.git-push-request.rb",
     "files/gitconfig.ini"             => "~/.gitconfig",
     "files/gitignore"                 => "~/.gitignore",
-    "files/guardfile.rb"              => "~/.Guardfile",
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/hub.zsh_completion.sh"     => "~/.zsh/completions/hub.zsh_completion",
-    "files/irbrc.ini"                 => "~/.irbrc",
-    "files/powconfig.sh"              => "~/.powconfig",
-    "files/pryrc.ini"                 => "~/.pryrc",
     "files/rspec.rb"                  => "~/.rspec",
     "files/ruby-gemset"               => "~/Code/.ruby-gemset",
     "files/ruby-version"              => "~/Code/.ruby-version",
-    "files/rvmrc.sh"                  => "~/.rvmrc",
     "files/smb.conf.ini"              => "~/.smb/smb.conf",
     "files/stCommitMsg.txt"           => "~/.stCommitMsg",
     "files/sublime/keymap.json"       => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
@@ -47,9 +39,6 @@ FILES = {
     "files/zshrc"                     => "~/.zshrc"
   },
 }
-
-# NOTE: First install https://packagecontrol.io/ then run "advance install" and paste:
-# Alignment, Better CoffeeScript, Better RSpec, Case Conversion, ChangeQuotes, Cucumber, Devastate, Git, GitGutter, GitHubinator, Haml, MarkdownLight, Material Theme, RSpec, RSpecNavigator, Sass, SideBarEnhancements, Solarized Color Scheme, Syntax Highlighting for Sass, Theme - Flatland, Theme - Glacier, Theme - Spacegray, Theme - Tech49, Themr, TrailingSpaces
 
 ################################################################################
 def get_user_information
@@ -83,8 +72,8 @@ def create_links
     if File.exist?(from) && !File.exist?(to)
       system %Q{ln -s "#{from}" "#{to}"}
     else
-      puts "Abort: destination already exists!" if File.exist?(to)
-      puts "Abort: origin file doesn't exist!" unless File.exist?(from)
+      puts "The destination already exists: #{to}" if File.exist?(to)
+      puts "The origin file doesn't exist: #{from}" unless File.exist?(from)
     end
   end
 end
@@ -140,17 +129,6 @@ task :install do
 end
 
 namespace :install do
-  desc "Same as Install, but without asking anything. Quick and easy."
-  task :no_ask do
-    @full_name        = "Developer"
-    @github_user      = ""
-    @github_email     = ""
-    @projects_dir     = "~/Code"
-
-    create_files :dotfiles
-    reload_bash
-  end
-
   desc "Create some sublinks"
   task :links do
     create_links
@@ -164,7 +142,7 @@ namespace :install do
 
     # Basics
     `brew update`
-    `brew install autoconf autojump awscli ctags curl docker gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre phantomjs pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
+    `brew install autoconf autojump awscli ctags curl gdbm gettext git htop hub icu4c libidn libidn2 libunistring mysql node openssl pcre pkg-config python rbenv readline ruby-build sqlite tree watchman wget xz`
     `brew link openssl --force`
   end
 end
