@@ -75,6 +75,7 @@ pcre \
 pkg-config \
 python \
 rbenv \
+rbenv-default-gems \
 readline \
 ruby-build \
 sqlite \

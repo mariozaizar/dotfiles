@@ -24,6 +24,7 @@ FILES = {
     "files/gitignore"                 => "~/.gitignore",
     "files/hgignore_global"           => "~/.hgignore_global",
     "files/hub.zsh_completion.sh"     => "~/.zsh/completions/hub.zsh_completion",
+    "files/rbenv-default-gems.rb"     => "~/.rbenv/default-gems",
     "files/rspec.rb"                  => "~/.rspec",
     "files/ruby-gemset"               => "~/Code/.ruby-gemset",
     "files/ruby-version"              => "~/Code/.ruby-version",
