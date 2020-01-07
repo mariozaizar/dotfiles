@@ -5,7 +5,7 @@ A simple way to configure your bash shell as developer [terminal][cli].
 
 - [Bash][bash] custom developer prompt, nice colors, useful aliases…
 - [Git][git] default configuration, useful git alias, autocomplete by default, commit timer/log, prompt…
-- [Sinatra][sinatra] and [Ruby on Rails][rails] 2 & 3 smart alias (use the same for both).
+- [Sinatra][sinatra] and [Ruby on Rails][rails] smart alias (use the same for both).
 - [Ruby][ruby], and [rubygems][gem] default settings.
 - Ruby versions like [rbenv][rbenv] inside your prompt.
 - Default [rubygems][gem] default settings, gemset and ruby version in prompt.
@@ -30,6 +30,11 @@ This is the current list of files:
 ~/.smb/smb.conf
 ~/.vimrc
 ```
+
+### Sublime packages
+
+Run "advance install" and paste:
+> Alignment, Better CoffeeScript, Better RSpec, Case Conversion, ChangeQuotes, Devastate, Git, GitGutter, GitHubinator, Haml, MarkdownLight, RSpec, RSpecNavigator, Sass, SideBarEnhancements, Syntax Highlighting for Sass, TrailingSpaces
 
 ## Requirements
 
