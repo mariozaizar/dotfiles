@@ -95,6 +95,4 @@ autoload -U compinit && compinit
 source ~/.dotfiles
 
 # Personal settings (should not overrided)
-if [ -f ~/.personal ]; then
-  source ~/.personal;
-fi
+source ~/.personal;
