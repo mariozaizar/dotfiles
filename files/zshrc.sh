@@ -5,8 +5,8 @@ export ZSH=/Users/mzaizar/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell" # robbyrussell (default), agnoster, dracula
-# NOTE: The agnoster theme needs git@github.com:powerline/fonts.git installed.
+ZSH_THEME="agnoster" # robbyrussell (default), agnoster, dracula
+# NOTE: The agnoster theme needs git@github.com:powerline/fonts.git installed and Meslo 14pt font.
 # NOTE: The drakula is from http://zenorocha.github.io/dracula-theme/
 
 # Uncomment the following line to use case-sensitive completion.
@@ -59,31 +59,6 @@ export PATH="/~/Code/zendesk/zendesk/docker-images/dockmaster/bin:/usr/local/sha
 
 source $ZSH/oh-my-zsh.sh
 # Update: upgrade_oh_my_zsh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #-------------------------------------------------------------------------------
 # Hub ~ Github

@@ -23,9 +23,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # If atom is installed, make it as your default editor
 if [ `which atom` ]; then
   export EDITOR="atom"
-elif [ `which subl` ]; then
-  # If sublime is installed, make it as your default editor
-  # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime
+elif [ `which sublime` ]; then
   export EDITOR="sublime -a"
 fi
 
@@ -62,9 +60,9 @@ alias ll='ls -alF'
 alias reload='source ~/.bash_profile'
 
 # Text Editors
-alias st='stree .';  # SourceTree
-alias s='subl -a .'; # Sublime
-alias a='atom -a .'; # Atom
+alias st='stree .';
+alias s='sublime -a .';
+alias a='atom -a .';
 
 # Ruby & Bundler
 alias be='bundle exec'
