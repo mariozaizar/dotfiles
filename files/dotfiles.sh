@@ -78,6 +78,8 @@ alias gd='git diff'
 alias go='git checkout'
 alias repush='git commit --amend --no-edit; git push --force;'
 
+alias github='gh'
+
 # vim
 alias vi='vim'
 

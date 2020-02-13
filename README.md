@@ -178,6 +178,7 @@ curl \
 gdbm \
 gettext \
 git \
+github/gh/gh \
 htop \
 hub \
 icu4c \
