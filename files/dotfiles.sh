@@ -19,17 +19,15 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 #-------------------------------------------------------------------------------
 # Default editor
-
-# If atom is installed, make it as your default editor
-if [ `which atom` ]; then
-  export EDITOR="atom"
-elif [ `which sublime` ]; then
+if [ `which sublime` ]; then
   export EDITOR="sublime -a"
+elif [ `which atom` ]; then
+  export EDITOR="atom"
 fi
 
 #-------------------------------------------------------------------------------
 # Default git editor
-export GIT_EDITOR="atom --wait"
+export GIT_EDITOR="$EDITOR --wait"
 
 #-------------------------------------------------------------------------------
 # Locale (Prefer US English and use UTF-8)
