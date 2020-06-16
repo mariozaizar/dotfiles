@@ -6,7 +6,8 @@
 	"auto_indent": true,
 	"auto_match_enabled": true,
 	"caret_style": "phase",
-	"close_windows_when_empty": true,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Theme - One Dark/One Dark.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"drag_text": false,
 	"draw_minimap_border": false,
@@ -18,7 +19,6 @@
 	[
 		"*.a",
 		"*.class",
-		"*.csv",
 		"*.cvs",
 		"*.db",
 		"*.dll",
@@ -67,12 +67,12 @@
 		"tmp/",
 		"vendor"
 	],
-	"font_face": "Monaco",
+	"font_face": "Cascadia Code",
 	"font_options":
 	[
 		"bold"
 	],
-	"font_size": 14,
+	"font_size": 16,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
@@ -106,6 +106,7 @@
 	"smart_indent": true,
 	"spell_check": false,
 	"tab_size": 2,
+	"theme": "One Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,
