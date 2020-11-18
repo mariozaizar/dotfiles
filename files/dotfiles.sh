@@ -76,6 +76,9 @@ alias gd='git diff'
 alias go='git checkout'
 alias repush='git commit --amend --no-edit; git push --force;'
 
+# Open GitKraken using the current repo directory in the cli and bring it on focus.
+alias kraken='open gitkraken://repo/$PWD'
+
 alias github='gh'
 
 # vim
