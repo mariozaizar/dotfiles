@@ -43,7 +43,7 @@ export NODE_PATH="/usr/local/lib/node";
 
 #-------------------------------------------------------------------------------
 # Aliases
-alias code='clear; cd <%= @projects_dir %>;'
+alias work='clear; cd <%= @projects_dir %>;'
 
 alias claer='clear;' # Nada puede malir sal
 alias cls='clear; ls;'
