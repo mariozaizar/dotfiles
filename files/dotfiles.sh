@@ -42,6 +42,11 @@ export PATH="/usr/local/share/npm/bin:$PATH";
 export NODE_PATH="/usr/local/lib/node";
 
 #-------------------------------------------------------------------------------
+# Hub ~ Github
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+
+#-------------------------------------------------------------------------------
 # Aliases
 alias work='clear; cd <%= @projects_dir %>;'
 
