@@ -11,8 +11,8 @@ eval "$(rbenv init -)";
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 # Default text editor
-if [ `which sublime` ]; then
-  export EDITOR="sublime -a"
+if [ `which subl` ]; then
+  export EDITOR="subl -a"
 elif [ `which code` ]; then
   export EDITOR="code"
 fi
@@ -47,7 +47,7 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias reload='source ~/.bash_profile'
 alias st='stree .';
-alias s='sublime -a .';
+alias s='subl -a .';
 alias be='bundle exec'
 alias repush='git commit --amend --no-edit; git push --force;'
 alias vi='vim'
