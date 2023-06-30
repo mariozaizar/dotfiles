@@ -24,7 +24,8 @@ This script will create/replace these files:
 
 - Mac OS Ventura
 - GitHub account
-- Homebrew
+- Homebrew: https://brew.sh/
+- Oh My Zsh: https://github.com/ohmyzsh/ohmyzsh
 
 ## Setup
 
