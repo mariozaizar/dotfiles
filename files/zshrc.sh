@@ -101,12 +101,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="/~/Code/zendesk/zendesk/docker-images/dockmaster/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/local/sbin:/Users/<%= @github_user %>/.rbenv/shims:/Users/<%= @github_user %>/.rbenv/shims:/Users/<%= @github_user %>/.rbenv/bin:/Users/<%= @github_user %>/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-# The source of magic
 source ~/.dotfiles
-
-# Personal settings (should not overrided)
-if [ -f ~/.personal ]; then
-  source ~/.personal;
-fi

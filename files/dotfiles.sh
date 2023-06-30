@@ -1,20 +1,16 @@
-# Ruby
-export PATH="$HOME/.rbenv/bin:$PATH";
-
-if which rbenv > /dev/null; then
-  # rbenv installed
-  export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
-  eval "$(rbenv init -)";
-fi
-
-# Homebrew should be before system-provided path
+# Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Ruby
+export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
+eval "$(rbenv init -)";
 
 # This fix MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
 # But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
 # export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
-# Default editor
+# Default text editor
 if [ `which sublime` ]; then
   export EDITOR="sublime -a"
 elif [ `which code` ]; then
@@ -57,3 +53,7 @@ alias repush='git commit --amend --no-edit; git push --force;'
 alias vi='vim'
 alias show_hidden_files_mac='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder'
 alias hide_hidden_files_mac='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder'
+
+if [ -f ~/.personal ]; then
+  source ~/.personal;
+fi
