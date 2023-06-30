@@ -5,7 +5,7 @@ HOME_DIR = File.expand_path('~')
 
 LINKS = {
   "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" =>
-    "/usr/local/bin/sublime",
+    "/usr/local/bin/subl",
   "/Applications/Sublime Merge.app/Contents/SharedSupport/bin/smerge" =>
     "/usr/local/bin/smerge"
 }
@@ -36,7 +36,7 @@ def get_user_information
   puts "\nPlease write your information:"
 
   @full_name        = ask(" - Your full name: ")
-  @github_user      = ask(" - GitHub username: ")
+  @github_user      = ask(" - GitHub username (without the @): ")
   @github_email     = ask(" - GitHub email: ")
   @projects_dir     = ask(" - Work directory. Like `~/Code`: ")
 
@@ -116,7 +116,7 @@ task :install do
   exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
   create_files :dotfiles
-  create_links
+  # create_links # Permission denied to link in /usr/local/bin
   reload_bash
 end
 

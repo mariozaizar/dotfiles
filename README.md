@@ -84,7 +84,6 @@ libunistring \
 mysql \
 pcre \
 pkg-config \
-python \
 readline \
 sqlite \
 watchman \
