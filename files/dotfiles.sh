@@ -6,9 +6,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH=$(rbenv root)/shims:$(rbenv root)/bin:$PATH;
 eval "$(rbenv init -)";
 
-# This fix MySQL: Library not loaded: libmysqlclient.18.dylib (LoadError)
-# But WARNING, setting DYLD_LIBRARY_PATH can break dynamic linking.
-# export export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
+# VSCode
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin";
 
 # Default text editor
 if [ `which subl` ]; then
