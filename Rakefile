@@ -26,7 +26,7 @@ FILES = {
     "files/ruby-version"               => "~/Code/.ruby-version",
     "files/ssh-config.ini"              => "~/.ssh/config",
     "files/vimrc.sh"                   => "~/.vimrc",
-    "files/zshrc.sh"                   => "~/.zshrc"
+    "files/zshrc.sh"                   => "~/.zshrc",
     "files/zprofile.sh"                 => "~/.zprofile"
   },
 }
