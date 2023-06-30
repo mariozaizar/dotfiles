@@ -1,2 +1,9 @@
 ---
 gem: --no-ri --no-rdoc
+backtrace: true
+verbose: true
+update_sources: true
+bulk_threshold: 1000
+concurrent_downloads: 8
+sources:
+- https://rubygems.org/
