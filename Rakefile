@@ -12,30 +12,22 @@ LINKS = {
 
 FILES = {
   :dotfiles => {
-    "files/atom/config.cson"           => "~/.atom/config.cson",
-    "files/atom/keymap.cson"           => "~/.atom/keymap.cson",
     "files/aws-credentials.yml"        => "~/.aws/credentials",
-    "files/bash_profile.sh"            => "~/.bash_profile",
+    "files/bash_profile.sh"             => "~/.bash_profile",
     "files/bashrc.sh"                  => "~/.bashrc",
-    "files/bundle_config.ini"          => "~/.bundle/config",
-    "files/dotfiles.sh"                => "~/.dotfiles",
+    "files/bundle_config.ini"           => "~/.bundle/config",
+    "files/dotfiles.sh"                 => "~/.dotfiles",
     "files/gemrc.yml"                  => "~/.gemrc",
-    "files/gitconfig.ini"              => "~/.gitconfig",
+    "files/gitconfig.ini"               => "~/.gitconfig",
     "files/gitignore"                  => "~/.gitignore",
-    "files/hgignore_global"            => "~/.hgignore_global",
     "files/hub.zsh_completion.sh"      => "~/.zsh/completions/hub.zsh_completion",
     "files/iterm2/switch_automatic.py" => "~/Library/Application\ Support/iTerm2/Scripts/AutoLaunch/switch_automatic.py",
-    "files/rbenv-default-gems.rb"      => "~/.rbenv/default-gems",
-    "files/rspec.rb"                   => "~/.rspec",
     "files/ruby-gemset"                => "~/Code/.ruby-gemset",
     "files/ruby-version"               => "~/Code/.ruby-version",
-    "files/smb.conf.ini"               => "~/.smb/smb.conf",
     "files/ssh-config.ini"              => "~/.ssh/config",
-    "files/stCommitMsg.txt"            => "~/.stCommitMsg",
-    "files/sublime/keymap.json"        => "~/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-    "files/sublime/settings.json"      => "~/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
     "files/vimrc.sh"                   => "~/.vimrc",
     "files/zshrc.sh"                   => "~/.zshrc"
+    "files/zprofile.sh"                 => "~/.zprofile"
   },
 }
 
@@ -124,15 +116,8 @@ task :install do
   exit if ask("\nContinue? [Y/N]: ", false)!='Y'
 
   create_files :dotfiles
+  create_links
   reload_bash
-end
-
-namespace :install do
-  desc "Create some sublinks"
-  task :links do
-    create_links
-    reload_bash
-  end
 end
 
 desc "Where to find the backup files"

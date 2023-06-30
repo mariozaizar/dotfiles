@@ -3,6 +3,4 @@
 .bundle
 .byebug_history
 .DS_Store
-.svn
 pkg
-log/test.log
