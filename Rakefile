@@ -18,6 +18,7 @@ FILES = {
     "files/bundle_config.ini"           => "~/.bundle/config",
     "files/dotfiles.sh"                 => "~/.dotfiles",
     "files/gemrc.yml"                  => "~/.gemrc",
+    "files/gem-credentials.yml"        => "~/.gem/credentials",
     "files/gitconfig.ini"               => "~/.gitconfig",
     "files/gitignore_global"           => "~/.gitignore_global",
     "files/hub.zsh_completion.sh"      => "~/.zsh/completions/hub.zsh_completion",
