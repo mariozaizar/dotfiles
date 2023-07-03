@@ -32,6 +32,10 @@ export NODE_PATH="/usr/local/lib/node";
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
+# gcloud
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
 # Aliases
 alias work='clear; cd <%= @projects_dir %>;'
 alias claer='clear;'
