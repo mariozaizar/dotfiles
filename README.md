@@ -55,38 +55,40 @@ Run in the terminal:
 
 ```sh
 brew install \
-curl \
-git \
-htop \
-hub \
-node \
-openssl \
-rbenv \
-ruby-build \
-tree \
-wget
+  autoconf \
+  autoconf \
+  automake \
+  curl \
+  gh \
+  git \
+  htop \
+  node \
+  openssl \
+  rbenv \
+  ruby-build \
+  tree \
+  wget \
+  zstd
 ```
 
 To be reviewed:
 
 ```sh
 brew install \
-autoconf \
-autojump \
-awscli \
-ctags \
-gdbm \
-gettext \
-gh \
-icu4c \
-libidn \
-libidn2 \
-libunistring \
-mysql \
-pcre \
-pkg-config \
-readline \
-sqlite \
-watchman \
-xz
+  autojump \
+  awscli \
+  ctags \
+  gdbm \
+  gettext \
+  icu4c \
+  libidn \
+  libidn2 \
+  libunistring \
+  mysql \
+  pcre \
+  pkg-config \
+  readline \
+  sqlite \
+  watchman \
+  xz
 ```
