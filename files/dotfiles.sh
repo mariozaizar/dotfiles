@@ -11,13 +11,13 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 # Default text editor
 if [ `which subl` ]; then
-  export EDITOR="subl -a"
+  export EDITOR="subl --add"
 elif [ `which code` ]; then
   export EDITOR="code"
 fi
 
 # Default git editor
-export GIT_EDITOR="$EDITOR --wait"
+export GIT_EDITOR="subl --wait"
 
 # Locale (Prefer US English and use UTF-8)
 export LC_CTYPE="UTF-8"
