@@ -68,7 +68,8 @@ brew install \
   ruby-build \
   tree \
   wget \
-  zstd
+  zstd \
+  jq
 ```
 
 To be reviewed:
